@@ -3,6 +3,7 @@
 
 Usage:
     python3 scripts/build.py                 # build from the newest file in data/
+    (data format: see briefing/RUNBOOK.md, section 5)
     python3 scripts/build.py data/2026-11-26.json
     python3 scripts/build.py --check FILE    # validate only, write nothing
 
@@ -33,8 +34,11 @@ SECTIONS = [
     ("federal", "Federal"),
     ("massachusetts", "Massachusetts"),
     ("new_hampshire", "New Hampshire"),
+    ("ai", "Artificial Intelligence"),
+    ("world", "World"),
 ]
-NAV_LABELS = {"federal": "Federal", "massachusetts": "Mass.", "new_hampshire": "N.H."}
+NAV_LABELS = {"federal": "Federal", "massachusetts": "Mass.", "new_hampshire": "N.H.",
+              "ai": "AI", "world": "World"}
 PRIORITY_TOPICS = ["labor", "healthcare", "education"]
 TOPIC_LABELS = {"labor": "Labor", "healthcare": "Health care", "education": "Education"}
 TIER_ORDER = ["primary", "high", "mostly", "mixed", "low", "unrated"]
@@ -133,32 +137,55 @@ def validate(data: dict, by_domain: dict) -> dict:
            "note": data.get("note"), "sections": {}}
     total = 0
     for key, _ in SECTIONS:
-        stories = sections.get(key, [])
-        resolved = []
-        for i, s in enumerate(stories):
-            where = f"{key} story {i + 1} ({s.get('headline', 'no headline')[:50]!r})"
-            for f in STORY_TEXT_FIELDS:
-                if not str(s.get(f, "")).strip():
-                    raise BriefingError(f"{where}: missing '{f}'")
-            topic = s.get("topic")
+        blocks = sections.get(key, [])
+        resolved_blocks, seen = [], set()
+        for bi, blk in enumerate(blocks):
+            topic = blk.get("topic")
+            bwhere = f"{key} block {bi + 1} ({blk.get('label') or topic})"
             if topic not in PRIORITY_TOPICS + ["other"]:
-                raise BriefingError(f"{where}: topic must be labor, healthcare, education or other")
-            if topic == "other" and not s.get("topic_label"):
-                raise BriefingError(f"{where}: topic 'other' needs a 'topic_label' (e.g. Housing)")
-            srcs = s.get("sources") or []
-            if not srcs:
-                raise BriefingError(f"{where}: every story must link to at least one source")
-            r = dict(s)
-            r["sources"] = [resolve_source(x, by_domain, where) for x in srcs]
-            resolved.append(r)
+                raise BriefingError(f"{bwhere}: topic must be labor, healthcare, education or other")
+            if topic == "other" and not blk.get("label"):
+                raise BriefingError(f"{bwhere}: topic 'other' needs a 'label' (e.g. Housing)")
+            ident = (topic, (blk.get("label") or "").lower())
+            if ident in seen:
+                raise BriefingError(f"{bwhere}: two blocks share this topic; merge them into one")
+            seen.add(ident)
+            if not str(blk.get("overview", "")).strip():
+                raise BriefingError(f"{bwhere}: missing 'overview' (the big-picture paragraph)")
+            items = blk.get("items") or []
+            if not items:
+                raise BriefingError(f"{bwhere}: a block needs at least one item")
+            res_items = []
+            for i, s in enumerate(items):
+                where = f"{bwhere} item {i + 1} ({s.get('headline', 'no headline')[:50]!r})"
+                for f in STORY_TEXT_FIELDS:
+                    if not str(s.get(f, "")).strip():
+                        raise BriefingError(f"{where}: missing '{f}'")
+                srcs = s.get("sources") or []
+                if not srcs:
+                    raise BriefingError(f"{where}: every item must link to at least one source")
+                r = dict(s)
+                r["sources"] = [resolve_source(x, by_domain, where) for x in srcs]
+                res_items.append(r)
+            rb = dict(blk)
+            rb["items"] = res_items
+            resolved_blocks.append(rb)
+            total += len(res_items)
         # labor, health care, education first; otherwise keep the writer's order
         rank = {t: n for n, t in enumerate(PRIORITY_TOPICS)}
-        resolved.sort(key=lambda s: rank.get(s["topic"], len(PRIORITY_TOPICS)))
-        out["sections"][key] = resolved
-        total += len(resolved)
+        resolved_blocks.sort(key=lambda b: rank.get(b["topic"], len(PRIORITY_TOPICS)))
+        out["sections"][key] = resolved_blocks
     if total == 0:
         raise BriefingError("briefing has no stories")
     return out
+
+
+def all_items(b: dict, key: str | None = None):
+    for k, _ in SECTIONS:
+        if key and k != key:
+            continue
+        for blk in b["sections"][k]:
+            yield from blk["items"]
 
 
 # ---------------------------------------------------------------- render
@@ -225,39 +252,59 @@ def render_sources(story: dict, tiers_text: dict) -> str:
     return f'<ul class="sources">{"".join(rows)}</ul>'
 
 
-def render_story(story: dict, tiers_text: dict) -> str:
-    topic = story["topic"]
-    label = TOPIC_LABELS.get(topic) or story.get("topic_label", "Policy")
-    status = f'<span class="status">{e(story["status"])}</span>' if story.get("status") else ""
+def render_item(story: dict, tiers_text: dict, anchor: str) -> str:
+    status = f'<p class="status">{e(story["status"])}</p>' if story.get("status") else ""
     nxt = (f'<div class="row"><dt>What\'s next</dt><dd>{e(story["whats_next"])}</dd></div>'
            if story.get("whats_next") else "")
     return f"""
-<article class="story">
-  <div class="tags"><span class="topic tp-{e(topic)}">{e(label)}</span>{status}</div>
-  <h3>{e(story["headline"])}</h3>
-  {render_trust_box(story, tiers_text)}
-  <dl>
-    <div class="row"><dt>What changed</dt><dd>{e(story["what_changed"])}</dd></div>
-    <div class="row"><dt>What it does</dt><dd>{e(story["what_it_does"])}</dd></div>
-    <div class="row"><dt>Who it affects</dt><dd>{e(story["who_it_affects"])}</dd></div>
-    {nxt}
-  </dl>
-  <p class="src-h">Sources</p>
-  {render_sources(story, tiers_text)}
+  <section class="item" id="{anchor}">
+    <h4>{e(story["headline"])}</h4>
+    {status}
+    {render_trust_box(story, tiers_text)}
+    <dl>
+      <div class="row"><dt>What changed</dt><dd>{e(story["what_changed"])}</dd></div>
+      <div class="row"><dt>What it does</dt><dd>{e(story["what_it_does"])}</dd></div>
+      <div class="row"><dt>Who it affects</dt><dd>{e(story["who_it_affects"])}</dd></div>
+      {nxt}
+    </dl>
+    <p class="src-h">Sources</p>
+    {render_sources(story, tiers_text)}
+  </section>"""
+
+
+def render_block(blk: dict, tiers_text: dict, anchor: str) -> str:
+    topic = blk["topic"]
+    label = blk.get("label") or TOPIC_LABELS.get(topic, "Policy")
+    n = len(blk["items"])
+    anchors = [f"{anchor}-{i + 1}" for i in range(n)]
+    toc = ""
+    if n > 1:
+        links = "".join(f'<li><a href="#{a}">{e(it["headline"])}</a></li>'
+                        for a, it in zip(anchors, blk["items"]))
+        toc = f'<ol class="toc">{links}</ol>'
+    items = "".join(render_item(it, tiers_text, a) for a, it in zip(anchors, blk["items"]))
+    count = f'{n} update{"s" if n != 1 else ""}'
+    return f"""
+<article class="block bk-{e(topic)}" id="{anchor}">
+  <header class="bk-head">
+    <h3>{e(label)}</h3><span class="bk-count">{count}</span>
+  </header>
+  <div class="overview"><p class="ov-h">The big picture</p><p>{e(blk["overview"])}</p></div>
+  {toc}
+  {items}
 </article>"""
 
 
 def spectrum(b: dict) -> str:
     counts = Counter()
     seen = set()
-    for key, _ in SECTIONS:
-        for st in b["sections"][key]:
-            for s in st["sources"]:
-                name = s["outlet"]["name"]
-                bucket = lean_bucket(s["outlet"]["lean"])
-                if bucket and name not in seen:
-                    seen.add(name)
-                    counts[bucket] += 1
+    for st in all_items(b):
+        for s in st["sources"]:
+            name = s["outlet"]["name"]
+            bucket = lean_bucket(s["outlet"]["lean"])
+            if bucket and name not in seen:
+                seen.add(name)
+                counts[bucket] += 1
     if not counts:
         return ""
     cells = "".join(
@@ -288,19 +335,23 @@ h1{font-size:28px;line-height:1.2;margin:4px 0 2px}
 .date{color:var(--muted);margin:0}
 .stale{display:none;background:var(--caut-bg);color:var(--caut);border-radius:10px;padding:10px 12px;margin:14px 0 0;font-size:15px}
 .note{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:12px 14px;margin:16px 0 0;font-size:16px}
-nav.jump{position:sticky;top:0;z-index:5;background:var(--bg);display:flex;gap:8px;padding:10px 0;margin-top:12px;border-bottom:1px solid var(--line);overflow-x:auto}
-nav.jump a{flex:0 0 auto;text-decoration:none;color:var(--ink);background:var(--card);border:1px solid var(--line);border-radius:999px;padding:6px 12px;font-size:14px;font-weight:600}
-nav.jump a span{color:var(--muted);font-weight:500;margin-left:4px}
+nav.jump{position:sticky;top:0;z-index:5;background:var(--bg);display:flex;flex-wrap:wrap;gap:5px;padding:8px 0;margin-top:12px;border-bottom:1px solid var(--line);overflow-x:auto}
+nav.jump a{flex:0 0 auto;text-decoration:none;color:var(--ink);background:var(--card);border:1px solid var(--line);border-radius:999px;padding:4px 9px;font-size:13.5px;font-weight:600}
+nav.jump a span{color:var(--muted);font-weight:500;margin-left:3px}
 section.sec{scroll-margin-top:60px}
 h2{font-size:22px;margin:28px 0 10px;padding-bottom:6px;border-bottom:2px solid var(--ink)}
 .empty{color:var(--muted);font-style:italic}
-.story{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px;margin:0 0 14px}
-.tags{display:flex;flex-wrap:wrap;gap:6px;align-items:center}
-.topic{font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.05em;border-radius:6px;padding:2px 8px}
-.tp-labor{color:var(--labor);background:var(--labor-bg)}.tp-healthcare{color:var(--health);background:var(--health-bg)}
-.tp-education{color:var(--edu);background:var(--edu-bg)}.tp-other{color:var(--other);background:var(--other-bg)}
-.status{font-size:13px;color:var(--muted)}
-.story h3{font-size:19px;line-height:1.3;margin:8px 0 10px}
+.block{--c:var(--accent);--cbg:var(--other-bg);background:var(--card);border:1px solid var(--line);border-top:5px solid var(--c);border-radius:14px;margin:0 0 18px;overflow:hidden;scroll-margin-top:60px}
+.bk-labor{--c:var(--labor);--cbg:var(--labor-bg)}.bk-healthcare{--c:var(--health);--cbg:var(--health-bg)}.bk-education{--c:var(--edu);--cbg:var(--edu-bg)}
+.bk-head{display:flex;align-items:baseline;justify-content:space-between;gap:10px;padding:14px 16px 0}
+.bk-head h3{font-size:21px;line-height:1.25;margin:0;color:var(--c)}
+.bk-count{font-size:13px;color:var(--muted);white-space:nowrap}
+.overview{background:var(--cbg);margin:12px 16px 0;border-radius:10px;padding:10px 12px}
+.overview p{margin:0}.ov-h{font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.05em;color:var(--c);margin-bottom:2px!important}
+.toc{margin:12px 16px 0;padding-left:22px;font-size:15px}.toc li{margin:0 0 4px}.toc a{color:var(--ink);text-decoration-color:var(--line)}
+.item{padding:16px;border-top:1px solid var(--line);margin-top:14px;scroll-margin-top:60px}
+.item h4{font-size:18px;line-height:1.3;margin:0 0 4px}
+.status{font-size:13px;color:var(--muted);margin:0 0 10px}
 dl{margin:0}.row{margin:0 0 10px}
 dt{font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.05em;color:var(--muted)}
 dd{margin:2px 0 0}
@@ -351,10 +402,12 @@ def page(title: str, body: str, extra_head: str = "") -> str:
 def render_briefing(b: dict, tiers_text: dict, archive_prefix: str) -> str:
     nav, secs = [], []
     for key, title in SECTIONS:
-        stories = b["sections"][key]
-        nav.append(f'<a href="#{key}">{NAV_LABELS[key]}<span>{len(stories)}</span></a>')
-        inner = "".join(render_story(s, tiers_text) for s in stories) or \
-            '<p class="empty">No stories of real policy substance in this section today.</p>'
+        blocks = b["sections"][key]
+        n = sum(len(blk["items"]) for blk in blocks)
+        nav.append(f'<a href="#{key}">{NAV_LABELS[key]}<span>{n}</span></a>')
+        inner = "".join(render_block(blk, tiers_text, f"{key}-{i + 1}")
+                        for i, blk in enumerate(blocks)) or \
+            '<p class="empty">Nothing of real substance in this section today.</p>'
         secs.append(f'<section class="sec" id="{key}"><h2>{title}</h2>{inner}</section>')
     note = f'<p class="note">{e(b["note"])}</p>' if b.get("note") else ""
     gen = ""
@@ -418,8 +471,8 @@ def main(argv: list[str]) -> int:
         print(f"FAILED: {ex}", file=sys.stderr)
         return 2
 
-    counts = {k: len(b["sections"][k]) for k, _ in SECTIONS}
-    unrated = sorted({s["outlet"]["name"] for k, _ in SECTIONS for st in b["sections"][k]
+    counts = {k: sum(1 for _ in all_items(b, k)) for k, _ in SECTIONS}
+    unrated = sorted({s["outlet"]["name"] for st in all_items(b)
                       for s in st["sources"] if s["outlet"]["tier"] == "unrated"})
     print(f"OK: {path.name} — {sum(counts.values())} stories {counts}")
     if unrated:

@@ -1,8 +1,9 @@
 # Morning Policy Briefing
 
 A daily briefing on policy substance (what changed, what it does, and who it affects) for
-federal, Massachusetts, and New Hampshire government. Labor, health care, and education
-come first.
+federal, Massachusetts, and New Hampshire government, plus AI and World sections. Labor,
+health care, and education come first. Each section is organized into reading blocks, one
+per topic, each opening with a short "big picture" summary.
 
 ## How it works
 

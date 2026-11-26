@@ -18,22 +18,52 @@ Find political news **of real substance**: what policies actually do and who the
 
 ## 2. Coverage
 
-Three sections, in this order:
+Five sections, in this order:
 
 1. **Federal**: Congress, the White House, federal agencies, and federal courts.
 2. **Massachusetts**: the Legislature (General Court), Governor, state agencies, courts,
    ballot questions, and major municipal policy with statewide reach.
 3. **New Hampshire**: the General Court, Governor, state agencies, courts, and the same
    kinds of local stories.
+4. **AI**: AI policy and regulation (federal, state, international), and major AI
+   developments with real-world consequences: new capabilities or products that change work,
+   schools, or health care; big industry moves; safety incidents; and court cases. Skip hype,
+   benchmark bragging, and rumor. Prioritize AI in education, AI and jobs, and AI in health
+   care. **Disclosure rule:** this briefing is written by Claude, made by Anthropic. Any AI
+   story about Anthropic (or one where Anthropic is a main party) must say so plainly in
+   that block's overview, and must be written with extra care for neutrality.
+5. **World**: substantive international news, including diplomacy, wars and ceasefires,
+   international court rulings, trade and sanctions, elections *results* and the policies of
+   new governments, humanitarian crises, and major policy changes abroad. The same "skip the
+   horse race" rule applies. Use wire services and international outlets (Reuters, AP, BBC, FT,
+   The Economist, DW, France 24, Al Jazeera, regional papers) for a range of perspectives.
 
 **Priority topics** are labor, healthcare, and education. Search for these deliberately in
-every section. Also include any other story of genuine policy substance (housing, energy,
-taxes, immigration, criminal justice, environment, transportation, technology, and so on).
+the Federal, Massachusetts, and New Hampshire sections. Also include any other story of genuine
+policy substance (housing, energy, taxes, immigration, criminal justice, environment,
+transportation, technology, and so on).
 
-**Target length:** 15–25 stories in total. Federal will usually be the largest section.
-Aim for at least 3–4 stories each for Massachusetts and New Hampshire when the news supports
-it. Never pad: on a quiet day (a weekend or holiday) it is fine to go shorter, and to say so in
-the `note`. A state section may be empty if nothing substantive happened.
+**Target length:** 15–25 items across Federal, Massachusetts, and New Hampshire, plus 3–6 AI
+items and 4–8 World items. Federal will usually be the largest section. Aim for at least
+3–4 items each for Massachusetts and New Hampshire when the news supports it. Never pad: on a
+quiet day (a weekend or holiday) it is fine to go shorter, and to say so in the `note`. A
+section may be empty if nothing substantive happened.
+
+### Reading blocks
+
+Within each section, group items into **reading blocks**, one per topic. For example, all
+federal health care news goes in a single Health care block. Each block opens with a 2–4
+sentence **overview** ("The big picture") that ties its items together: the common thread,
+the most important development, and why it matters. Then come the individual items.
+
+- Federal / Massachusetts / New Hampshire blocks: one per topic (Labor, Health care,
+  Education, then other topics such as Housing, Energy, Taxes).
+- AI blocks: by theme, such as "Government & regulation", "AI in schools", "AI & work",
+  "AI in health care", "Industry", or "Safety".
+- World blocks: by region or theme, such as "Middle East", "Europe", "Asia", "Americas",
+  "Africa", "Trade & economy", or "International law".
+- Never make two blocks for the same topic in one section; merge them. A block may have a
+  single item.
 
 **Freshness:** focus on the last ~24 hours (on Mondays, the weekend too). An older story can
 come in only when something new happened today, such as a law taking effect or a deadline
@@ -109,19 +139,35 @@ Save today's briefing as `data/YYYY-MM-DD.json` (today's Eastern date):
   "generated_at": "2026-11-27 3:41 a.m. ET",
   "note": "Optional one or two sentences, e.g. holiday slowdown. Omit if not needed.",
   "sections": {
-    "federal": [ STORY, ... ],
-    "massachusetts": [ STORY, ... ],
-    "new_hampshire": [ STORY, ... ]
+    "federal": [ BLOCK, ... ],
+    "massachusetts": [ BLOCK, ... ],
+    "new_hampshire": [ BLOCK, ... ],
+    "ai": [ BLOCK, ... ],
+    "world": [ BLOCK, ... ]
   }
 }
 ```
 
-Each STORY:
+Each BLOCK:
+
+```json
+{
+  "topic": "healthcare",
+  "overview": "2–4 sentences: the big picture tying this block's items together.",
+  "items": [ STORY, ... ]
+}
+```
+
+- `topic` is one of `labor`, `healthcare`, `education`, or `other`. For `other`, add a
+  `"label"` (e.g. `"Housing"`, `"Middle East"`, `"Government & regulation"`). Any block may
+  also carry a `label` to override the default heading, e.g. an AI block with
+  `"topic": "education", "label": "AI in schools"`.
+
+Each STORY (one item inside a block):
 
 ```json
 {
   "headline": "Labor Department proposes new overtime threshold of $X",
-  "topic": "labor",
   "status": "Proposed rule; comments due Jan. 20",
   "what_changed": "One to three sentences.",
   "what_it_does": "One to four sentences on the mechanics.",
@@ -135,10 +181,9 @@ Each STORY:
 }
 ```
 
-- `topic` is one of `labor`, `healthcare`, `education`, or `other`. For `other`, add
-  `"topic_label": "Housing"` (or a similar short label).
-- The build script puts labor, healthcare, and education first in each section
-  automatically. Within that, put the most consequential stories first.
+- The build script puts labor, healthcare, and education blocks first in each section
+  automatically. Otherwise, order blocks and the items inside them by importance, most
+  consequential first.
 - A source from an outlet not in `outlets.json` should get its own entry there (see §3).
   As a last resort, give the source `"outlet"` and a `"rating"` object
   (`lean`, `tier`, `mbfc`, `adfontes`).
@@ -168,4 +213,6 @@ and push again. Never force-push.
 - [ ] Every story has at least one working link to the article you actually read.
 - [ ] Left, center, and right outlets all appear somewhere in the briefing.
 - [ ] Stories from mixed/low/unrated outlets attribute their claims in the text.
-- [ ] Federal, Massachusetts, and New Hampshire are all covered (or noted as quiet).
+- [ ] Federal, Massachusetts, New Hampshire, AI, and World are all covered (or noted as quiet).
+- [ ] Each block's overview ties its items together; no topic appears twice in a section.
+- [ ] Any AI story involving Anthropic carries the disclosure.

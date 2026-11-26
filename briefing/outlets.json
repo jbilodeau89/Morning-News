@@ -1111,6 +1111,286 @@
       "mbfc": "Not rated",
       "adfontes": "Not rated",
       "checked": null
+    },
+    {
+      "id": "cnbc",
+      "name": "CNBC",
+      "domains": [
+        "cnbc.com"
+      ],
+      "lean": "Center-Left",
+      "tier": "high",
+      "mbfc": "Left-Center / High factual",
+      "adfontes": "Middle / Reliable",
+      "checked": null
+    },
+    {
+      "id": "bbc",
+      "name": "BBC News",
+      "domains": [
+        "bbc.com",
+        "bbc.co.uk"
+      ],
+      "lean": "Center-Left",
+      "tier": "high",
+      "mbfc": "Left-Center / High factual",
+      "adfontes": "Middle / Reliable",
+      "checked": null
+    },
+    {
+      "id": "ft",
+      "name": "Financial Times",
+      "domains": [
+        "ft.com"
+      ],
+      "lean": "Center",
+      "tier": "high",
+      "mbfc": "Least Biased / High factual",
+      "adfontes": "Middle / Reliable",
+      "checked": null
+    },
+    {
+      "id": "economist",
+      "name": "The Economist",
+      "domains": [
+        "economist.com"
+      ],
+      "lean": "Center",
+      "tier": "high",
+      "mbfc": "Least Biased / High factual",
+      "adfontes": "Middle / Reliable",
+      "checked": null
+    },
+    {
+      "id": "aljazeera",
+      "name": "Al Jazeera English",
+      "domains": [
+        "aljazeera.com"
+      ],
+      "lean": "Center-Left",
+      "tier": "mixed",
+      "mbfc": "Left-Center / Mixed factual",
+      "adfontes": "Skews Left / Generally reliable",
+      "checked": null
+    },
+    {
+      "id": "dw",
+      "name": "DW (Deutsche Welle)",
+      "domains": [
+        "dw.com"
+      ],
+      "lean": "Center",
+      "tier": "high",
+      "mbfc": "Least Biased / High factual",
+      "adfontes": "Middle / Reliable",
+      "checked": null
+    },
+    {
+      "id": "france24",
+      "name": "France 24",
+      "domains": [
+        "france24.com"
+      ],
+      "lean": "Center-Left",
+      "tier": "high",
+      "mbfc": "Left-Center / High factual",
+      "adfontes": "Middle / Reliable",
+      "checked": null
+    },
+    {
+      "id": "euronews",
+      "name": "Euronews",
+      "domains": [
+        "euronews.com"
+      ],
+      "lean": "Center",
+      "tier": "high",
+      "mbfc": "Least Biased / High factual",
+      "adfontes": "Middle / Reliable",
+      "checked": null
+    },
+    {
+      "id": "semafor",
+      "name": "Semafor",
+      "domains": [
+        "semafor.com"
+      ],
+      "lean": "Center",
+      "tier": "high",
+      "mbfc": "Least Biased / High factual",
+      "adfontes": "Middle / Reliable",
+      "checked": null
+    },
+    {
+      "id": "jpost",
+      "name": "The Jerusalem Post",
+      "domains": [
+        "jpost.com"
+      ],
+      "lean": "Center-Right",
+      "tier": "mostly",
+      "mbfc": "Right-Center / Mostly factual",
+      "adfontes": "Skews Right / Generally reliable",
+      "checked": null
+    },
+    {
+      "id": "timesofisrael",
+      "name": "The Times of Israel",
+      "domains": [
+        "timesofisrael.com"
+      ],
+      "lean": "Center",
+      "tier": "high",
+      "mbfc": "Least Biased / High factual",
+      "adfontes": "Middle / Reliable",
+      "checked": null
+    },
+    {
+      "id": "kyivindependent",
+      "name": "The Kyiv Independent",
+      "domains": [
+        "kyivindependent.com"
+      ],
+      "lean": "Center",
+      "tier": "mostly",
+      "mbfc": "Least Biased / Mostly factual",
+      "adfontes": "Not rated",
+      "checked": null
+    },
+    {
+      "id": "scmp",
+      "name": "South China Morning Post",
+      "domains": [
+        "scmp.com"
+      ],
+      "lean": "Center",
+      "tier": "mostly",
+      "mbfc": "Least Biased / Mostly factual",
+      "adfontes": "Middle / Generally reliable",
+      "checked": null
+    },
+    {
+      "id": "hrw",
+      "name": "Human Rights Watch (advocacy group)",
+      "domains": [
+        "hrw.org"
+      ],
+      "lean": "Center-Left (human rights advocacy)",
+      "tier": "mostly",
+      "mbfc": "Left-Center / High factual",
+      "adfontes": "Not rated",
+      "checked": null
+    },
+    {
+      "id": "un",
+      "name": "United Nations",
+      "domains": [
+        "un.org",
+        "news.un.org",
+        "media.un.org",
+        "icj-cij.org"
+      ],
+      "lean": "n/a (official)",
+      "tier": "primary",
+      "mbfc": "n/a (official)",
+      "adfontes": "n/a",
+      "checked": null
+    },
+    {
+      "id": "cnas",
+      "name": "Center for a New American Security (think tank)",
+      "domains": [
+        "cnas.org"
+      ],
+      "lean": "Center (national security think tank)",
+      "tier": "mostly",
+      "mbfc": "Least Biased / High factual",
+      "adfontes": "Not rated",
+      "checked": null
+    },
+    {
+      "id": "verge",
+      "name": "The Verge",
+      "domains": [
+        "theverge.com"
+      ],
+      "lean": "Center-Left",
+      "tier": "high",
+      "mbfc": "Left-Center / High factual",
+      "adfontes": "Skews Left / Reliable",
+      "checked": null
+    },
+    {
+      "id": "techcrunch",
+      "name": "TechCrunch",
+      "domains": [
+        "techcrunch.com"
+      ],
+      "lean": "Center-Left",
+      "tier": "high",
+      "mbfc": "Left-Center / High factual",
+      "adfontes": "Middle / Reliable",
+      "checked": null
+    },
+    {
+      "id": "wired",
+      "name": "Wired",
+      "domains": [
+        "wired.com"
+      ],
+      "lean": "Center-Left",
+      "tier": "high",
+      "mbfc": "Left-Center / High factual",
+      "adfontes": "Skews Left / Reliable",
+      "checked": null
+    },
+    {
+      "id": "arstechnica",
+      "name": "Ars Technica",
+      "domains": [
+        "arstechnica.com"
+      ],
+      "lean": "Center-Left",
+      "tier": "high",
+      "mbfc": "Left-Center / High factual",
+      "adfontes": "Middle / Reliable",
+      "checked": null
+    },
+    {
+      "id": "mittr",
+      "name": "MIT Technology Review",
+      "domains": [
+        "technologyreview.com"
+      ],
+      "lean": "Center",
+      "tier": "high",
+      "mbfc": "Least Biased / High factual",
+      "adfontes": "Middle / Reliable",
+      "checked": null
+    },
+    {
+      "id": "theinformation",
+      "name": "The Information",
+      "domains": [
+        "theinformation.com"
+      ],
+      "lean": "Center",
+      "tier": "high",
+      "mbfc": "Least Biased / High factual",
+      "adfontes": "Not rated",
+      "checked": null
+    },
+    {
+      "id": "newsweek",
+      "name": "Newsweek",
+      "domains": [
+        "newsweek.com"
+      ],
+      "lean": "Center",
+      "tier": "mixed",
+      "mbfc": "Least Biased / Mixed factual",
+      "adfontes": "Middle / Mixed reliability",
+      "checked": null
     }
   ]
 }
