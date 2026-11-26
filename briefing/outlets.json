@@ -313,8 +313,8 @@
       "lean": "Right",
       "tier": "mixed",
       "mbfc": "Right / Mixed factual",
-      "adfontes": "Skews Right / Mixed reliability",
-      "checked": null
+      "adfontes": "Skews Right / Generally Reliable, Analysis or Other Issues",
+      "checked": "2026-11-26"
     },
     {
       "id": "nationalreview",
@@ -686,7 +686,7 @@
       "tier": "high",
       "mbfc": "Left-Center / High factual",
       "adfontes": "Not rated",
-      "checked": null
+      "checked": "2026-11-26"
     },
     {
       "id": "gbh",
@@ -1027,6 +1027,35 @@
       "checked": null
     },
     {
+      "id": "nygov",
+      "name": "New York State government",
+      "domains": [
+        "ny.gov",
+        "governor.ny.gov",
+        "nysenate.gov",
+        "legislation.nysenate.gov",
+        "nyassembly.gov"
+      ],
+      "lean": "n/a (state's own statement)",
+      "tier": "primary",
+      "mbfc": "n/a",
+      "adfontes": "n/a",
+      "checked": "2026-11-26"
+    },
+    {
+      "id": "nga",
+      "name": "National Governors Association",
+      "domains": [
+        "nga.org"
+      ],
+      "lean": "n/a (bipartisan governors' association's own statement)",
+      "tier": "primary",
+      "mbfc": "Not rated",
+      "adfontes": "Not rated",
+      "checked": "2026-11-26",
+      "note": "Not a government body; treated as primary only for its own announcements."
+    },
+    {
       "id": "healthcaredive",
       "name": "Healthcare Dive",
       "domains": [
@@ -1131,11 +1160,11 @@
         "bbc.com",
         "bbc.co.uk"
       ],
-      "lean": "Center-Left",
-      "tier": "high",
-      "mbfc": "Left-Center / High factual",
-      "adfontes": "Middle / Reliable",
-      "checked": null
+      "lean": "Center",
+      "tier": "mostly",
+      "mbfc": "Least Biased / Mostly Factual",
+      "adfontes": "Middle / Reliable, Analysis/Fact Reporting",
+      "checked": "2026-11-26"
     },
     {
       "id": "ft",
@@ -1170,8 +1199,8 @@
       "lean": "Center-Left",
       "tier": "mixed",
       "mbfc": "Left-Center / Mixed factual",
-      "adfontes": "Skews Left / Generally reliable",
-      "checked": null
+      "adfontes": "Skews Left / Reliable, Analysis/Fact Reporting",
+      "checked": "2026-11-26"
     },
     {
       "id": "dw",
@@ -1391,6 +1420,20 @@
       "mbfc": "Least Biased / Mixed factual",
       "adfontes": "Middle / Mixed reliability",
       "checked": null
+    },
+    {
+      "id": "yahoo",
+      "name": "Yahoo News",
+      "domains": [
+        "yahoo.com",
+        "news.yahoo.com"
+      ],
+      "lean": "Center-Left",
+      "tier": "high",
+      "mbfc": "Left-Center / High factual",
+      "adfontes": "Rated (score not confirmed)",
+      "checked": "2026-11-26",
+      "note": "Mostly republishes other outlets' stories; credit the original outlet in the title."
     }
   ]
 }

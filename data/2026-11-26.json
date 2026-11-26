@@ -1,32 +1,23 @@
 {
   "date": "2026-11-26",
-  "generated_at": "Thanksgiving morning (setup test edition, version 2)",
-  "note": "Happy Thanksgiving. This is a second test edition, showing the new reading-block layout and the new AI and World sections. Congress and both state legislatures are on holiday recess, so it rounds up the past week rather than the past 24 hours. Regular editions start tomorrow morning.",
+  "generated_at": "2026-11-26 1:45 p.m. ET",
+  "note": "Happy Thanksgiving. This is a daytime holiday test edition. Congress and both state legislatures are on recess, so it covers the past several days rather than just the last 24 hours, and some sections are shorter than usual.",
   "sections": {
     "federal": [
       {
         "topic": "labor",
-        "overview": "The week's main federal labor move changes who counts as an employee. It matters because employee status decides who gets minimum wage, overtime, and family leave.",
+        "overview": "The one federal labor item this holiday week is narrow but practical: Labor Department guidance on how salaried school staff qualify for family and medical leave. It matters most for school districts and other employers that do not track the hours of salaried workers.",
         "items": [
           {
-            "headline": "Labor Department finalizes rule making it easier to classify workers as independent contractors",
-            "status": "Final rule; takes effect 60 days after Federal Register publication",
-            "what_changed": "On Nov. 19 the Labor Department finalized a rule that replaces the 2024 standard for deciding whether a worker is an employee or an independent contractor. It returns to an \"economic reality\" test much like the one the department adopted in 2021.",
-            "what_it_does": "The test gives the most weight to two questions: how much control the business has over the work, and whether the worker can earn a profit or take a loss through their own initiative or investment. Other factors, such as specialized skill and how permanent the relationship is, count for less. For the first time, the same standard also applies under the Family and Medical Leave Act and the farmworker protection law, not just the Fair Labor Standards Act (the federal minimum-wage and overtime law).",
-            "who_it_affects": "Gig workers, truck drivers, construction trades, and other workers whose status is disputed. Independent contractors are not covered by federal minimum wage, overtime, or family-leave rights. Business groups backed the change, and worker advocates said it will make misclassification easier. The rule does not override stricter state laws such as Massachusetts' worker classification law.",
-            "whats_next": "Takes effect 60 days after it is published in the Federal Register. Legal challenges are likely, as with earlier versions.",
+            "headline": "Labor Department: a school specialist's after-hours IEP work counts toward family-leave eligibility",
+            "status": "Agency opinion letter (Nov. 17)",
+            "what_changed": "In an opinion letter dated Nov. 17, the Labor Department said a salaried occupational therapist's after-hours work on IEPs (individualized education programs, the legal plans for students with disabilities) must be counted as hours of service under the Family and Medical Leave Act (FMLA). It said the therapist's travel time between schools also likely counts.",
+            "what_it_does": "To qualify for FMLA, a worker generally needs 12 months with the employer and at least 1,250 hours of service in the past year. FMLA guarantees up to 12 weeks of unpaid, job-protected leave a year. The department said that when an employer has not kept accurate hours, it is up to the employer to prove a worker does not qualify, and that for salaried workers exempt from overtime recordkeeping, eligibility is presumed after 12 months on the job.",
+            "who_it_affects": "School districts and their salaried specialists, such as occupational therapists, speech therapists, and special education staff, and more broadly any employer that does not track salaried employees' hours. Opinion letters are guidance, not new regulations.",
             "sources": [
               {
-                "url": "https://www.hrdive.com/news/dol-flips-independent-contractor-switch-back-with-new-final-rule/875183/",
-                "title": "DOL flips independent contractor switch back with new final rule"
-              },
-              {
-                "url": "https://www.dol.gov/agencies/whd/flsa/misclassification/2026rulemaking",
-                "title": "Final Rule: Employee or Independent Contractor Status (Labor Department)"
-              },
-              {
-                "url": "https://www.washingtonexaminer.com/?p=4472935",
-                "title": "Labor Department announces plan to roll back Biden gig worker rule (February proposal)"
+                "url": "https://www.k12dive.com/news/time-spent-on-ieps-travel-may-count-toward-fmla-eligibility-dol-says/875306/",
+                "title": "School specialist's time spent on IEPs after hours may count toward FMLA eligibility"
               }
             ]
           }
@@ -34,96 +25,43 @@
       },
       {
         "topic": "healthcare",
-        "overview": "Three federal moves this week all tighten eligibility and oversight in public health coverage. Medicaid work requirements are getting an optional six-month runway. A new anti-fraud package targets providers and insurance brokers. Stricter ID checks are slowing ACA marketplace sign-ups. Together they shape who keeps coverage in 2027 and how hard it is to enroll.",
+        "overview": "Medicare finished its third round of drug price negotiations, and for the first time the list includes drugs given in doctors' offices, not just pharmacy drugs. The new prices start in 2028. Separately, states are deciding whether to use the federal six-month grace period on Medicaid work requirements; Massachusetts opted in this week (see the Massachusetts health care block).",
         "items": [
           {
-            "headline": "States get an optional six-month grace period on Medicaid work requirements; four states sue",
-            "status": "Federal guidance issued Nov. 13; lawsuit pending",
-            "what_changed": "The Centers for Medicare & Medicaid Services (CMS) said on Nov. 13 that states can take a six-month \"hold harmless\" period before enforcing the new Medicaid work requirement. The requirement still formally starts in January. Separately, Oregon, Minnesota, New Mexico, and Washington have sued to stop the requirements.",
-            "what_it_does": "Under the 2025 budget law, many adults covered through Medicaid expansion must show at least 80 hours a month of work, volunteering, or school to keep coverage. During the grace period, states must still set up the system and check compliance, but people would not lose coverage for failing the requirement until mid-2027. The lawsuit argues that the federal government lacks the authority to impose the changes the way it has and that withholding Medicaid funds would be unconstitutional.",
-            "who_it_affects": "Millions of low-income adults on Medicaid, and the state agencies that must verify their hours. Some states, including Iowa, South Dakota, Indiana, and Nebraska, have said they will not use the grace period. According to The Epoch Times, 19 states and D.C. have asked for a broader delay.",
-            "whats_next": "Requirement begins in January. States choosing the grace period would start enforcing by about July 2027.",
+            "headline": "Medicare sets negotiated prices for 13 more drugs, starting in 2028",
+            "status": "Final negotiated prices; take effect Jan. 1, 2028",
+            "what_changed": "The Centers for Medicare & Medicaid Services (CMS) announced negotiated prices for 13 drugs in the third round of the Medicare Drug Price Negotiation Program, created by the 2022 Inflation Reduction Act. This is the first round to include Part B drugs, which are given in a doctor's office, alongside Part D pharmacy drugs.",
+            "what_it_does": "CMS estimates the prices would have saved Medicare $9.2 billion, about 45% of net spending, had they been in effect in 2025; counting a separate drugmaker discount program, the savings figure is about $5.5 billion (33%). Fifteen drugs were selected, but no negotiated price applies to Xeljanz and Xolair because cheaper generic or biosimilar versions are now on the market, or to Botox while a court order in a lawsuit by its maker remains in effect. In four cases the drugmaker accepted CMS's written final offer; the rest were agreed in talks.",
+            "who_it_affects": "In 2025 about 1.4 million Part D enrollees and about 120,000 Part B enrollees used the selected drugs, which treat cancer, immune conditions, diabetes, and other chronic illnesses. CMS projects beneficiaries will save about $69 million out of pocket in Part D and $395 million in Part B once the prices apply. With this round, 37 drugs will have negotiated Medicare prices.",
+            "whats_next": "Prices take effect Jan. 1, 2028. The Botox exclusion depends on the outcome of AbbVie v. HHS.",
             "sources": [
               {
-                "url": "https://www.washingtonpost.com/health/2026/11/13/states-can-delay-controversial-medicaid-work-requirement-six-months/",
-                "title": "States can delay controversial Medicaid work requirement for six months"
+                "url": "https://www.cms.gov/newsroom/press-releases/cms-announces-lower-negotiated-prices-13-high-cost-drugs",
+                "title": "CMS Announces Lower Negotiated Prices for 13 High-Cost Drugs"
               },
               {
-                "url": "https://thehill.com/policy/healthcare/6220069-trump-delays-medicaid-work-requirements/",
-                "title": "Trump administration delays Medicaid work requirement enforcement"
-              },
-              {
-                "url": "https://www.statnews.com/2026/11/06/states-sue-trump-delay-medicaid-work-requirements/",
-                "title": "States sue Trump administration again to delay Medicaid work requirements"
-              },
-              {
-                "url": "https://www.theepochtimes.com/us/19-states-plus-dc-ask-to-delay-medicaid-work-requirements-6128835",
-                "title": "19 States Plus DC Ask to Delay Medicaid Work Requirements"
+                "url": "https://www.cms.gov/files/document/fact-sheet-negotiated-prices-ipay-2028.pdf",
+                "title": "Fact sheet: Negotiated prices for initial price applicability year 2028"
               }
             ]
-          },
-          {
-            "headline": "CMS proposes broad anti-fraud rules for Medicare, Medicaid, and ACA marketplace plans",
-            "status": "Proposed rule; comments due Jan. 19, 2027",
-            "what_changed": "On Nov. 16 the administration proposed a package of anti-fraud rules covering Medicare Advantage, Medicaid, and the Affordable Care Act (ACA) insurance marketplaces.",
-            "what_it_does": "State Medicaid agencies could suspend payments to a provider based on a credible fraud finding by CMS or another federal agency. Providers would have to report and return overpayments within 60 days. Insurance agents and brokers with certain felony convictions would be barred from the ACA marketplaces, and CMS could suspend brokers facing credible abuse allegations. CMS estimates about $90 billion in federal savings over 10 years.",
-            "who_it_affects": "Health care providers and insurers billing federal programs, ACA insurance brokers, and state Medicaid agencies. Patients are affected indirectly if providers face suspended payments.",
-            "whats_next": "Public comments are due Jan. 19, 2027, before CMS can finalize the rule.",
-            "sources": [
-              {
-                "url": "https://news.bgov.com/health-law-and-business/rfk-jr-oz-release-rules-on-fraud-in-medicare-medicaid-aca",
-                "title": "RFK Jr., Oz Release Rules on Fraud in Medicare, Medicaid, ACA"
-              },
-              {
-                "url": "https://www.healthcaredive.com/news/cms-proposes-sweeping-reforms-to-curb-healthcare-fraud/875059/",
-                "title": "CMS proposes sweeping reforms to curb healthcare fraud"
-              },
-              {
-                "url": "https://www.beckershospitalreview.com/legal-regulatory-issues/cms-targets-90b-in-savings-with-sweeping-new-anti-fraud-rule/",
-                "title": "CMS targets $90B in savings with sweeping new anti-fraud rule"
-              }
-            ]
-          },
-          {
-            "headline": "New ID checks are slowing ACA sign-ups; groups ask CMS to extend the Dec. 15 deadline",
-            "status": "Open enrollment underway; extension requested, not granted",
-            "what_changed": "New identity-verification steps on HealthCare.gov are causing online applications to time out, according to reporting by The Texas Tribune. Advocacy groups and insurance brokers have asked CMS to push the Dec. 15 deadline (for coverage starting Jan. 1) to Dec. 31. CMS has not agreed.",
-            "what_it_does": "The checks are part of the administration's effort against improper enrollments. CMS says it flagged 315,000 marketplace plans covering about 760,000 people as potentially fraudulent. All were broker-assisted and lacked a verified Social Security or immigration document number. CMS says help is available through HealthCare.gov, its call center, and local enrollment helpers.",
-            "who_it_affects": "People buying their own health insurance through HealthCare.gov states. Massachusetts and New Hampshire residents are affected differently: Massachusetts runs its own marketplace (the Health Connector), while New Hampshire uses HealthCare.gov.",
-            "whats_next": "Dec. 15 is the deadline for Jan. 1 coverage unless CMS extends it.",
-            "sources": [
-              {
-                "url": "https://www.kera.org/2026/11/25/new-aca-identity-checks-delay-health-insurance-enrollment/",
-                "title": "New ACA identity checks delay health insurance enrollment"
-              }
-            ],
-            "source_note": "This story rests on a single report so far. CMS has not publicly responded to the extension request."
           }
         ]
       },
       {
         "topic": "education",
-        "overview": "Early childhood education is the focus this week: the federal government dropped the requirement that Head Start programs raise teacher pay.",
+        "overview": "With federal funding set to run out Dec. 11, the Senate Appropriations Committee's plan for the Education Department differs sharply from the House's. The Senate plan would raise the department's budget 19%; the House committee's plan would cut it 10%. Congress must pass a funding bill or another stopgap by the deadline.",
         "items": [
           {
-            "headline": "Head Start wage and benefit requirements for teachers are rescinded",
-            "status": "Final rule published mid-November",
-            "what_changed": "The federal Administration for Children and Families finalized a rule removing the 2024 requirements that Head Start programs raise teacher and staff pay toward public-school levels and provide specified benefits.",
-            "what_it_does": "Head Start programs no longer have to meet the pay-parity and benefit mandates. HHS called them an unfunded mandate and estimates programs avoid more than $2 billion in future costs. When the requirements were adopted, the government had estimated that meeting them without new money could cut funded enrollment by more than 100,000 slots. That was the trade-off supporters and critics argued over.",
-            "who_it_affects": "Head Start teachers and staff, who are often paid far less than public-school teachers, and the low-income families of young children whom Head Start serves. Head Start programs in Massachusetts and New Hampshire are affected too.",
-            "whats_next": "Reports differ on the effective date (about 60 days after publication, around mid-January 2027). The Federal Register notice is the authority.",
+            "headline": "Senate committee's 2027 plan would raise Education Department funding 19%; House plan would cut it 10%",
+            "status": "Committee proposal; funding deadline Dec. 11",
+            "what_changed": "The Republican-led Senate Appropriations Committee proposed $93.9 billion for the Education Department in fiscal year 2027, a 19% increase over 2026.",
+            "what_it_does": "Title I aid for schools in low-income communities ($18.4 billion), English-learner aid ($890 million), and the Office for Civil Rights ($140 million) would stay level. Special education would get $50 million more ($15.5 billion), charter schools $60 million more ($500 million), and after-school programs $5 million more ($1.3 billion). A companion health bill would add $50 million for Head Start ($12.4 billion). The House committee's plan, advanced in June, would cut the department to $71 billion, including a $2 billion cut to Title I; the president's budget asked for $76.5 billion. Subcommittee chair Sen. Shelley Moore Capito (R-W.Va.) said the plan makes meaningful investments; Sen. Patty Murray (D-Wash.) said it does not do enough to stop the department's dismantling or invest in families.",
+            "who_it_affects": "Public schools, especially high-poverty districts and students with disabilities, and Head Start programs. Final numbers depend on a House–Senate agreement.",
+            "whats_next": "Current stopgap funding expires at the end of Dec. 11. Congress must pass full-year bills or another stopgap, or a shutdown begins.",
             "sources": [
               {
-                "url": "https://www.edweek.org/teaching-learning/trump-admin-finalizes-rollback-of-required-raises-for-head-start-teachers/2026/11",
-                "title": "Trump admin. finalizes rollback of required raises for Head Start teachers"
-              },
-              {
-                "url": "https://www.k12dive.com/news/hhs-rule-rolls-back-head-start-wage-and-benefit-requirements/874689/",
-                "title": "HHS rule rolls back Head Start wage and benefit requirements"
-              },
-              {
-                "url": "https://newhampshirebulletin.com/2026/11/23/trump-administration-rescinds-rule-that-would-boost-staff-recruitment-and-retention-for-head-start/",
-                "title": "Trump administration rescinds rule that would boost staff recruitment and retention for Head Start"
+                "url": "https://www.k12dive.com/news/senate-committees-fy27-plan-gives-education-department-19-boost/875240/",
+                "title": "Senate committee's FY27 plan gives Education Department 19% boost"
               }
             ]
           }
@@ -131,24 +69,98 @@
       },
       {
         "topic": "other",
-        "label": "Energy",
-        "overview": "A rare bipartisan bill to speed up approval of energy projects cleared the Senate and now heads to the House.",
+        "label": "Trade",
+        "overview": "The administration proposed new tariffs on 14 trading partners under Section 301 of the Trade Act of 1974, the law it has relied on since the Supreme Court struck down tariffs imposed under an emergency-powers law in February. Nothing takes effect yet: a public comment period comes first, and officials say January is the earliest start.",
         "items": [
           {
-            "headline": "Senate passes bipartisan overhaul of federal permitting for power lines, energy, and mining",
-            "status": "Passed Senate 62–33; House vote expected after Thanksgiving",
-            "what_changed": "The Senate passed the Bipartisan American Affordability and Jobs Act on Nov. 19 by a 62–33 vote.",
-            "what_it_does": "The bill overhauls how federal agencies review and approve projects such as electric transmission lines, energy facilities, and mines, aiming to shorten reviews and limit delays.",
-            "who_it_affects": "Energy and mining developers, utilities and electricity customers, communities near proposed projects, and groups that use the review process to challenge projects.",
-            "whats_next": "House Republican leaders plan a floor vote after the Thanksgiving recess.",
+            "headline": "U.S. proposes new tariffs on China, the EU, and 12 other economies over 'excess capacity'",
+            "status": "Proposed; comment period first, earliest effect about January",
+            "what_changed": "On Nov. 25 the U.S. Trade Representative (USTR) found that 14 economies' industrial policies, such as subsidies that let factories produce far more than demand supports, unreasonably burden U.S. commerce, and proposed tariffs in response. The finding follows an eight-month investigation of 16 economies; probes of Mexico and Norway continue.",
+            "what_it_does": "China would face a new 20% tariff on top of the roughly 25% tariffs from Trump's first term, rising to 40% if a U.S.–China trade truce that expires in January breaks down; about $30 billion of Chinese imports under review for tariff cuts would be excluded. Vietnam would also face 20%. For other partners, officials said the new tariffs would replace, not add to, existing ones, and would stay within caps in earlier trade deals, such as 15% for the EU, Japan, and South Korea. Trade Representative Jamieson Greer said that 'when it all nets out, it really will just top up a few percentage points.'",
+            "who_it_affects": "U.S. importers and consumers of goods from China, the EU, India, Japan, South Korea, Indonesia, Bangladesh, Cambodia, Malaysia, Singapore, Switzerland, Taiwan, Thailand, and Vietnam. Targeted sectors in the investigation included steel, cars, chips, and solar panels. China's foreign ministry called 'overcapacity' a 'false issue.'",
+            "whats_next": "Exact rates for most countries will be published in the Federal Register, followed by a public comment period.",
             "sources": [
               {
-                "url": "https://www.rollcall.com/2026/11/19/sweeping-permitting-overhaul-passes-senate-on-to-house",
-                "title": "Sweeping permitting overhaul passes Senate, on to House"
+                "url": "https://www.nbcnews.com/business/economy/trump-country-specific-tariffs-excess-capacity-rcna611087",
+                "title": "Trump proposes a new wave of tariffs on China, E.U. and other trade partners"
               },
               {
-                "url": "https://axios.com/2026/11/25/house-energy-permitting-bill-vote-schedule",
-                "title": "Get ready for the House energy permitting bill vote"
+                "url": "https://abcnews.com/Politics/trump-admin-proposes-new-tariffs-china-eu-12/story?id=138442698",
+                "title": "Trump admin proposes new tariffs on China, EU and 12 other trading partners"
+              },
+              {
+                "url": "https://www.ms.now/news/trump-proposes-new-tariffs-on-china-eu-other-u-s-trading-partners",
+                "title": "Trump unveils new tariffs on China and other U.S. trading partners"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "topic": "other",
+        "label": "Justice & courts",
+        "overview": "Two presidential directives and one court ruling this week deal with federal power: a memo telling the Justice Department to seek the death penalty more often and speed executions, an order requiring federal contractors to route congressional requests through the White House, and a judge's order stopping the FCC's early review of ABC station licenses.",
+        "items": [
+          {
+            "headline": "Presidential memo directs the Justice Department to seek death sentences in more cases and speed executions",
+            "status": "Presidential memorandum signed Nov. 23",
+            "what_changed": "A memorandum to the Attorney General directs federal prosecutors, where the law allows, to take federal jurisdiction and seek the death penalty for the first-degree murder of a child and for murders committed during rape, child sexual exploitation, sex trafficking, kidnapping, or human trafficking. This adds to categories named in a January 2025 executive order.",
+            "what_it_does": "The Attorney General must work to carry out federal death sentences 'as expeditiously as possible,' including by prioritizing quick resolution of appeals and habeas corpus petitions (court challenges to whether a prisoner is lawfully held), opposing what the memo calls 'dilatory' litigation tactics, seeking expedited court review, and cutting administrative delays. The memo does not change the law; courts still control the pace of appeals.",
+            "who_it_affects": "Defendants in federal capital cases and people on federal death row, along with victims' families. It applies only to federal cases, not state prosecutions.",
+            "sources": [
+              {
+                "url": "https://www.whitehouse.gov/presidential-actions/2026/11/expeditious-enforcement-of-capital-sentences-and-the-pursuit-of-justice-for-victims-of-heinous-crimes/",
+                "title": "Expeditious Enforcement of Capital Sentences and the Pursuit of Justice for Victims of Heinous Crimes"
+              }
+            ],
+            "source_note": "This is the White House's own text; no outside coverage was readable at publication time."
+          },
+          {
+            "headline": "Executive order requires federal contractors to notify the White House before answering Congress",
+            "status": "Executive order signed Nov. 20; published Nov. 25",
+            "what_changed": "An executive order requires all federal contractors and subcontractors to notify the White House and their contracting agency of any pending or future congressional request about their work or communications with the executive branch, and to follow White House instructions on withholding information the administration says is covered by executive privilege (the president's power to keep some internal communications confidential).",
+            "what_it_does": "Agencies must inform contractors of the requirement and coordinate responses. The Office of Management and Budget will issue compliance guidance. Contractors that do not comply could face contract termination, suspension, or debarment (a ban on future federal contracts). The order says some congressional leaders have been 'harassing' contractors and that coordination avoids duplicate litigation; its legal limits have not yet been tested in court.",
+            "who_it_affects": "Federal contractors and subcontractors of every size, and congressional committees seeking information from them, including the incoming Democratic majorities that take over in January.",
+            "sources": [
+              {
+                "url": "https://www.whitehouse.gov/presidential-actions/2026/11/protecting-the-executives-privileges-and-enhancing-efficiencies-in-federal-contracting/",
+                "title": "Protecting the Executive's Privileges and Enhancing Efficiencies in Federal Contracting"
+              }
+            ],
+            "source_note": "This is the White House's own text; no outside coverage was readable at publication time."
+          },
+          {
+            "headline": "Judge bars the FCC from an early review of eight ABC stations' licenses",
+            "status": "Preliminary injunction (Nov. 25)",
+            "what_changed": "U.S. District Judge Loren AliKhan in Washington granted Disney's request to block the Federal Communications Commission (FCC) from holding a hearing on the licenses of eight ABC-owned TV stations, a step that could have led to revocation. According to Al Jazeera's report (from AP and Reuters), the judge wrote that 'this is not a close case' and that the FCC appeared to be carrying out a retaliatory campaign against ABC's free-speech rights.",
+            "what_it_does": "FCC Chair Brendan Carr ordered the early reviews in April, although the licenses were not due for renewal until October 2028 at the earliest; the FCC had not ordered an early review in more than 50 years. The injunction keeps the review on hold while Disney's lawsuit proceeds. An FCC spokesperson called the ruling 'wrong on the facts and wrong on the law.'",
+            "who_it_affects": "ABC stations in Los Angeles, Chicago, New York, and other cities, and other broadcasters whose licenses depend on FCC renewal.",
+            "whats_next": "The FCC can appeal the injunction.",
+            "sources": [
+              {
+                "url": "https://www.aljazeera.com/news/2026/11/26/us-judge-blocks-trumps-fcc-attempt-to-target-disneys-abc-stations",
+                "title": "US judge blocks Trump's FCC attempt to target Disney's ABC stations"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "topic": "other",
+        "label": "Housing",
+        "overview": "A new HUD rule would end federal housing aid for 'mixed-status' families, households where at least one member lacks eligible immigration status. Twenty-one states, including Massachusetts, have sued to stop it before it takes effect Dec. 14.",
+        "items": [
+          {
+            "headline": "21 states, including Massachusetts, sue to block HUD rule ending housing aid for mixed-status families",
+            "status": "Final rule takes effect Dec. 14; lawsuit filed",
+            "what_changed": "The Department of Housing and Urban Development (HUD) finalized a rule that would deny federal housing assistance to a household if any member lacks eligible citizenship or immigration status. Twenty-one states and Pennsylvania's governor sued to block it.",
+            "what_it_does": "For more than 30 years, mixed-status families have received prorated aid, reduced to exclude the ineligible member. The rule would end aid for the whole household, require everyone to verify status, and require housing authorities and private landlords to report tenants who fail verification to the Department of Homeland Security. HUD Secretary Scott Turner said the rule enforces a 1980 law and frees up to $218 million for eligible Americans on waitlists; the states argue Congress never gave HUD this power and that U.S.-citizen children could lose their homes.",
+            "who_it_affects": "HUD and DHS identified about 20,000 mixed-status households receiving federal housing aid nationwide. California's attorney general estimated 7,000 households in that state alone.",
+            "whats_next": "The rule takes effect Dec. 14 unless a court blocks it.",
+            "sources": [
+              {
+                "url": "https://www.wbur.org/news/2026/11/24/states-sue-hud-housing-aid-immigrants-mixed-status",
+                "title": "Mass. joins 20 states in suing HUD over a rule that could cut off housing aid for mixed-status families"
               }
             ]
           }
@@ -157,64 +169,119 @@
     ],
     "massachusetts": [
       {
-        "topic": "healthcare",
-        "overview": "Two health bills are in House–Senate negotiations at the State House. One would push hospitals to spend more on primary care. The other is a $2+ billion spending bill, most of it for MassHealth. Both need a compromise before they can reach the governor.",
+        "topic": "labor",
+        "overview": "A months-long labor dispute at one of Boston's biggest hospitals is over. More than 4,000 Brigham and Women's nurses ratified a contract that limits the hospital's use of temporary travel nurses.",
         "items": [
           {
-            "headline": "House and Senate negotiators face a deadline on a bill to steer more health spending to primary care",
-            "status": "In House–Senate negotiations",
-            "what_changed": "Lawmakers are trying to settle differences between House and Senate versions of a primary care bill before an approaching deadline.",
-            "what_it_does": "Both versions would have hospitals and health systems put 15% of their spending toward primary care without raising total health costs. The Senate version sets 2030 as the target year, and the House version sets 2036. The Senate bill also aims at affordability and long wait times for appointments.",
-            "who_it_affects": "Patients who struggle to find or wait to see a primary care doctor, primary care physicians, and hospital systems that would have to shift spending. A union of Mass General Brigham primary care doctors has urged a final deal.",
-            "whats_next": "A compromise bill needs approval from both chambers and the governor's signature.",
+            "headline": "Brigham and Women's nurses ratify contract, ending threat of an open-ended strike",
+            "status": "Contract ratified Nov. 24; runs through Sept. 30, 2028",
+            "what_changed": "Nurses at Brigham and Women's Hospital voted to ratify a contract with Mass General Brigham, ending a dispute that included a five-day work stoppage in July and a planned open-ended strike called off when a tentative deal was reached Nov. 11.",
+            "what_it_does": "The contract limits the use of temporary travel nurses, keeps current nurses' health insurance affordable, adds two pay steps for nurses at the top of the scale, and gives all nurses a prorated $1,000 bonus, according to the Massachusetts Nurses Association.",
+            "who_it_affects": "More than 4,000 Brigham nurses and the hospital's patients. The union did not release the vote count.",
             "sources": [
               {
-                "url": "https://www.bostonglobe.com/2026/11/23/metro/massachusetts-legislature-bill-primary-care-crisis/",
-                "title": "Mass. lawmakers' talks over primary care bill face deadline"
-              },
+                "url": "https://www.wbur.org/news/2026/11/25/brigham-nurses-ratify-contract-labor-fight",
+                "title": "Brigham nurses ratify contract, ending monthslong labor fight"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "topic": "healthcare",
+        "overview": "Massachusetts is using every available delay on new federal Medicaid work rules, while a state bill to strengthen primary care remains stuck in House–Senate talks. Both stories turn on deadlines: Jan. 1 for the federal rules and Jan. 5 for the Legislature's session.",
+        "items": [
+          {
+            "headline": "MassHealth opts into six-month grace period on federal Medicaid work rules",
+            "status": "State decision announced Nov. 24; grace period Jan. 1–June 30, 2027",
+            "what_changed": "MassHealth, the state's Medicaid program, said it will use the optional six-month 'hold harmless' period offered by the federal Centers for Medicare & Medicaid Services. Members who would otherwise lose eligibility on Jan. 1, 2027, under the new federal work and education requirements will not be cut off before June 30, 2027.",
+            "what_it_does": "During the grace period the state will check whether members meet or are exempt from the requirements, created by the 2025 federal budget law known as the One Big Beautiful Bill Act, but will not deny or end coverage solely for not meeting them. MassHealth also joined a multi-state request for a 'good faith effort' exemption that would delay the requirements altogether until July 1, 2027. It urged members to start meeting the requirements anyway.",
+            "who_it_affects": "About 310,000 MassHealth members are projected to be subject to the new requirements. The Blue Cross Blue Shield of Massachusetts Foundation has projected the eligibility changes could double the state's uninsured rate.",
+            "whats_next": "Enforcement would begin July 1, 2027, unless the federal exemption request is granted or Congress changes the law.",
+            "sources": [
               {
-                "url": "https://malegislature.gov/PressRoom/Detail?pressReleaseId=1406",
-                "title": "Senate Bill Takes Aim at Health Care Affordability, Primary Care Shortages and Long Wait Times"
+                "url": "https://www.wbur.org/news/2026/11/25/masshealth-medicaid-work-requirements-hold-harmless",
+                "title": "MassHealth opts into 6-month grace period on Medicaid work rules"
               }
             ]
           },
           {
-            "headline": "House and Senate still need to agree on a $2+ billion budget bill, mostly for MassHealth",
-            "status": "House and Senate versions differ",
-            "what_changed": "Both chambers have produced their own versions of the supplemental budget to close out fiscal 2026. The two need to be merged into one bill.",
-            "what_it_does": "The House bill (H 5700) puts about $1.8 billion toward MassHealth, the state Medicaid program, and dropped the governor's proposed Health Care Stabilization Fund and gas-tax suspension. The Senate's $2.61 billion version (S 3290) also has about $1.8 billion for MassHealth, plus $52 million for nursing home rates, $368 million for the Student Opportunity Act school-funding fund, and $18.5 million for early education subsidies.",
-            "who_it_affects": "MassHealth members and providers, nursing homes, school districts that receive Student Opportunity Act money, and families using child care subsidies.",
-            "whats_next": "A House–Senate compromise, then the governor's signature.",
+            "headline": "Primary care bill still in House–Senate talks with about six weeks left in the session",
+            "status": "In conference committee since July 31; session ends Jan. 5",
+            "what_changed": "Negotiators have not agreed on a final bill to expand primary care access and lower prescription drug costs. The House passed its version 158–0 and the Senate 35–4.",
+            "what_it_does": "Both versions would require hospitals and health systems to devote 15% of their spending to primary care without raising overall costs. The Senate sets a 2030 deadline; the House would allow until 2036. The Senate would require one uniform primary care payment model for all systems; the House would let each system design its own. The Senate's lead negotiator, Sen. Cindy Friedman, said 'we must get something done now'; the House's, Rep. Aaron Michlewitz, said lawmakers are 'trying to find the right balance.'",
+            "who_it_affects": "Patients who wait months for a primary care appointment, primary care doctors, and hospital systems whose budgets would shift.",
+            "whats_next": "Any bill not passed by Jan. 5 must start over in the new session.",
             "sources": [
               {
-                "url": "https://www.wbur.org/news/2026/10/30/senate-supplemental-spending-bill-house-healey",
-                "title": "Senate loads up supplemental spending bill with policy riders"
-              },
-              {
-                "url": "https://www.wbur.org/news/2026/10/21/supplemental-budget-house-gas-tax-health-funding",
-                "title": "What did and didn't make it into the Mass. House's supplemental budget bill"
+                "url": "https://www.bostonglobe.com/2026/11/23/metro/massachusetts-legislature-bill-primary-care-crisis/",
+                "title": "Mass. lawmakers' talks over primary care bill face deadline"
               }
-            ],
-            "source_note": "Coverage found during setup predates the Senate's floor vote; check for updates before relying on the final numbers."
+            ]
           }
         ]
       },
       {
         "topic": "other",
-        "label": "Housing",
-        "overview": "After voters narrowly rejected Question 7, the governor wants the Legislature to take up starter-home zoning itself.",
+        "label": "Energy",
+        "overview": "The governor's energy affordability bill, meant to cut ratepayer costs by about $10 billion over a decade, is one of 13 bills still in House–Senate talks. The Senate's energy chair now puts its chances at 50-50.",
         "items": [
           {
-            "headline": "After Question 7 failed, Healey asks the Legislature to pass a starter-home bill",
-            "status": "Proposal; no bill passed",
-            "what_changed": "Gov. Healey said she wants lawmakers to pass a standalone bill allowing single-family \"starter homes\" on smaller lots, after voters narrowly rejected Question 7 on Nov. 3.",
-            "what_it_does": "Question 7 would have allowed single-family homes on lots as small as 5,000 square feet statewide, overriding larger local minimum lot sizes. It did not set a limit on house size. A legislative version could change those details. Separately, a Senate-backed idea to allow duplexes by right on all residential lots is in private House–Senate talks.",
-            "who_it_affects": "First-time homebuyers, cities and towns that set their own zoning (the Massachusetts Municipal Association opposed Question 7), and builders.",
-            "whats_next": "The governor has signaled she wants action after the holidays.",
+            "headline": "Energy affordability bill's chances '50-50,' Senate negotiator says",
+            "status": "In conference committee; session ends Jan. 5",
+            "what_changed": "Sen. Michael Barrett, the Senate's lead negotiator, said talks 'have not gone particularly well' and gave the bill a '50-50 chance' this session. His House counterpart, Rep. Mark Cusack, said he is optimistic a deal can be reached.",
+            "what_it_does": "All versions aim to save ratepayers about $10 billion over 10 years, partly by expanding state energy purchasing and tightening rules for competitive electric suppliers, third-party companies that often charge more than utilities. The House version cuts $1 billion from Mass Save, the efficiency program funded by a charge on utility bills, and would lift the ban on new nuclear plants; the Senate version keeps Mass Save's budget, keeps the nuclear ban, and would end a costly gas-pipeline replacement program by 2030. Eversource wrote that neither bill would improve affordability; Barrett called that letter an attempt to sink the bill, while Cusack said stakeholder input is routine.",
+            "who_it_affects": "Massachusetts electricity and gas customers, whose bills are among the highest in the nation; utilities; and the state's climate targets.",
+            "whats_next": "Deadline to pass legislation this session is Jan. 5, 2027.",
             "sources": [
               {
-                "url": "https://www.boston.com/news/politics/2026/11/17/a-measure-pitched-as-promising-more-starter-homes-failed-at-the-ballot-maura-healey-wants-the-legislature-to-pass-it/",
-                "title": "A measure pitched as promising more starter homes failed at the ballot. Maura Healey wants the Legislature to pass it."
+                "url": "https://commonwealthbeacon.org/energy/were-at-a-sensitive-moment-as-legislative-deadline-nears-energy-affordability-negotiations-enter-scramble-mode/",
+                "title": "'We're at a sensitive moment': As legislative deadline nears, energy affordability negotiations enter scramble mode"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "topic": "other",
+        "label": "Immigration & courts",
+        "overview": "Massachusetts is in federal court over whether its new courthouse law can bind federal immigration agents. The state says ICE is violating the law; the federal government says states cannot direct federal law enforcement.",
+        "items": [
+          {
+            "headline": "Massachusetts sues ICE over arrests in state courthouses",
+            "status": "Lawsuit filed Nov. 23",
+            "what_changed": "Attorney General Andrea Campbell sued to stop U.S. Immigration and Customs Enforcement (ICE) from arresting people in and around state courthouses. The suit says at least 38 such arrests have occurred since the courthouse provision of the state's PROTECT Act took effect Nov. 3.",
+            "what_it_does": "The PROTECT Act requires officers to show court officials a judicial warrant (signed by a judge) before making a civil arrest, such as for an immigration violation, at a courthouse. The state argues the Tenth Amendment gives it authority over its own courts and that the arrests derail criminal cases. A Homeland Security spokesperson called courthouse arrests 'common sense' because officers know where a person will be and that the person has passed security screening.",
+            "who_it_affects": "Immigrants with state court dates, including defendants, victims, and witnesses, and the state's criminal courts.",
+            "sources": [
+              {
+                "url": "https://www.wbur.org/news/2026/11/23/massachusetts-ice-lawsuit-courtroom-arrests",
+                "title": "Mass. sues ICE over immigration arrests in state courts"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "topic": "other",
+        "label": "Transportation",
+        "overview": "One bill did finish this fall: an expansion of the 'Move Over' law, which Gov. Healey says she will sign.",
+        "items": [
+          {
+            "headline": "Expanded 'Move Over' law heads to Healey, who says she will sign it",
+            "status": "Passed Legislature; governor says she will sign",
+            "what_changed": "The Legislature sent the governor a compromise bill expanding the state's 'Move Over' law, which requires drivers to change lanes or slow down when passing emergency vehicles stopped with flashing lights. Healey said, 'It's a matter of public safety… I'm glad that it's on my desk.'",
+            "what_it_does": "The bill adds utility vehicles and disabled vehicles to the list of protected vehicles and raises penalties. Earlier versions required repeat offenders to complete a driver program run by the Registry of Motor Vehicles. WBUR described the bill as bringing 'larger fines and more cars' under the law; the final fine amounts were not available in a readable source at publication time.",
+            "who_it_affects": "All Massachusetts drivers, plus utility crews, tow operators, and stranded motorists on the roadside.",
+            "whats_next": "Takes effect after the governor signs it, on the schedule set in the bill.",
+            "sources": [
+              {
+                "url": "https://www.wbur.org/news/2026/11/25/mayor-wu-boston-city-council-minimum-parking",
+                "title": "WBUR Today: Healey plans to sign Move Over bill"
+              },
+              {
+                "url": "https://www.wbur.org/news/2026/11/23/massachusetts-move-over-law-bill-expansion",
+                "title": "Larger fines and more cars: What to know about the Mass. bill to expand the state's 'Move Over' law"
               }
             ]
           }
@@ -223,34 +290,40 @@
     ],
     "new_hampshire": [
       {
-        "topic": "education",
-        "overview": "School funding is the big New Hampshire education issue heading into the January session. Democrats' new majorities want to change how state aid is distributed, while 91 districts are adjusting to property-tax caps their voters just approved.",
+        "topic": "healthcare",
+        "overview": "A year after a New Hampshire Bulletin investigation found hundreds of cases of abuse and neglect in the state's disability care system, the state health department has answered a review committee's recommendations. It agreed to work on some but warned that money may limit what it can do.",
         "items": [
           {
-            "headline": "Democrats with new legislative majorities plan changes to school funding",
-            "status": "Proposals for the 2027 session",
-            "what_changed": "After the Nov. 3 election gave Democrats majorities in the Legislature, Democratic lawmakers say they will revisit how the state funds schools.",
-            "what_it_does": "Rep. Dave Luneau plans to reintroduce \"opportunity grants,\" which would end uniform per-pupil state aid and instead adjust funding for each district based on factors like poverty and special education needs.",
-            "who_it_affects": "School districts, especially property-poor districts with high needs, and local property taxpayers, since state aid affects how much towns must raise locally. Republican Gov. Kelly Ayotte, re-elected Nov. 3, would have to sign any change.",
-            "whats_next": "Bills will be filed for the session that begins in January.",
+            "headline": "State health department responds to disability-system reforms, citing budget limits",
+            "status": "Agency response to review committee",
+            "what_changed": "The Department of Health and Human Services (DHHS) responded to recommendations from the System Review Committee of the state's Developmental Services Quality Council. It agreed to work with stakeholders on some points, but Commissioner Lori Weaver wrote that its ability to act on several recommendations 'will ultimately be determined by the current fiscal environment.'",
+            "what_it_does": "The committee's top requests include one centralized intake and triage system with the abuse hotline built in, replacing several separate agencies and procedures; a clear leadership structure for investigations; and more public reporting and analysis of data. Committee members called the response insufficient; co-chair Stephanie Patrick said DHHS focuses on 'compliance' rather than the quality of care. Gov. Kelly Ayotte's office said DHHS's response speaks for the state.",
+            "who_it_affects": "People with developmental disabilities such as autism or cerebral palsy who receive taxpayer-funded care, their families, and provider agencies.",
+            "whats_next": "Funding for changes would come through the next two-year state budget, which the new Legislature will write in 2027.",
             "sources": [
               {
-                "url": "https://newhampshirebulletin.com/2026/11/16/with-their-new-legislative-majorities-nh-democrats-eye-education-changes/",
-                "title": "With their new legislative majorities, NH Democrats eye education changes"
+                "url": "https://www.yahoo.com/news/us/articles/state-responds-committee-recommendations-addressing-100002997.html",
+                "title": "State responds to committee recommendations on addressing issues in NH's disability system (New Hampshire Bulletin, republished)"
               }
-            ]
-          },
+            ],
+            "source_note": "Reported by the New Hampshire Bulletin; read via its republished copy on Yahoo News because the Bulletin's site blocked automated reading."
+          }
+        ]
+      },
+      {
+        "topic": "education",
+        "overview": "A new report says fewer New Hampshire graduates go to college, and more of those who do leave the state, even as the fastest-growing jobs require degrees. New Hampshire ranks last in public funding for higher education.",
+        "items": [
           {
-            "headline": "91 school districts adopted property-tax caps; budgets must now fit them",
-            "status": "Approved by local voters Nov. 3",
-            "what_changed": "Under a new state law, voters in 91 of 168 school districts approved caps on school property-tax growth, clearing the required 60% vote.",
-            "what_it_does": "In those districts, school boards must now write budgets that fit the cap on how much the local school tax can grow, unless voters approve exceptions the law allows.",
-            "who_it_affects": "Students, teachers, and school staff in those districts, where budget growth will be limited, and property owners, whose school taxes will rise more slowly.",
-            "whats_next": "School boards are drafting budgets now for spring town and district meetings.",
+            "headline": "Report: fewer NH graduates go to college, and most four-year students leave the state",
+            "status": "New report (New Hampshire Fiscal Policy Institute, Nov. 24)",
+            "what_changed": "An analysis from the New Hampshire Fiscal Policy Institute found that between 2014 and 2024, the number of high school graduates fell about 5%, but the number going on to college fell nearly three times as fast. Three in five graduates who pursue a four-year degree leave the state.",
+            "what_it_does": "The report recommends making public colleges more affordable and expanding enrollment options. It notes the state ranks last in public higher education funding, that the last budget cut University System of New Hampshire support by about $18 million over two years, and that the system raised tuition this year for the first time in several years. Six of the state's 10 fastest-growing occupations require a four-year degree. The University of New Hampshire raised enrollment nearly 5% this year, which it partly credits to a record $40 million in financial aid.",
+            "who_it_affects": "New Hampshire high school students and families, the state's public colleges, and employers needing degree holders.",
             "sources": [
               {
-                "url": "https://newhampshirebulletin.com/2026/11/10/dozens-of-nh-school-districts-adopted-tax-caps-now-a-balancing-act-begins/",
-                "title": "Dozens of NH school districts adopted tax caps. Now, a balancing act begins."
+                "url": "https://www.nhpr.org/education/2026-11-24/college-enrollment-decline-university-system-of-new-hampshire-report-new-hampshire-fiscal-policy-institute",
+                "title": "Report says fewer NH students are pursuing the college degrees that employers want"
               }
             ]
           }
@@ -258,20 +331,40 @@
       },
       {
         "topic": "other",
-        "label": "Child care",
-        "overview": "The state's child care scholarship program spent about twice its budget this year, and the health department wants more money for it in the next budget.",
+        "label": "Local aid & property taxes",
+        "overview": "With the new Legislature sworn in next week, some mayors are filing bills to shift costs from local property taxes back to the state, especially for pensions, education, and shared tax revenue.",
         "items": [
           {
-            "headline": "Health and Human Services asks for more child care money in the next two-year budget",
-            "status": "Agency budget request",
-            "what_changed": "The Department of Health and Human Services is asking for more state funding for its child care scholarship program in the next two-year budget.",
-            "what_it_does": "The request responds to a funding gap: the department budgeted just over $25 million for the scholarship program in fiscal 2026, but spent more than $52 million.",
-            "who_it_affects": "Low- and moderate-income working families who rely on child care scholarships, and child care providers.",
-            "whats_next": "Agency requests feed into Gov. Ayotte's budget proposal, due early next year, and then go to the Legislature.",
+            "headline": "Mayors file bills to restore state aid to cities and towns",
+            "status": "Bills filed for the 2027 session",
+            "what_changed": "Laconia Mayor Mike Bordes, also a newly elected state representative, has filed bills to raise the share of state meals and rooms tax revenue returned to municipalities from 30% to 40% over four years, and to have the state again pay part of local pension costs.",
+            "what_it_does": "The state once paid 40% of local contributions to the New Hampshire Retirement System for police, firefighters, and teachers, then cut that share over time to nothing; Bordes's bill would restore it to 17.5%. Somersworth Mayor Matt Gerding said towns need more state education funding and described 'a decade of cuts' pushed down to local property taxpayers.",
+            "who_it_affects": "Property taxpayers and municipal budgets statewide, and local police, fire, and school employees whose pensions cities must fund.",
+            "whats_next": "The new Legislature is sworn in next week; bills get hearings in the new year.",
             "sources": [
               {
-                "url": "https://newhampshirebulletin.com/2026/11/19/health-and-human-services-proposes-more-funding-for-childcare-in-next-two-year-budget/",
-                "title": "Health and Human Services proposes more funding for childcare in next two-year budget"
+                "url": "https://www.wmur.com/article/new-hampshire-mayors-local-aid-legislature-112526/74535356",
+                "title": "New Hampshire mayors hope for local aid changes under new Legislature"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "topic": "other",
+        "label": "Courts",
+        "overview": "A second justice is leaving the New Hampshire Supreme Court this year, which will leave the five-seat court with three sitting justices until the governor fills the seats.",
+        "items": [
+          {
+            "headline": "Justice Bryan Gould to retire, leaving two vacancies on the NH Supreme Court",
+            "status": "Retirement announced Nov. 23; leaving before year's end",
+            "what_changed": "Associate Justice Bryan Gould announced he will step down for health and family reasons before the end of the year. He is the second justice to leave in two months, after Chief Justice Gordon MacDonald resigned in September following a judicial conduct investigation.",
+            "what_it_does": "With no nominee yet for MacDonald's seat, the five-member court will have three sitting justices. In New Hampshire the governor nominates justices and the Executive Council confirms them. The court said Gould will spend his remaining weeks finishing opinions in cases he has heard.",
+            "who_it_affects": "Anyone with a case before the state's highest court, where cases may be decided by a smaller panel until the seats are filled.",
+            "sources": [
+              {
+                "url": "https://www.concordmonitor.com/2026/11/23/nh-supreme-court-justice-bryan-gould-retires-due-to-health-concerns/",
+                "title": "NH Supreme Court Justice Bryan Gould retires due to health concerns"
               }
             ]
           }
@@ -282,23 +375,37 @@
       {
         "topic": "other",
         "label": "Government & regulation",
-        "overview": "Washington tightened one of the main ways Chinese companies could still reach top-end American AI chips: renting computing power from data centers abroad.",
+        "overview": "States keep moving on AI while Congress prepares to take up a national framework in January. New York enacted a five-year ban on AI chatbot toys for young children, and the nation's governors released bipartisan principles asking Congress to keep a role for states.",
         "items": [
           {
-            "headline": "Commerce Department rule restricts overseas data centers from renting top AI chips to Chinese companies",
-            "status": "Interim final rule, in effect; issued mid-November",
-            "what_changed": "The Commerce Department's Bureau of Industry and Security issued a rule closing a \"remote access\" gap in AI chip export controls. Until now, companies based in China could rent the power of advanced chips housed in data centers outside China, even though they couldn't buy the chips directly.",
-            "what_it_does": "Shipping advanced AI chips to a data center anywhere in the world now needs a U.S. license if that data center supplies large amounts of computing power to companies headquartered in China and certain other countries. Licenses are reviewed case by case. Data centers inside the United States are not covered.",
-            "who_it_affects": "Chipmakers such as Nvidia, cloud and data-center operators in Southeast Asia and elsewhere (Indonesia, Malaysia, Singapore, Thailand, and Brazil face new license requirements), and Chinese AI developers. CNBC reports that resellers have started dumping Nvidia chips on the market since the rule was announced.",
-            "whats_next": "Because this is an interim final rule, it is already in effect, and Commerce can still revise it after public comment. A related House-passed bill awaits Senate action.",
+            "headline": "New York enacts five-year ban on AI chatbot toys for children 12 and under",
+            "status": "Signed into law Nov. 24 (Chapter 416); takes effect in February",
+            "what_changed": "Gov. Kathy Hochul signed a bill (S.9408A) banning the sale of children's toys with a built-in 'AI companion' for five years. New York is the second state to ban such toys, after California, NBC News reported.",
+            "what_it_does": "The law defines an AI companion as a system designed to simulate an ongoing human-like relationship, for example by remembering past conversations, asking unprompted emotional questions, or keeping up personal dialogue. 'Children's toy' follows the federal definition: a product meant for children 12 or younger. The law also orders an interagency study by the Department of State, the Office of Mental Health, the Attorney General, and others. Hochul signed it with an approval memo, which in New York usually means agreed changes will follow.",
+            "who_it_affects": "Toy makers and retailers selling in New York, and families with young children.",
+            "whats_next": "Takes effect in February; the ban expires after five years unless extended.",
             "sources": [
               {
-                "url": "https://www.cnbc.com/2026/11/25/nvidia-china-ai-chip-remote-access.html",
-                "title": "Nvidia sellers seek new buyers as U.S. curbs China AI chip access"
+                "url": "https://www.nbcnews.com/tech/tech-news/new-york-governor-kathy-hochul-sign-ai-toy-ban-law-rcna610962",
+                "title": "New York governor Kathy Hochul signs AI toy ban into law"
               },
               {
-                "url": "https://www.cnas.org/publications/cnas-insights/insights-unpacking-the-remote-access-rule",
-                "title": "Insights: Unpacking the Remote Access Rule"
+                "url": "https://www.nysenate.gov/legislation/bills/2025/S9408",
+                "title": "Senate Bill S9408A: bill text, summary, and actions"
+              }
+            ]
+          },
+          {
+            "headline": "Governors release bipartisan principles for state and federal AI rules",
+            "status": "Policy principles released Nov. 22",
+            "what_changed": "The National Governors Association released principles for AI governance developed by a bipartisan council led by Govs. Wes Moore (D-Md.), Mike Braun (R-Ind.), Josh Stein (D-N.C.), and Spencer Cox (R-Utah). They are meant to make state laws more consistent and to inform the incoming Congress as it writes a federal AI framework.",
+            "what_it_does": "The principles say both levels of government should regulate: Washington should focus on national and international risks, while states keep the power to govern AI use within their own responsibilities. They call for policies that promote innovation, protect the public, especially children and consumers, and give workers a voice in how AI is deployed. Moore said governors 'agree that humans must stay in control.'",
+            "who_it_affects": "State governments and legislatures, AI companies operating across many states, and workers and consumers covered by state AI laws. The principles are not binding.",
+            "whats_next": "The new Congress takes office in January.",
+            "sources": [
+              {
+                "url": "https://www.nga.org/news/press-releases/governors-call-for-ai-action/",
+                "title": "Governors Call for AI Action"
               }
             ]
           }
@@ -307,46 +414,41 @@
       {
         "topic": "education",
         "label": "AI in schools",
-        "overview": "States keep writing rules for AI in classrooms. This week's example comes from Pennsylvania, part of a 2026 wave in which dozens of states considered AI-in-education bills.",
+        "overview": "Google's decision not to offer schools a version of its search engine without AI features is drawing pushback from parents, educators, and some of its own employees. Districts with money are building workarounds; smaller ones may not be able to.",
         "items": [
           {
-            "headline": "Pennsylvania lawmakers weigh four bills on AI in schools, including a required district AI policy",
-            "status": "Bills pending in the Legislature",
-            "what_changed": "According to Keystone Newsroom, four bills now before the Pennsylvania Legislature would set statewide rules for how schools use AI.",
-            "what_it_does": "One bill would require every public and private school to adopt an AI-use policy by the start of the 2027–28 school year. Another would bar AI from providing mental health services to students. Several states, including Maryland and North Carolina, have already passed laws requiring AI guidelines or AI literacy standards.",
-            "who_it_affects": "Pennsylvania students, teachers, and school leaders, and AI education vendors. It's also a model Massachusetts and New Hampshire lawmakers could look to.",
-            "whats_next": "The bills still need committee action.",
+            "headline": "Google won't offer schools search without AI features; employees and parents push back",
+            "status": "Company policy; protests and petition",
+            "what_changed": "Google said it will not separate AI features from its education tools. More than 550 Google employees signed a petition asking the company to let schools use Search without AI Overviews, and parents and educators protested outside Google offices in six cities, NPR reported.",
+            "what_it_does": "Schools that turn off Google's AI features for students would lose Google Search as well. Google did not comment to NPR. Some districts are building their own filters: Fairfax County, Va., is piloting a tool that blocks AI on school devices. Experts NPR spoke with said smaller, less-funded districts may not be able to do the same.",
+            "who_it_affects": "Students and teachers in the many districts that use Google's education software, and district technology staff.",
             "sources": [
               {
-                "url": "https://keystonenewsroom.com/news/education/four-pennsylvania-bills-that-could-shape-ai-use-in-schools/",
-                "title": "Four Pennsylvania bills that could shape AI use in schools", "outlet": "Keystone Newsroom"
+                "url": "https://www.npr.org/2026/11/21/nx-s1-6048599/google-employees-protest-ai-in-schools-policy",
+                "title": "Google employees protest AI in schools policy"
               }
-            ],
-            "source_note": "Keystone Newsroom isn't in the major media-rating databases yet; the nightly run will look it up."
+            ]
           }
         ]
       },
       {
         "topic": "other",
         "label": "Industry",
-        "overview": "The year's biggest AI business story was a stock market debut. Disclosure: this briefing is written by Claude, an AI model made by Anthropic, the company in this story.",
+        "overview": "Federal regulators have cleared a plan to put AI computing in orbit. Demand for AI computing keeps rising, and communities have pushed back on large data centers built on the ground.",
         "items": [
           {
-            "headline": "Anthropic goes public in the largest IPO on record",
-            "status": "Began trading Nov. 19 (Nasdaq: ANT)",
-            "what_changed": "Anthropic, the AI company that makes Claude, sold about 980 million shares at $83 each, raising roughly $81 billion. CNBC reports that this is the largest initial public offering on record. Trading began Nov. 19.",
-            "what_it_does": "Going public lets Anthropic raise money for the computing power and data centers that frontier AI models require. It also means the company must publicly disclose its finances and answer to shareholders. The stock opened well above its offering price and has swung sharply since.",
-            "who_it_affects": "Investors and retirement funds holding the stock, Anthropic's competitors and their own fundraising, and policymakers watching how much money is flowing into AI development.",
+            "headline": "FCC approves SpaceX plan for up to 1 million 'space data center' satellites",
+            "status": "Federal license approval",
+            "what_changed": "According to the Washington Examiner, the Federal Communications Commission approved SpaceX's plan to put as many as 1 million satellites into orbit that can work as data centers, the computing facilities that power AI.",
+            "what_it_does": "SpaceX applied in January for authority to run what it calls an 'Orbital Data Center' system; the FCC accepted the filing for public comment in February. The Washington Examiner describes the approval as a major step for orbital data centers, which companies are exploring as an alternative to large ground-based data centers that strain local power and water supplies.",
+            "who_it_affects": "AI developers that need computing capacity, communities facing data center construction, and other satellite operators and astronomers concerned about crowded orbits.",
             "sources": [
               {
-                "url": "https://www.cnbc.com/2026/11/18/anthropic-ipo-ai-offering-price.html",
-                "title": "Anthropic IPO raises over $81 billion in largest offering on record, topping SpaceX"
-              },
-              {
-                "url": "https://www.foxbusiness.com/markets/anthropic-begins-trading-nasdaq-record-breaking-ipo",
-                "title": "Anthropic begins trading on Nasdaq, tops SpaceX for biggest IPO ever"
+                "url": "https://www.washingtonexaminer.com/policy/technology/4815316/fcc-approves-spacex-launch-1-million-data-center-satellites/",
+                "title": "FCC approves SpaceX's plan to launch 1 million 'space data center' satellites"
               }
-            ]
+            ],
+            "source_note": "Only the opening of the Washington Examiner article was readable, and no second outlet or FCC document confirming the approval was found at publication time."
           }
         ]
       }
@@ -355,48 +457,38 @@
       {
         "topic": "other",
         "label": "Middle East",
-        "overview": "Shipping through the Strait of Hormuz, the route for about a fifth of the world's oil, remains dangerous. Iran says several more tankers hit mines this week, and the United States responded with new sanctions.",
+        "overview": "The U.S.–Israeli war with Iran, which began in late February, is again spreading to Gulf states that host U.S. forces. Negotiations are deadlocked, and attacks around the Strait of Hormuz are at their highest level of the war.",
         "items": [
           {
-            "headline": "Iran says tankers hit mines in the Strait of Hormuz despite U.S. naval escort",
-            "status": "Unconfirmed Iranian claims; U.S. sanctions widened",
-            "what_changed": "Iran's Revolutionary Guard said three oil tankers hit naval mines and caught fire on Nov. 23–24 while under U.S. military escort, and that two more hit mines on Nov. 25 after using what it called an unauthorized route. The U.S. military had not confirmed the incidents. The Treasury Department widened sanctions the same week.",
-            "what_it_does": "Iran is demanding that ships coordinate their passage with Tehran, using the threat of mines to enforce it, and it has been pressing that demand since the 2026 Hormuz crisis began. The U.S. escorts and sanctions aim to keep the strait open without accepting Iran's control.",
-            "who_it_affects": "Ship crews and tanker operators, and anyone who pays for fuel: disruptions in the strait push up global oil and gasoline prices.",
+            "headline": "Two Italian technicians killed in drone attack on a facility in Kuwait",
+            "status": "Attack Nov. 25–26; Iran denies involvement",
+            "what_changed": "Italy's foreign ministry said two Italian technicians working for the German arms maker Rheinmetall died after an Iranian strike on a facility in Kuwait. Kuwait's defense ministry said Iranian drones were intercepted and four people, the two Italians plus a Kuwaiti and a Pakistani, were hit by falling shrapnel.",
+            "what_it_does": "An Iranian armed forces spokesperson denied that Iran's military carried out any operation. The attack came just over a week after Kuwait said it repelled Iranian drones aimed at an airbase hosting U.S. forces, the first strikes on Kuwait in more than two months.",
+            "who_it_affects": "Foreign workers and residents in Gulf states hosting U.S. forces, and countries with citizens in the region. Recent exchanges have raised fears of a wider escalation.",
             "sources": [
               {
-                "url": "https://www.cnbc.com/2026/11/24/iran-trump-hormuz-crude-.html",
-                "title": "Iran says three tankers hit mines in Hormuz despite U.S. escort, as Treasury widens sanctions"
-              },
-              {
-                "url": "https://www.jpost.com/middle-east/iran-news/article-915899",
-                "title": "IRGC: Three tankers hit mines, exploded while transiting Hormuz with US support"
+                "url": "https://www.bbc.com/news/articles/c39w9y5dx4k5o",
+                "title": "Italy says two citizens killed in Iranian strike in Kuwait"
               }
-            ],
-            "source_note": "The tanker incidents are claims by Iran's Revolutionary Guard; independent confirmation was not available."
+            ]
           }
         ]
       },
       {
         "topic": "other",
-        "label": "Europe",
-        "overview": "U.S.-brokered peace talks between Russia and Ukraine ended without a ceasefire. Territory remains the sticking point.",
+        "label": "Asia",
+        "overview": "North Korea's leader called for broader deployment of tactical nuclear weapons, short-range weapons meant for battlefield use, amid a border dispute with South Korea. Myanmar's leader said the country will not comply with parts of last week's World Court genocide ruling (see International law).",
         "items": [
           {
-            "headline": "Russia–Ukraine talks in Abu Dhabi end without a ceasefire",
-            "status": "Talks ended; no agreement",
-            "what_changed": "The third round of U.S.-mediated talks among the United States, Ukraine, and Russia, held in Abu Dhabi beginning Nov. 10, ended without a ceasefire. Fighting continued during the talks.",
-            "what_it_does": "No terms changed. Russia still demands that Ukraine withdraw from the parts of the Donbas region it still holds. Ukraine refuses to give up territory Russia doesn't occupy. Both sides floated a prisoner exchange, the one area of possible agreement. The EU says it is assembling its own negotiating team.",
-            "who_it_affects": "Ukrainian and Russian civilians and soldiers, European security planning, and U.S. aid and diplomacy.",
-            "whats_next": "No date has been set for the next round.",
+            "headline": "Kim Jong Un calls for deploying tactical nuclear weapons 'across multiple domains'",
+            "status": "Policy statement via state media (Nov. 26)",
+            "what_changed": "During an inspection of nuclear material and weapons facilities, Kim Jong Un said North Korea is systematically expanding its nuclear material production and urged deploying tactical nuclear weapons 'for different missions,' according to state media KCNA as reported by Al Jazeera and Reuters.",
+            "what_it_does": "Kim said any attempt to deny North Korea's status as a nuclear-weapons state, which it wrote into its constitution in 2023, would be treated as 'an open declaration of war.' The statement comes amid a dispute over a September landmine blast in the demilitarized zone that injured three South Korean soldiers; a joint South Korea–UN investigation blamed the North, which then fired about 10 short-range ballistic missiles.",
+            "who_it_affects": "South Korea, Japan, and U.S. forces in the region. South Korea estimates the North has 80 to 120 nuclear warheads.",
             "sources": [
               {
-                "url": "https://www.semafor.com/article/11/11/2026/russia-ukraine-ceasefire-negotiations-stall",
-                "title": "Russia-Ukraine ceasefire negotiations stall"
-              },
-              {
-                "url": "https://www.euronews.com/2026/11/11/ukraine-russia-peace-talks-enter-second-day-with-territory-and-security-guarantees-in-focu",
-                "title": "Ukraine-Russia peace talks enter second day with territory and security guarantees in focus"
+                "url": "https://www.aljazeera.com/news/2026/11/26/kim-jong-un-says-north-korea-should-widen-deployment-of-tactical-nukes",
+                "title": "Kim Jong Un says North Korea should widen deployment of tactical nukes"
               }
             ]
           }
@@ -405,28 +497,87 @@
       {
         "topic": "other",
         "label": "International law",
-        "overview": "For the first time, the UN's top court has found that a country committed genocide.",
+        "overview": "Myanmar, the first state ever found to have violated the 1948 Genocide Convention, says it will not comply with parts of the ruling. The UN's top court has no police force; enforcement depends largely on the Security Council and other states.",
         "items": [
           {
-            "headline": "World Court rules Myanmar committed genocide against the Rohingya",
-            "status": "International Court of Justice judgment, Nov. 19 (9–6)",
-            "what_changed": "The International Court of Justice ruled 9–6 that Myanmar violated the Genocide Convention through its military's campaign against the Rohingya, a Muslim minority, in Rakhine State. It is the first time the court has found a state responsible for genocide.",
-            "what_it_does": "The court ordered Myanmar to support the safe and voluntary return of displaced Rohingya, reunite families, and restore property and rights. This is a ruling against the state, not a criminal case against individuals, and the court has no enforcement power of its own. Myanmar's military-backed government called the ruling \"unfair.\"",
-            "who_it_affects": "Roughly a million Rohingya refugees, most living in camps in Bangladesh, plus countries deciding whether to send Rohingya back. The ruling may also shape future genocide cases.",
+            "headline": "Myanmar says it will not comply with 'inappropriate' parts of World Court genocide ruling",
+            "status": "Government response to International Court of Justice ruling",
+            "what_changed": "Min Aung Hlaing, the coup leader who is now Myanmar's president, said the country 'would not comply with requirements it considered inappropriate' in last week's International Court of Justice (ICJ) ruling, according to state media. He did not say which parts.",
+            "what_it_does": "As the BBC reports, the ICJ ruled 9–6 that Myanmar committed genocide against its Rohingya Muslim minority in 2017 military operations in Rakhine State. The court found about 10,000 Rohingya were killed and about 815,000 were targeted, and more than 700,000 fled to Bangladesh. The case was brought by The Gambia in 2019. Myanmar denies genocide and says its forces responded to attacks by armed groups.",
+            "who_it_affects": "Rohingya refugees, most of them in camps in Bangladesh, and Rohingya still in Myanmar; also the credibility of the Genocide Convention.",
             "sources": [
               {
-                "url": "https://edition.cnn.com/2026/11/19/asia/icj-myanmar-genocide-rohingya-ruling-intl-hnk",
-                "title": "In historic first, UN top court rules a country committed genocide"
-              },
-              {
-                "url": "https://www.aljazeera.com/news/2026/11/19/what-the-icj-ruling-means-for-the-rohingya",
-                "title": "What the ICJ genocide ruling means for the Rohingya people"
-              },
-              {
-                "url": "https://www.hrw.org/news/2026/11/19/world-court-finds-myanmar-committed-rohingya-genocide",
-                "title": "World Court Finds Myanmar Committed Rohingya Genocide"
+                "url": "https://www.bbc.com/news/articles/c61wr87wyg5wo",
+                "title": "Myanmar refuses to comply with parts of ICJ genocide ruling"
               }
             ]
+          }
+        ]
+      },
+      {
+        "topic": "other",
+        "label": "Africa & global health",
+        "overview": "Africa has a major advance in HIV prevention and a worsening Ebola crisis at the same time. A cheap generic version of a twice-yearly HIV prevention shot has begun arriving. Meanwhile, Congo's Ebola outbreak has passed 12,000 cases as fighting disrupts the response, and a Kenyan court halted a U.S.-backed quarantine site.",
+        "items": [
+          {
+            "headline": "Low-cost generic HIV prevention shot begins arriving in Africa",
+            "status": "First shipments delivered (Nov. 25)",
+            "what_changed": "The first global shipment of generic lenacapavir, an injection given twice a year that prevents HIV infection, arrived in Zambia, the Global Fund said. Uganda is next, and Zimbabwe follows early next year.",
+            "what_it_does": "The generic is expected to cost about $40 per person per year, compared with about $28,000 a year for the original Gilead version in the U.S. In a 2024 trial of more than 5,000 young women and girls in Uganda and South Africa, none who received the shot contracted HIV. The World Health Organization recommended it for prevention in July 2025. Health experts say a twice-yearly shot avoids the daily pills and stigma of current prevention drugs.",
+            "who_it_affects": "People at risk of HIV across sub-Saharan Africa, where the disease burden is highest, and national health programs that buy prevention drugs.",
+            "sources": [
+              {
+                "url": "https://www.bbc.com/news/articles/cmly7jve72r2o",
+                "title": "Hope for millions as cheaper HIV prevention jab reaches Africa"
+              }
+            ]
+          },
+          {
+            "headline": "Congo's Ebola outbreak passes 12,000 cases as fighting forces out health workers",
+            "status": "Outbreak update (government data, Nov. 26)",
+            "what_changed": "The Democratic Republic of the Congo has confirmed at least 12,021 Ebola infections and 5,904 deaths, according to government data reported by Al Jazeera, AP, and Reuters. Response workers have had to leave affected areas as fighting intensifies in Ituri province.",
+            "what_it_does": "The outbreak, declared in mid-May, is caused by the rare Bundibugyo species of Ebola, for which there is no approved treatment or vaccine. Cases are now in eight of the country's 26 provinces. A WHO official said about a dozen people, including two WHO staff, were evacuated after three days trapped in a hospital amid crossfire between the army and an armed group.",
+            "who_it_affects": "Residents of eastern Congo and neighboring countries, and health and aid workers in conflict areas.",
+            "sources": [
+              {
+                "url": "https://www.aljazeera.com/news/2026/11/26/dr-congo-ebola-cases-surpass-12000-as-fighting-disrupts-response-in-east",
+                "title": "DR Congo Ebola cases surpass 12,000 as fighting disrupts response in east"
+              }
+            ]
+          },
+          {
+            "headline": "Kenyan court halts U.S.-backed Ebola quarantine site, citing lack of public disclosure",
+            "status": "Court ruling (Nov. 26)",
+            "what_changed": "Kenya's High Court ruled that the government violated the constitution by allowing construction of a U.S.-backed Ebola quarantine facility at Laikipia airbase near Nanyuki without disclosing the agreement or seeking public input, Al Jazeera reported, citing Reuters.",
+            "what_it_does": "The court ordered all further work stopped until the government discloses the U.S. agreement and holds public participation. The 50-bed facility was built to quarantine people exposed to Ebola, including U.S. citizens; seven American aid workers stayed there in July. Protests against the site have turned deadly.",
+            "who_it_affects": "Residents of Laikipia County, and U.S. and international aid workers responding to Congo's outbreak who would be quarantined there.",
+            "sources": [
+              {
+                "url": "https://www.aljazeera.com/news/2026/11/26/kenya-govt-violated-constitution-with-ebola-quarantine-site-court-says",
+                "title": "Kenya gov't violated constitution with Ebola quarantine site, court says"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "topic": "other",
+        "label": "Europe",
+        "overview": "Ukraine's U.S.-built fighter jets are wearing out. A pending U.S. sale of spare parts is aimed at returning grounded F-16s to service while peace talks remain stalled.",
+        "items": [
+          {
+            "headline": "State Department approves possible $622 million sale of F-16 parts to Ukraine",
+            "status": "Proposed foreign military sale approved by State Department",
+            "what_changed": "According to the Washington Examiner, the State Department approved the possible sale of $621.9 million in critical F-16 fighter jet parts to Ukraine.",
+            "what_it_does": "The Washington Examiner reports that much of Ukraine's F-16 fleet, all older models supplied by the U.S. and allies, is grounded by maintenance problems from heavy use, and that the parts could return aircraft to service. Ukraine has relied on the F-16s for air defense against Russian missiles and drones.",
+            "who_it_affects": "Ukraine's air force and air defenses. Congress has a review period before arms sales go ahead.",
+            "sources": [
+              {
+                "url": "https://www.washingtonexaminer.com/policy/defense/4815739/state-department-approves-possible-sale-ukraine-f-16-parts-amid-overuse/",
+                "title": "State Department approves possible sale to Ukraine of critical F-16 parts"
+              }
+            ],
+            "source_note": "Only the opening of the Washington Examiner article was readable, and no official notice was found at publication time."
           }
         ]
       }
