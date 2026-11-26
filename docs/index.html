@@ -1,0 +1,250 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="robots" content="noindex">
+<meta name="color-scheme" content="light dark">
+<title>Policy Briefing — Thursday, November 26, 2026</title>
+<style>
+:root{--bg:#f7f5f0;--card:#fff;--ink:#1c1b19;--muted:#5f5b53;--line:#e4dfd4;--accent:#1f4e79;
+--labor:#8a4b0f;--labor-bg:#fbeedd;--health:#0d6b58;--health-bg:#dff3ec;--edu:#5a3d8a;--edu-bg:#ece5f7;
+--other:#4a4a4a;--other-bg:#ececec;--warn:#8a1c1c;--warn-bg:#fdecea;--caut:#7a5a00;--caut-bg:#fff6d9;
+--ok:#1d6b35;--ok-bg:#e2f3e7}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#151514;--card:#1f1f1d;--ink:#ecebe7;
+--muted:#a9a59c;--line:#34332f;--accent:#8fb8e3;--labor:#f0b070;--labor-bg:#3a2a18;--health:#6fd3b8;
+--health-bg:#17332b;--edu:#c3a9f0;--edu-bg:#2c2440;--other:#cfcfcf;--other-bg:#2e2e2e;--warn:#f2a3a3;
+--warn-bg:#3b1d1d;--caut:#f1d27a;--caut-bg:#3a3117;--ok:#8fdba5;--ok-bg:#1b3323}}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.55 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif}
+a{color:var(--accent)}
+.wrap{max-width:680px;margin:0 auto;padding:0 16px 48px}
+header.top{padding:28px 0 8px}
+.kicker{font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin:0}
+h1{font-size:28px;line-height:1.2;margin:4px 0 2px}
+.date{color:var(--muted);margin:0}
+.stale{display:none;background:var(--caut-bg);color:var(--caut);border-radius:10px;padding:10px 12px;margin:14px 0 0;font-size:15px}
+.note{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:12px 14px;margin:16px 0 0;font-size:16px}
+nav.jump{position:sticky;top:0;z-index:5;background:var(--bg);display:flex;gap:8px;padding:10px 0;margin-top:12px;border-bottom:1px solid var(--line);overflow-x:auto}
+nav.jump a{flex:0 0 auto;text-decoration:none;color:var(--ink);background:var(--card);border:1px solid var(--line);border-radius:999px;padding:6px 12px;font-size:14px;font-weight:600}
+nav.jump a span{color:var(--muted);font-weight:500;margin-left:4px}
+section.sec{scroll-margin-top:60px}
+h2{font-size:22px;margin:28px 0 10px;padding-bottom:6px;border-bottom:2px solid var(--ink)}
+.empty{color:var(--muted);font-style:italic}
+.story{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px;margin:0 0 14px}
+.tags{display:flex;flex-wrap:wrap;gap:6px;align-items:center}
+.topic{font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.05em;border-radius:6px;padding:2px 8px}
+.tp-labor{color:var(--labor);background:var(--labor-bg)}.tp-healthcare{color:var(--health);background:var(--health-bg)}
+.tp-education{color:var(--edu);background:var(--edu-bg)}.tp-other{color:var(--other);background:var(--other-bg)}
+.status{font-size:13px;color:var(--muted)}
+.story h3{font-size:19px;line-height:1.3;margin:8px 0 10px}
+dl{margin:0}.row{margin:0 0 10px}
+dt{font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.05em;color:var(--muted)}
+dd{margin:2px 0 0}
+.trust{border-radius:10px;padding:10px 12px;margin:0 0 12px;font-size:15px}
+.trust p{margin:0 0 4px}.trust ul{margin:4px 0 0;padding-left:18px}
+.trust-h{font-weight:700}
+.trust.warning{background:var(--warn-bg);color:var(--warn);border-left:4px solid var(--warn)}
+.trust.caution{background:var(--caut-bg);color:var(--caut);border-left:4px solid var(--caut)}
+.src-h{font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.05em;color:var(--muted);margin:12px 0 4px}
+.sources{list-style:none;margin:0;padding:0}
+.sources li{padding:8px 0;border-top:1px solid var(--line);font-size:15px;overflow-wrap:anywhere}
+.src-meta{display:flex;flex-wrap:wrap;gap:6px;align-items:center;margin-top:3px;font-size:13px;color:var(--muted)}
+.outlet{font-weight:600;color:var(--ink)}
+.chip{border-radius:6px;padding:1px 7px;font-weight:600}
+.t-primary,.t-high{color:var(--ok);background:var(--ok-bg)}
+.t-mostly{color:var(--other);background:var(--other-bg)}
+.t-mixed{color:var(--caut);background:var(--caut-bg)}
+.t-low,.t-unrated{color:var(--warn);background:var(--warn-bg)}
+.spectrum{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px 16px;margin:28px 0 0}
+.sp-h{margin:0 0 8px;font-weight:700;font-size:15px}
+.sp-row{display:grid;grid-template-columns:repeat(5,1fr);gap:6px;text-align:center}
+.sp-cell{background:var(--bg);border-radius:8px;padding:6px 2px}
+.sp-n{display:block;font-size:20px;font-weight:700}.sp-l{display:block;font-size:11px;color:var(--muted)}
+.sp-f{margin:8px 0 0;font-size:13px;color:var(--muted)}
+footer{margin-top:28px;font-size:14px;color:var(--muted)}
+footer p{margin:0 0 8px}
+.archive li{margin:0 0 8px}
+</style>
+
+</head>
+<body><div class="wrap">
+<header class="top">
+  <p class="kicker">Morning Policy Briefing</p>
+  <h1>What changed, and who it affects</h1>
+  <p class="date">Thursday, November 26, 2026</p>
+  <p class="stale" id="stale"></p>
+  <p class="note">Happy Thanksgiving. This is a test edition built while setting up the briefing. Congress and both state legislatures are on holiday recess, so it rounds up the most important policy moves of the past week instead of the past 24 hours. Regular editions start tomorrow morning.</p>
+</header>
+<nav class="jump" aria-label="Sections"><a href="#federal">Federal<span>6</span></a><a href="#massachusetts">Mass.<span>3</span></a><a href="#new_hampshire">N.H.<span>3</span></a></nav>
+<section class="sec" id="federal"><h2>Federal</h2>
+<article class="story">
+  <div class="tags"><span class="topic tp-labor">Labor</span><span class="status">Final rule; takes effect 60 days after Federal Register publication</span></div>
+  <h3>Labor Department finalizes rule making it easier to classify workers as independent contractors</h3>
+  <aside class="trust caution" role="note"><p class="trust-h">Source note</p><p>Some details here come from an outlet with a weaker reliability rating; the core facts are backed by a highly rated source.</p><ul><li><strong>Rated mixed reliability.</strong> Washington Examiner — lean: Right. Media Bias/Fact Check: Right / Mixed factual. Ad Fontes Media: Skews Right / Mixed reliability.</li></ul></aside>
+  <dl>
+    <div class="row"><dt>What changed</dt><dd>On Nov. 19 the Labor Department finalized a rule that replaces the 2024 standard for deciding whether a worker is an employee or an independent contractor. It returns to an &quot;economic reality&quot; test much like the one the department adopted in 2021.</dd></div>
+    <div class="row"><dt>What it does</dt><dd>The test gives the most weight to two questions: how much control the business has over the work, and whether the worker can earn a profit or take a loss through their own initiative or investment. Other factors, such as specialized skill and how permanent the relationship is, count for less. For the first time, the same standard also applies under the Family and Medical Leave Act and the farmworker protection law, not just the Fair Labor Standards Act (the federal minimum-wage and overtime law).</dd></div>
+    <div class="row"><dt>Who it affects</dt><dd>Gig workers, truck drivers, construction trades, and other workers whose status is disputed. Independent contractors are not covered by federal minimum wage, overtime, or family-leave rights. Business groups backed the change, and worker advocates said it will make misclassification easier. The rule does not override stricter state laws such as Massachusetts&#x27; worker classification law.</dd></div>
+    <div class="row"><dt>What's next</dt><dd>Takes effect 60 days after it is published in the Federal Register. Legal challenges are likely, as with earlier versions.</dd></div>
+  </dl>
+  <p class="src-h">Sources</p>
+  <ul class="sources"><li><a href="https://www.hrdive.com/news/dol-flips-independent-contractor-switch-back-with-new-final-rule/875183/" target="_blank" rel="noopener">DOL flips independent contractor switch back with new final rule</a><span class="src-meta"><span class="outlet">HR Dive</span><span class="chip t-high" title="HR Dive — lean: Center. Media Bias/Fact Check: Least Biased / High factual. Ad Fontes Media: Not rated.">Rated highly reliable</span><span class="lean">Center</span></span></li><li><a href="https://www.dol.gov/agencies/whd/flsa/misclassification/2026rulemaking" target="_blank" rel="noopener">Final Rule: Employee or Independent Contractor Status (Labor Department)</a><span class="src-meta"><span class="outlet">U.S. federal agency</span><span class="chip t-primary" title="U.S. federal agency — lean: n/a (agency&amp;#x27;s own statement). Media Bias/Fact Check: n/a. Ad Fontes Media: n/a.">Official government document or record</span><span class="lean">n/a (agency&#x27;s own statement)</span></span></li><li><a href="https://www.washingtonexaminer.com/?p=4472935" target="_blank" rel="noopener">Labor Department announces plan to roll back Biden gig worker rule (February proposal)</a><span class="src-meta"><span class="outlet">Washington Examiner</span><span class="chip t-mixed" title="Washington Examiner — lean: Right. Media Bias/Fact Check: Right / Mixed factual. Ad Fontes Media: Skews Right / Mixed reliability.">Rated mixed reliability</span><span class="lean">Right</span></span></li></ul>
+</article>
+<article class="story">
+  <div class="tags"><span class="topic tp-healthcare">Health care</span><span class="status">Federal guidance issued Nov. 13; lawsuit pending</span></div>
+  <h3>States get an optional six-month grace period on Medicaid work requirements; four states sue</h3>
+  <aside class="trust caution" role="note"><p class="trust-h">Source note</p><p>Some details here come from an outlet with a weaker reliability rating; the core facts are backed by a highly rated source.</p><ul><li><strong>Rated low reliability.</strong> The Epoch Times — lean: Right. Media Bias/Fact Check: Questionable (Right) / Mixed factual. Ad Fontes Media: Skews Right / Mixed reliability.</li></ul></aside>
+  <dl>
+    <div class="row"><dt>What changed</dt><dd>The Centers for Medicare &amp; Medicaid Services (CMS) said on Nov. 13 that states can take a six-month &quot;hold harmless&quot; period before enforcing the new Medicaid work requirement. The requirement still formally starts in January. Separately, Oregon, Minnesota, New Mexico, and Washington have sued to stop the requirements.</dd></div>
+    <div class="row"><dt>What it does</dt><dd>Under the 2025 budget law, many adults covered through Medicaid expansion must show at least 80 hours a month of work, volunteering, or school to keep coverage. During the grace period, states must still set up the system and check compliance, but people would not lose coverage for failing the requirement until mid-2027. The lawsuit argues that the federal government lacks the authority to impose the changes the way it has and that withholding Medicaid funds would be unconstitutional.</dd></div>
+    <div class="row"><dt>Who it affects</dt><dd>Millions of low-income adults on Medicaid, and the state agencies that must verify their hours. Some states, including Iowa, South Dakota, Indiana, and Nebraska, have said they will not use the grace period. According to The Epoch Times, 19 states and D.C. have asked for a broader delay.</dd></div>
+    <div class="row"><dt>What's next</dt><dd>Requirement begins in January. States choosing the grace period would start enforcing by about July 2027.</dd></div>
+  </dl>
+  <p class="src-h">Sources</p>
+  <ul class="sources"><li><a href="https://www.washingtonpost.com/health/2026/11/13/states-can-delay-controversial-medicaid-work-requirement-six-months/" target="_blank" rel="noopener">States can delay controversial Medicaid work requirement for six months</a><span class="src-meta"><span class="outlet">The Washington Post</span><span class="chip t-mostly" title="The Washington Post — lean: Center-Left. Media Bias/Fact Check: Left-Center / Mostly factual. Ad Fontes Media: Skews Left / Reliable.">Rated mostly reliable</span><span class="lean">Center-Left</span></span></li><li><a href="https://thehill.com/policy/healthcare/6220069-trump-delays-medicaid-work-requirements/" target="_blank" rel="noopener">Trump administration delays Medicaid work requirement enforcement</a><span class="src-meta"><span class="outlet">The Hill</span><span class="chip t-high" title="The Hill — lean: Center. Media Bias/Fact Check: Least Biased / High factual. Ad Fontes Media: Middle / Reliable.">Rated highly reliable</span><span class="lean">Center</span></span></li><li><a href="https://www.statnews.com/2026/11/06/states-sue-trump-delay-medicaid-work-requirements/" target="_blank" rel="noopener">States sue Trump administration again to delay Medicaid work requirements</a><span class="src-meta"><span class="outlet">STAT</span><span class="chip t-high" title="STAT — lean: Center. Media Bias/Fact Check: Least Biased / High factual. Ad Fontes Media: Middle / Reliable.">Rated highly reliable</span><span class="lean">Center</span></span></li><li><a href="https://www.theepochtimes.com/us/19-states-plus-dc-ask-to-delay-medicaid-work-requirements-6128835" target="_blank" rel="noopener">19 States Plus DC Ask to Delay Medicaid Work Requirements</a><span class="src-meta"><span class="outlet">The Epoch Times</span><span class="chip t-low" title="The Epoch Times — lean: Right. Media Bias/Fact Check: Questionable (Right) / Mixed factual. Ad Fontes Media: Skews Right / Mixed reliability.">Rated low reliability</span><span class="lean">Right</span></span></li></ul>
+</article>
+<article class="story">
+  <div class="tags"><span class="topic tp-healthcare">Health care</span><span class="status">Proposed rule; comments due Jan. 19, 2027</span></div>
+  <h3>CMS proposes broad anti-fraud rules for Medicare, Medicaid, and ACA marketplace plans</h3>
+  
+  <dl>
+    <div class="row"><dt>What changed</dt><dd>On Nov. 16 the administration proposed a package of anti-fraud rules covering Medicare Advantage, Medicaid, and the Affordable Care Act (ACA) insurance marketplaces.</dd></div>
+    <div class="row"><dt>What it does</dt><dd>State Medicaid agencies could suspend payments to a provider based on a credible fraud finding by CMS or another federal agency. Providers would have to report and return overpayments within 60 days. Insurance agents and brokers with certain felony convictions would be barred from the ACA marketplaces, and CMS could suspend brokers facing credible abuse allegations. CMS estimates about $90 billion in federal savings over 10 years.</dd></div>
+    <div class="row"><dt>Who it affects</dt><dd>Health care providers and insurers billing federal programs, ACA insurance brokers, and state Medicaid agencies. Patients are affected indirectly if providers face suspended payments.</dd></div>
+    <div class="row"><dt>What's next</dt><dd>Public comments are due Jan. 19, 2027, before CMS can finalize the rule.</dd></div>
+  </dl>
+  <p class="src-h">Sources</p>
+  <ul class="sources"><li><a href="https://news.bgov.com/health-law-and-business/rfk-jr-oz-release-rules-on-fraud-in-medicare-medicaid-aca" target="_blank" rel="noopener">RFK Jr., Oz Release Rules on Fraud in Medicare, Medicaid, ACA</a><span class="src-meta"><span class="outlet">Bloomberg Law / Bloomberg Government</span><span class="chip t-high" title="Bloomberg Law / Bloomberg Government — lean: Center. Media Bias/Fact Check: Not separately rated (see Bloomberg). Ad Fontes Media: Middle / Reliable.">Rated highly reliable</span><span class="lean">Center</span></span></li><li><a href="https://www.healthcaredive.com/news/cms-proposes-sweeping-reforms-to-curb-healthcare-fraud/875059/" target="_blank" rel="noopener">CMS proposes sweeping reforms to curb healthcare fraud</a><span class="src-meta"><span class="outlet">Healthcare Dive</span><span class="chip t-high" title="Healthcare Dive — lean: Center. Media Bias/Fact Check: Least Biased / High factual. Ad Fontes Media: Not rated.">Rated highly reliable</span><span class="lean">Center</span></span></li><li><a href="https://www.beckershospitalreview.com/legal-regulatory-issues/cms-targets-90b-in-savings-with-sweeping-new-anti-fraud-rule/" target="_blank" rel="noopener">CMS targets $90B in savings with sweeping new anti-fraud rule</a><span class="src-meta"><span class="outlet">Becker&#x27;s Hospital Review</span><span class="chip t-mostly" title="Becker&amp;#x27;s Hospital Review — lean: Center. Media Bias/Fact Check: Not rated (trade publication). Ad Fontes Media: Not rated.">Rated mostly reliable</span><span class="lean">Center</span></span></li></ul>
+</article>
+<article class="story">
+  <div class="tags"><span class="topic tp-healthcare">Health care</span><span class="status">Open enrollment underway; extension requested, not granted</span></div>
+  <h3>New ID checks are slowing ACA sign-ups; groups ask CMS to extend the Dec. 15 deadline</h3>
+  
+  <dl>
+    <div class="row"><dt>What changed</dt><dd>New identity-verification steps on HealthCare.gov are causing online applications to time out, according to reporting by The Texas Tribune. Advocacy groups and insurance brokers have asked CMS to push the Dec. 15 deadline (for coverage starting Jan. 1) to Dec. 31. CMS has not agreed.</dd></div>
+    <div class="row"><dt>What it does</dt><dd>The checks are part of the administration&#x27;s effort against improper enrollments. CMS says it flagged 315,000 marketplace plans covering about 760,000 people as potentially fraudulent. All were broker-assisted and lacked a verified Social Security or immigration document number. CMS says help is available through HealthCare.gov, its call center, and local enrollment helpers.</dd></div>
+    <div class="row"><dt>Who it affects</dt><dd>People buying their own health insurance through HealthCare.gov states. Massachusetts and New Hampshire residents are affected differently: Massachusetts runs its own marketplace (the Health Connector), while New Hampshire uses HealthCare.gov.</dd></div>
+    <div class="row"><dt>What's next</dt><dd>Dec. 15 is the deadline for Jan. 1 coverage unless CMS extends it.</dd></div>
+  </dl>
+  <p class="src-h">Sources</p>
+  <ul class="sources"><li><a href="https://www.kera.org/2026/11/25/new-aca-identity-checks-delay-health-insurance-enrollment/" target="_blank" rel="noopener">New ACA identity checks delay health insurance enrollment</a><span class="src-meta"><span class="outlet">KERA News (public radio, Dallas; often republishes The Texas Tribune)</span><span class="chip t-high" title="KERA News (public radio, Dallas; often republishes The Texas Tribune) — lean: Center-Left. Media Bias/Fact Check: Not separately rated (see Texas Tribune / NPR). Ad Fontes Media: Not rated.">Rated highly reliable</span><span class="lean">Center-Left</span></span></li></ul>
+</article>
+<article class="story">
+  <div class="tags"><span class="topic tp-education">Education</span><span class="status">Final rule published mid-November</span></div>
+  <h3>Head Start wage and benefit requirements for teachers are rescinded</h3>
+  
+  <dl>
+    <div class="row"><dt>What changed</dt><dd>The federal Administration for Children and Families finalized a rule removing the 2024 requirements that Head Start programs raise teacher and staff pay toward public-school levels and provide specified benefits.</dd></div>
+    <div class="row"><dt>What it does</dt><dd>Head Start programs no longer have to meet the pay-parity and benefit mandates. HHS called them an unfunded mandate and estimates programs avoid more than $2 billion in future costs. When the requirements were adopted, the government had estimated that meeting them without new money could cut funded enrollment by more than 100,000 slots. That was the trade-off supporters and critics argued over.</dd></div>
+    <div class="row"><dt>Who it affects</dt><dd>Head Start teachers and staff, who are often paid far less than public-school teachers, and the low-income families of young children whom Head Start serves. Head Start programs in Massachusetts and New Hampshire are affected too.</dd></div>
+    <div class="row"><dt>What's next</dt><dd>Reports differ on the effective date (about 60 days after publication, around mid-January 2027). The Federal Register notice is the authority.</dd></div>
+  </dl>
+  <p class="src-h">Sources</p>
+  <ul class="sources"><li><a href="https://www.edweek.org/teaching-learning/trump-admin-finalizes-rollback-of-required-raises-for-head-start-teachers/2026/11" target="_blank" rel="noopener">Trump admin. finalizes rollback of required raises for Head Start teachers</a><span class="src-meta"><span class="outlet">Education Week</span><span class="chip t-high" title="Education Week — lean: Center. Media Bias/Fact Check: Least Biased / High factual. Ad Fontes Media: Middle / Reliable.">Rated highly reliable</span><span class="lean">Center</span></span></li><li><a href="https://www.k12dive.com/news/hhs-rule-rolls-back-head-start-wage-and-benefit-requirements/874689/" target="_blank" rel="noopener">HHS rule rolls back Head Start wage and benefit requirements</a><span class="src-meta"><span class="outlet">K-12 Dive</span><span class="chip t-high" title="K-12 Dive — lean: Center. Media Bias/Fact Check: Least Biased / High factual. Ad Fontes Media: Not rated.">Rated highly reliable</span><span class="lean">Center</span></span></li><li><a href="https://newhampshirebulletin.com/2026/11/23/trump-administration-rescinds-rule-that-would-boost-staff-recruitment-and-retention-for-head-start/" target="_blank" rel="noopener">Trump administration rescinds rule that would boost staff recruitment and retention for Head Start</a><span class="src-meta"><span class="outlet">New Hampshire Bulletin</span><span class="chip t-high" title="New Hampshire Bulletin — lean: Center-Left. Media Bias/Fact Check: Left-Center / High factual. Ad Fontes Media: Not rated.">Rated highly reliable</span><span class="lean">Center-Left</span></span></li></ul>
+</article>
+<article class="story">
+  <div class="tags"><span class="topic tp-other">Energy</span><span class="status">Passed Senate 62–33; House vote expected after Thanksgiving</span></div>
+  <h3>Senate passes bipartisan overhaul of federal permitting for power lines, energy, and mining</h3>
+  
+  <dl>
+    <div class="row"><dt>What changed</dt><dd>The Senate passed the Bipartisan American Affordability and Jobs Act on Nov. 19 by a 62–33 vote.</dd></div>
+    <div class="row"><dt>What it does</dt><dd>The bill overhauls how federal agencies review and approve projects such as electric transmission lines, energy facilities, and mines, aiming to shorten reviews and limit delays.</dd></div>
+    <div class="row"><dt>Who it affects</dt><dd>Energy and mining developers, utilities and electricity customers, communities near proposed projects, and groups that use the review process to challenge projects.</dd></div>
+    <div class="row"><dt>What's next</dt><dd>House Republican leaders plan a floor vote after the Thanksgiving recess.</dd></div>
+  </dl>
+  <p class="src-h">Sources</p>
+  <ul class="sources"><li><a href="https://www.rollcall.com/2026/11/19/sweeping-permitting-overhaul-passes-senate-on-to-house" target="_blank" rel="noopener">Sweeping permitting overhaul passes Senate, on to House</a><span class="src-meta"><span class="outlet">Roll Call</span><span class="chip t-high" title="Roll Call — lean: Center. Media Bias/Fact Check: Least Biased / High factual. Ad Fontes Media: Middle / Reliable.">Rated highly reliable</span><span class="lean">Center</span></span></li><li><a href="https://axios.com/2026/11/25/house-energy-permitting-bill-vote-schedule" target="_blank" rel="noopener">Get ready for the House energy permitting bill vote</a><span class="src-meta"><span class="outlet">Axios</span><span class="chip t-high" title="Axios — lean: Center-Left. Media Bias/Fact Check: Left-Center / High factual. Ad Fontes Media: Middle / Reliable.">Rated highly reliable</span><span class="lean">Center-Left</span></span></li></ul>
+</article></section><section class="sec" id="massachusetts"><h2>Massachusetts</h2>
+<article class="story">
+  <div class="tags"><span class="topic tp-healthcare">Health care</span><span class="status">In House–Senate negotiations</span></div>
+  <h3>House and Senate negotiators face a deadline on a bill to steer more health spending to primary care</h3>
+  
+  <dl>
+    <div class="row"><dt>What changed</dt><dd>Lawmakers are trying to settle differences between House and Senate versions of a primary care bill before an approaching deadline.</dd></div>
+    <div class="row"><dt>What it does</dt><dd>Both versions would have hospitals and health systems put 15% of their spending toward primary care without raising total health costs. The Senate version sets 2030 as the target year, and the House version sets 2036. The Senate bill also aims at affordability and long wait times for appointments.</dd></div>
+    <div class="row"><dt>Who it affects</dt><dd>Patients who struggle to find or wait to see a primary care doctor, primary care physicians, and hospital systems that would have to shift spending. A union of Mass General Brigham primary care doctors has urged a final deal.</dd></div>
+    <div class="row"><dt>What's next</dt><dd>A compromise bill needs approval from both chambers and the governor&#x27;s signature.</dd></div>
+  </dl>
+  <p class="src-h">Sources</p>
+  <ul class="sources"><li><a href="https://www.bostonglobe.com/2026/11/23/metro/massachusetts-legislature-bill-primary-care-crisis/" target="_blank" rel="noopener">Mass. lawmakers&#x27; talks over primary care bill face deadline</a><span class="src-meta"><span class="outlet">The Boston Globe</span><span class="chip t-high" title="The Boston Globe — lean: Center-Left. Media Bias/Fact Check: Left-Center / High factual. Ad Fontes Media: Skews Left / Reliable.">Rated highly reliable</span><span class="lean">Center-Left</span></span></li><li><a href="https://malegislature.gov/PressRoom/Detail?pressReleaseId=1406" target="_blank" rel="noopener">Senate Bill Takes Aim at Health Care Affordability, Primary Care Shortages and Long Wait Times</a><span class="src-meta"><span class="outlet">Commonwealth of Massachusetts</span><span class="chip t-primary" title="Commonwealth of Massachusetts — lean: n/a (state&amp;#x27;s own statement). Media Bias/Fact Check: n/a. Ad Fontes Media: n/a.">Official government document or record</span><span class="lean">n/a (state&#x27;s own statement)</span></span></li></ul>
+</article>
+<article class="story">
+  <div class="tags"><span class="topic tp-healthcare">Health care</span><span class="status">House and Senate versions differ</span></div>
+  <h3>House and Senate still need to agree on a $2+ billion budget bill, mostly for MassHealth</h3>
+  
+  <dl>
+    <div class="row"><dt>What changed</dt><dd>Both chambers have produced their own versions of the supplemental budget to close out fiscal 2026. The two need to be merged into one bill.</dd></div>
+    <div class="row"><dt>What it does</dt><dd>The House bill (H 5700) puts about $1.8 billion toward MassHealth, the state Medicaid program, and dropped the governor&#x27;s proposed Health Care Stabilization Fund and gas-tax suspension. The Senate&#x27;s $2.61 billion version (S 3290) also has about $1.8 billion for MassHealth, plus $52 million for nursing home rates, $368 million for the Student Opportunity Act school-funding fund, and $18.5 million for early education subsidies.</dd></div>
+    <div class="row"><dt>Who it affects</dt><dd>MassHealth members and providers, nursing homes, school districts that receive Student Opportunity Act money, and families using child care subsidies.</dd></div>
+    <div class="row"><dt>What's next</dt><dd>A House–Senate compromise, then the governor&#x27;s signature.</dd></div>
+  </dl>
+  <p class="src-h">Sources</p>
+  <ul class="sources"><li><a href="https://www.wbur.org/news/2026/10/30/senate-supplemental-spending-bill-house-healey" target="_blank" rel="noopener">Senate loads up supplemental spending bill with policy riders</a><span class="src-meta"><span class="outlet">WBUR</span><span class="chip t-high" title="WBUR — lean: Center-Left. Media Bias/Fact Check: Left-Center / High factual. Ad Fontes Media: Not rated.">Rated highly reliable</span><span class="lean">Center-Left</span></span></li><li><a href="https://www.wbur.org/news/2026/10/21/supplemental-budget-house-gas-tax-health-funding" target="_blank" rel="noopener">What did and didn&#x27;t make it into the Mass. House&#x27;s supplemental budget bill</a><span class="src-meta"><span class="outlet">WBUR</span><span class="chip t-high" title="WBUR — lean: Center-Left. Media Bias/Fact Check: Left-Center / High factual. Ad Fontes Media: Not rated.">Rated highly reliable</span><span class="lean">Center-Left</span></span></li></ul>
+</article>
+<article class="story">
+  <div class="tags"><span class="topic tp-other">Housing</span><span class="status">Proposal; no bill passed</span></div>
+  <h3>After Question 7 failed, Healey asks the Legislature to pass a starter-home bill</h3>
+  <aside class="trust caution" role="note"><p class="trust-h">Source note</p><p>This story comes only from outlets rated mostly (not highly) reliable:</p><ul><li><strong>Rated mostly reliable.</strong> Boston.com — lean: Center-Left. Media Bias/Fact Check: Left-Center / Mostly factual. Ad Fontes Media: Not rated.</li></ul></aside>
+  <dl>
+    <div class="row"><dt>What changed</dt><dd>Gov. Healey said she wants lawmakers to pass a standalone bill allowing single-family &quot;starter homes&quot; on smaller lots, after voters narrowly rejected Question 7 on Nov. 3.</dd></div>
+    <div class="row"><dt>What it does</dt><dd>Question 7 would have allowed single-family homes on lots as small as 5,000 square feet statewide, overriding larger local minimum lot sizes. It did not set a limit on house size. A legislative version could change those details. Separately, a Senate-backed idea to allow duplexes by right on all residential lots is in private House–Senate talks.</dd></div>
+    <div class="row"><dt>Who it affects</dt><dd>First-time homebuyers, cities and towns that set their own zoning (the Massachusetts Municipal Association opposed Question 7), and builders.</dd></div>
+    <div class="row"><dt>What's next</dt><dd>The governor has signaled she wants action after the holidays.</dd></div>
+  </dl>
+  <p class="src-h">Sources</p>
+  <ul class="sources"><li><a href="https://www.boston.com/news/politics/2026/11/17/a-measure-pitched-as-promising-more-starter-homes-failed-at-the-ballot-maura-healey-wants-the-legislature-to-pass-it/" target="_blank" rel="noopener">A measure pitched as promising more starter homes failed at the ballot. Maura Healey wants the Legislature to pass it.</a><span class="src-meta"><span class="outlet">Boston.com</span><span class="chip t-mostly" title="Boston.com — lean: Center-Left. Media Bias/Fact Check: Left-Center / Mostly factual. Ad Fontes Media: Not rated.">Rated mostly reliable</span><span class="lean">Center-Left</span></span></li></ul>
+</article></section><section class="sec" id="new_hampshire"><h2>New Hampshire</h2>
+<article class="story">
+  <div class="tags"><span class="topic tp-education">Education</span><span class="status">Proposals for the 2027 session</span></div>
+  <h3>Democrats with new legislative majorities plan changes to school funding</h3>
+  
+  <dl>
+    <div class="row"><dt>What changed</dt><dd>After the Nov. 3 election gave Democrats majorities in the Legislature, Democratic lawmakers say they will revisit how the state funds schools.</dd></div>
+    <div class="row"><dt>What it does</dt><dd>Rep. Dave Luneau plans to reintroduce &quot;opportunity grants,&quot; which would end uniform per-pupil state aid and instead adjust funding for each district based on factors like poverty and special education needs.</dd></div>
+    <div class="row"><dt>Who it affects</dt><dd>School districts, especially property-poor districts with high needs, and local property taxpayers, since state aid affects how much towns must raise locally. Republican Gov. Kelly Ayotte, re-elected Nov. 3, would have to sign any change.</dd></div>
+    <div class="row"><dt>What's next</dt><dd>Bills will be filed for the session that begins in January.</dd></div>
+  </dl>
+  <p class="src-h">Sources</p>
+  <ul class="sources"><li><a href="https://newhampshirebulletin.com/2026/11/16/with-their-new-legislative-majorities-nh-democrats-eye-education-changes/" target="_blank" rel="noopener">With their new legislative majorities, NH Democrats eye education changes</a><span class="src-meta"><span class="outlet">New Hampshire Bulletin</span><span class="chip t-high" title="New Hampshire Bulletin — lean: Center-Left. Media Bias/Fact Check: Left-Center / High factual. Ad Fontes Media: Not rated.">Rated highly reliable</span><span class="lean">Center-Left</span></span></li></ul>
+</article>
+<article class="story">
+  <div class="tags"><span class="topic tp-education">Education</span><span class="status">Approved by local voters Nov. 3</span></div>
+  <h3>91 school districts adopted property-tax caps; budgets must now fit them</h3>
+  
+  <dl>
+    <div class="row"><dt>What changed</dt><dd>Under a new state law, voters in 91 of 168 school districts approved caps on school property-tax growth, clearing the required 60% vote.</dd></div>
+    <div class="row"><dt>What it does</dt><dd>In those districts, school boards must now write budgets that fit the cap on how much the local school tax can grow, unless voters approve exceptions the law allows.</dd></div>
+    <div class="row"><dt>Who it affects</dt><dd>Students, teachers, and school staff in those districts, where budget growth will be limited, and property owners, whose school taxes will rise more slowly.</dd></div>
+    <div class="row"><dt>What's next</dt><dd>School boards are drafting budgets now for spring town and district meetings.</dd></div>
+  </dl>
+  <p class="src-h">Sources</p>
+  <ul class="sources"><li><a href="https://newhampshirebulletin.com/2026/11/10/dozens-of-nh-school-districts-adopted-tax-caps-now-a-balancing-act-begins/" target="_blank" rel="noopener">Dozens of NH school districts adopted tax caps. Now, a balancing act begins.</a><span class="src-meta"><span class="outlet">New Hampshire Bulletin</span><span class="chip t-high" title="New Hampshire Bulletin — lean: Center-Left. Media Bias/Fact Check: Left-Center / High factual. Ad Fontes Media: Not rated.">Rated highly reliable</span><span class="lean">Center-Left</span></span></li></ul>
+</article>
+<article class="story">
+  <div class="tags"><span class="topic tp-other">Child care</span><span class="status">Agency budget request</span></div>
+  <h3>Health and Human Services asks for more child care money in the next two-year budget</h3>
+  
+  <dl>
+    <div class="row"><dt>What changed</dt><dd>The Department of Health and Human Services is asking for more state funding for its child care scholarship program in the next two-year budget.</dd></div>
+    <div class="row"><dt>What it does</dt><dd>The request responds to a funding gap: the department budgeted just over $25 million for the scholarship program in fiscal 2026, but spent more than $52 million.</dd></div>
+    <div class="row"><dt>Who it affects</dt><dd>Low- and moderate-income working families who rely on child care scholarships, and child care providers.</dd></div>
+    <div class="row"><dt>What's next</dt><dd>Agency requests feed into Gov. Ayotte&#x27;s budget proposal, due early next year, and then go to the Legislature.</dd></div>
+  </dl>
+  <p class="src-h">Sources</p>
+  <ul class="sources"><li><a href="https://newhampshirebulletin.com/2026/11/19/health-and-human-services-proposes-more-funding-for-childcare-in-next-two-year-budget/" target="_blank" rel="noopener">Health and Human Services proposes more funding for childcare in next two-year budget</a><span class="src-meta"><span class="outlet">New Hampshire Bulletin</span><span class="chip t-high" title="New Hampshire Bulletin — lean: Center-Left. Media Bias/Fact Check: Left-Center / High factual. Ad Fontes Media: Not rated.">Rated highly reliable</span><span class="lean">Center-Left</span></span></li></ul>
+</article></section>
+<section class="spectrum" aria-label="Political lean of outlets cited"><p class="sp-h">Outlets cited today, by lean</p><div class="sp-row"><div class="sp-cell"><span class="sp-n">0</span><span class="sp-l">Left</span></div><div class="sp-cell"><span class="sp-n">7</span><span class="sp-l">Center-Left</span></div><div class="sp-cell"><span class="sp-n">9</span><span class="sp-l">Center</span></div><div class="sp-cell"><span class="sp-n">0</span><span class="sp-l">Center-Right</span></div><div class="sp-cell"><span class="sp-n">2</span><span class="sp-l">Right</span></div></div><p class="sp-f">Official records and agency documents are not counted.</p></section>
+<footer>
+  <p>Reliability and lean labels summarize ratings from Media Bias/Fact Check and Ad Fontes Media.
+  The weaker a source's rating, the more prominently this page flags it.</p>
+  <p>Compiled Thanksgiving afternoon (setup test edition).</p>
+  <p><a href="archive/index.html">Past briefings</a></p>
+</footer>
+<script>
+(function(){try{var d="2026-11-26";var now=new Date();
+var et=new Intl.DateTimeFormat('en-CA',{timeZone:'America/New_York',year:'numeric',month:'2-digit',day:'2-digit'}).format(now);
+if(et>d){var el=document.getElementById('stale');el.textContent="Heads up: this is the "+d+" briefing. Today's hasn't been published yet.";el.style.display='block';}}catch(e){}})();
+</script></div></body>
+</html>

@@ -1,0 +1,174 @@
+{
+  "date": "2026-11-26",
+  "generated_at": "Thanksgiving afternoon (setup test edition)",
+  "note": "Happy Thanksgiving. This is a test edition built while setting up the briefing. Congress and both state legislatures are on holiday recess, so it rounds up the most important policy moves of the past week instead of the past 24 hours. Regular editions start tomorrow morning.",
+  "sections": {
+    "federal": [
+      {
+        "headline": "Labor Department finalizes rule making it easier to classify workers as independent contractors",
+        "topic": "labor",
+        "status": "Final rule; takes effect 60 days after Federal Register publication",
+        "what_changed": "On Nov. 19 the Labor Department finalized a rule that replaces the 2024 standard for deciding whether a worker is an employee or an independent contractor. It returns to an \"economic reality\" test much like the one the department adopted in 2021.",
+        "what_it_does": "The test gives the most weight to two questions: how much control the business has over the work, and whether the worker can earn a profit or take a loss through their own initiative or investment. Other factors, such as specialized skill and how permanent the relationship is, count for less. For the first time, the same standard also applies under the Family and Medical Leave Act and the farmworker protection law, not just the Fair Labor Standards Act (the federal minimum-wage and overtime law).",
+        "who_it_affects": "Gig workers, truck drivers, construction trades, and other workers whose status is disputed. Independent contractors are not covered by federal minimum wage, overtime, or family-leave rights. Business groups backed the change, and worker advocates said it will make misclassification easier. The rule does not override stricter state laws such as Massachusetts' worker classification law.",
+        "whats_next": "Takes effect 60 days after it is published in the Federal Register. Legal challenges are likely, as with earlier versions.",
+        "sources": [
+          {"url": "https://www.hrdive.com/news/dol-flips-independent-contractor-switch-back-with-new-final-rule/875183/", "title": "DOL flips independent contractor switch back with new final rule"},
+          {"url": "https://www.dol.gov/agencies/whd/flsa/misclassification/2026rulemaking", "title": "Final Rule: Employee or Independent Contractor Status (Labor Department)"},
+          {"url": "https://www.washingtonexaminer.com/?p=4472935", "title": "Labor Department announces plan to roll back Biden gig worker rule (February proposal)"}
+        ]
+      },
+      {
+        "headline": "States get an optional six-month grace period on Medicaid work requirements; four states sue",
+        "topic": "healthcare",
+        "status": "Federal guidance issued Nov. 13; lawsuit pending",
+        "what_changed": "The Centers for Medicare & Medicaid Services (CMS) said on Nov. 13 that states can take a six-month \"hold harmless\" period before enforcing the new Medicaid work requirement. The requirement still formally starts in January. Separately, Oregon, Minnesota, New Mexico, and Washington have sued to stop the requirements.",
+        "what_it_does": "Under the 2025 budget law, many adults covered through Medicaid expansion must show at least 80 hours a month of work, volunteering, or school to keep coverage. During the grace period, states must still set up the system and check compliance, but people would not lose coverage for failing the requirement until mid-2027. The lawsuit argues that the federal government lacks the authority to impose the changes the way it has and that withholding Medicaid funds would be unconstitutional.",
+        "who_it_affects": "Millions of low-income adults on Medicaid, and the state agencies that must verify their hours. Some states, including Iowa, South Dakota, Indiana, and Nebraska, have said they will not use the grace period. According to The Epoch Times, 19 states and D.C. have asked for a broader delay.",
+        "whats_next": "Requirement begins in January. States choosing the grace period would start enforcing by about July 2027.",
+        "sources": [
+          {"url": "https://www.washingtonpost.com/health/2026/11/13/states-can-delay-controversial-medicaid-work-requirement-six-months/", "title": "States can delay controversial Medicaid work requirement for six months"},
+          {"url": "https://thehill.com/policy/healthcare/6220069-trump-delays-medicaid-work-requirements/", "title": "Trump administration delays Medicaid work requirement enforcement"},
+          {"url": "https://www.statnews.com/2026/11/06/states-sue-trump-delay-medicaid-work-requirements/", "title": "States sue Trump administration again to delay Medicaid work requirements"},
+          {"url": "https://www.theepochtimes.com/us/19-states-plus-dc-ask-to-delay-medicaid-work-requirements-6128835", "title": "19 States Plus DC Ask to Delay Medicaid Work Requirements"}
+        ]
+      },
+      {
+        "headline": "CMS proposes broad anti-fraud rules for Medicare, Medicaid, and ACA marketplace plans",
+        "topic": "healthcare",
+        "status": "Proposed rule; comments due Jan. 19, 2027",
+        "what_changed": "On Nov. 16 the administration proposed a package of anti-fraud rules covering Medicare Advantage, Medicaid, and the Affordable Care Act (ACA) insurance marketplaces.",
+        "what_it_does": "State Medicaid agencies could suspend payments to a provider based on a credible fraud finding by CMS or another federal agency. Providers would have to report and return overpayments within 60 days. Insurance agents and brokers with certain felony convictions would be barred from the ACA marketplaces, and CMS could suspend brokers facing credible abuse allegations. CMS estimates about $90 billion in federal savings over 10 years.",
+        "who_it_affects": "Health care providers and insurers billing federal programs, ACA insurance brokers, and state Medicaid agencies. Patients are affected indirectly if providers face suspended payments.",
+        "whats_next": "Public comments are due Jan. 19, 2027, before CMS can finalize the rule.",
+        "sources": [
+          {"url": "https://news.bgov.com/health-law-and-business/rfk-jr-oz-release-rules-on-fraud-in-medicare-medicaid-aca", "title": "RFK Jr., Oz Release Rules on Fraud in Medicare, Medicaid, ACA"},
+          {"url": "https://www.healthcaredive.com/news/cms-proposes-sweeping-reforms-to-curb-healthcare-fraud/875059/", "title": "CMS proposes sweeping reforms to curb healthcare fraud"},
+          {"url": "https://www.beckershospitalreview.com/legal-regulatory-issues/cms-targets-90b-in-savings-with-sweeping-new-anti-fraud-rule/", "title": "CMS targets $90B in savings with sweeping new anti-fraud rule"}
+        ]
+      },
+      {
+        "headline": "New ID checks are slowing ACA sign-ups; groups ask CMS to extend the Dec. 15 deadline",
+        "topic": "healthcare",
+        "status": "Open enrollment underway; extension requested, not granted",
+        "what_changed": "New identity-verification steps on HealthCare.gov are causing online applications to time out, according to reporting by The Texas Tribune. Advocacy groups and insurance brokers have asked CMS to push the Dec. 15 deadline (for coverage starting Jan. 1) to Dec. 31. CMS has not agreed.",
+        "what_it_does": "The checks are part of the administration's effort against improper enrollments. CMS says it flagged 315,000 marketplace plans covering about 760,000 people as potentially fraudulent. All were broker-assisted and lacked a verified Social Security or immigration document number. CMS says help is available through HealthCare.gov, its call center, and local enrollment helpers.",
+        "who_it_affects": "People buying their own health insurance through HealthCare.gov states. Massachusetts and New Hampshire residents are affected differently: Massachusetts runs its own marketplace (the Health Connector), while New Hampshire uses HealthCare.gov.",
+        "whats_next": "Dec. 15 is the deadline for Jan. 1 coverage unless CMS extends it.",
+        "sources": [
+          {"url": "https://www.kera.org/2026/11/25/new-aca-identity-checks-delay-health-insurance-enrollment/", "title": "New ACA identity checks delay health insurance enrollment"}
+        ],
+        "source_note": "This story rests on a single report so far. CMS has not publicly responded to the extension request."
+      },
+      {
+        "headline": "Head Start wage and benefit requirements for teachers are rescinded",
+        "topic": "education",
+        "status": "Final rule published mid-November",
+        "what_changed": "The federal Administration for Children and Families finalized a rule removing the 2024 requirements that Head Start programs raise teacher and staff pay toward public-school levels and provide specified benefits.",
+        "what_it_does": "Head Start programs no longer have to meet the pay-parity and benefit mandates. HHS called them an unfunded mandate and estimates programs avoid more than $2 billion in future costs. When the requirements were adopted, the government had estimated that meeting them without new money could cut funded enrollment by more than 100,000 slots. That was the trade-off supporters and critics argued over.",
+        "who_it_affects": "Head Start teachers and staff, who are often paid far less than public-school teachers, and the low-income families of young children whom Head Start serves. Head Start programs in Massachusetts and New Hampshire are affected too.",
+        "whats_next": "Reports differ on the effective date (about 60 days after publication, around mid-January 2027). The Federal Register notice is the authority.",
+        "sources": [
+          {"url": "https://www.edweek.org/teaching-learning/trump-admin-finalizes-rollback-of-required-raises-for-head-start-teachers/2026/11", "title": "Trump admin. finalizes rollback of required raises for Head Start teachers"},
+          {"url": "https://www.k12dive.com/news/hhs-rule-rolls-back-head-start-wage-and-benefit-requirements/874689/", "title": "HHS rule rolls back Head Start wage and benefit requirements"},
+          {"url": "https://newhampshirebulletin.com/2026/11/23/trump-administration-rescinds-rule-that-would-boost-staff-recruitment-and-retention-for-head-start/", "title": "Trump administration rescinds rule that would boost staff recruitment and retention for Head Start"}
+        ]
+      },
+      {
+        "headline": "Senate passes bipartisan overhaul of federal permitting for power lines, energy, and mining",
+        "topic": "other",
+        "topic_label": "Energy",
+        "status": "Passed Senate 62–33; House vote expected after Thanksgiving",
+        "what_changed": "The Senate passed the Bipartisan American Affordability and Jobs Act on Nov. 19 by a 62–33 vote.",
+        "what_it_does": "The bill overhauls how federal agencies review and approve projects such as electric transmission lines, energy facilities, and mines, aiming to shorten reviews and limit delays.",
+        "who_it_affects": "Energy and mining developers, utilities and electricity customers, communities near proposed projects, and groups that use the review process to challenge projects.",
+        "whats_next": "House Republican leaders plan a floor vote after the Thanksgiving recess.",
+        "sources": [
+          {"url": "https://www.rollcall.com/2026/11/19/sweeping-permitting-overhaul-passes-senate-on-to-house", "title": "Sweeping permitting overhaul passes Senate, on to House"},
+          {"url": "https://axios.com/2026/11/25/house-energy-permitting-bill-vote-schedule", "title": "Get ready for the House energy permitting bill vote"}
+        ]
+      }
+    ],
+    "massachusetts": [
+      {
+        "headline": "House and Senate negotiators face a deadline on a bill to steer more health spending to primary care",
+        "topic": "healthcare",
+        "status": "In House–Senate negotiations",
+        "what_changed": "Lawmakers are trying to settle differences between House and Senate versions of a primary care bill before an approaching deadline.",
+        "what_it_does": "Both versions would have hospitals and health systems put 15% of their spending toward primary care without raising total health costs. The Senate version sets 2030 as the target year, and the House version sets 2036. The Senate bill also aims at affordability and long wait times for appointments.",
+        "who_it_affects": "Patients who struggle to find or wait to see a primary care doctor, primary care physicians, and hospital systems that would have to shift spending. A union of Mass General Brigham primary care doctors has urged a final deal.",
+        "whats_next": "A compromise bill needs approval from both chambers and the governor's signature.",
+        "sources": [
+          {"url": "https://www.bostonglobe.com/2026/11/23/metro/massachusetts-legislature-bill-primary-care-crisis/", "title": "Mass. lawmakers' talks over primary care bill face deadline"},
+          {"url": "https://malegislature.gov/PressRoom/Detail?pressReleaseId=1406", "title": "Senate Bill Takes Aim at Health Care Affordability, Primary Care Shortages and Long Wait Times"}
+        ]
+      },
+      {
+        "headline": "House and Senate still need to agree on a $2+ billion budget bill, mostly for MassHealth",
+        "topic": "healthcare",
+        "status": "House and Senate versions differ",
+        "what_changed": "Both chambers have produced their own versions of the supplemental budget to close out fiscal 2026. The two need to be merged into one bill.",
+        "what_it_does": "The House bill (H 5700) puts about $1.8 billion toward MassHealth, the state Medicaid program, and dropped the governor's proposed Health Care Stabilization Fund and gas-tax suspension. The Senate's $2.61 billion version (S 3290) also has about $1.8 billion for MassHealth, plus $52 million for nursing home rates, $368 million for the Student Opportunity Act school-funding fund, and $18.5 million for early education subsidies.",
+        "who_it_affects": "MassHealth members and providers, nursing homes, school districts that receive Student Opportunity Act money, and families using child care subsidies.",
+        "whats_next": "A House–Senate compromise, then the governor's signature.",
+        "sources": [
+          {"url": "https://www.wbur.org/news/2026/10/30/senate-supplemental-spending-bill-house-healey", "title": "Senate loads up supplemental spending bill with policy riders"},
+          {"url": "https://www.wbur.org/news/2026/10/21/supplemental-budget-house-gas-tax-health-funding", "title": "What did and didn't make it into the Mass. House's supplemental budget bill"}
+        ],
+        "source_note": "Coverage found during setup predates the Senate's floor vote; check for updates before relying on the final numbers."
+      },
+      {
+        "headline": "After Question 7 failed, Healey asks the Legislature to pass a starter-home bill",
+        "topic": "other",
+        "topic_label": "Housing",
+        "status": "Proposal; no bill passed",
+        "what_changed": "Gov. Healey said she wants lawmakers to pass a standalone bill allowing single-family \"starter homes\" on smaller lots, after voters narrowly rejected Question 7 on Nov. 3.",
+        "what_it_does": "Question 7 would have allowed single-family homes on lots as small as 5,000 square feet statewide, overriding larger local minimum lot sizes. It did not set a limit on house size. A legislative version could change those details. Separately, a Senate-backed idea to allow duplexes by right on all residential lots is in private House–Senate talks.",
+        "who_it_affects": "First-time homebuyers, cities and towns that set their own zoning (the Massachusetts Municipal Association opposed Question 7), and builders.",
+        "whats_next": "The governor has signaled she wants action after the holidays.",
+        "sources": [
+          {"url": "https://www.boston.com/news/politics/2026/11/17/a-measure-pitched-as-promising-more-starter-homes-failed-at-the-ballot-maura-healey-wants-the-legislature-to-pass-it/", "title": "A measure pitched as promising more starter homes failed at the ballot. Maura Healey wants the Legislature to pass it."}
+        ]
+      }
+    ],
+    "new_hampshire": [
+      {
+        "headline": "Democrats with new legislative majorities plan changes to school funding",
+        "topic": "education",
+        "status": "Proposals for the 2027 session",
+        "what_changed": "After the Nov. 3 election gave Democrats majorities in the Legislature, Democratic lawmakers say they will revisit how the state funds schools.",
+        "what_it_does": "Rep. Dave Luneau plans to reintroduce \"opportunity grants,\" which would end uniform per-pupil state aid and instead adjust funding for each district based on factors like poverty and special education needs.",
+        "who_it_affects": "School districts, especially property-poor districts with high needs, and local property taxpayers, since state aid affects how much towns must raise locally. Republican Gov. Kelly Ayotte, re-elected Nov. 3, would have to sign any change.",
+        "whats_next": "Bills will be filed for the session that begins in January.",
+        "sources": [
+          {"url": "https://newhampshirebulletin.com/2026/11/16/with-their-new-legislative-majorities-nh-democrats-eye-education-changes/", "title": "With their new legislative majorities, NH Democrats eye education changes"}
+        ]
+      },
+      {
+        "headline": "91 school districts adopted property-tax caps; budgets must now fit them",
+        "topic": "education",
+        "status": "Approved by local voters Nov. 3",
+        "what_changed": "Under a new state law, voters in 91 of 168 school districts approved caps on school property-tax growth, clearing the required 60% vote.",
+        "what_it_does": "In those districts, school boards must now write budgets that fit the cap on how much the local school tax can grow, unless voters approve exceptions the law allows.",
+        "who_it_affects": "Students, teachers, and school staff in those districts, where budget growth will be limited, and property owners, whose school taxes will rise more slowly.",
+        "whats_next": "School boards are drafting budgets now for spring town and district meetings.",
+        "sources": [
+          {"url": "https://newhampshirebulletin.com/2026/11/10/dozens-of-nh-school-districts-adopted-tax-caps-now-a-balancing-act-begins/", "title": "Dozens of NH school districts adopted tax caps. Now, a balancing act begins."}
+        ]
+      },
+      {
+        "headline": "Health and Human Services asks for more child care money in the next two-year budget",
+        "topic": "other",
+        "topic_label": "Child care",
+        "status": "Agency budget request",
+        "what_changed": "The Department of Health and Human Services is asking for more state funding for its child care scholarship program in the next two-year budget.",
+        "what_it_does": "The request responds to a funding gap: the department budgeted just over $25 million for the scholarship program in fiscal 2026, but spent more than $52 million.",
+        "who_it_affects": "Low- and moderate-income working families who rely on child care scholarships, and child care providers.",
+        "whats_next": "Agency requests feed into Gov. Ayotte's budget proposal, due early next year, and then go to the Legislature.",
+        "sources": [
+          {"url": "https://newhampshirebulletin.com/2026/11/19/health-and-human-services-proposes-more-funding-for-childcare-in-next-two-year-budget/", "title": "Health and Human Services proposes more funding for childcare in next two-year budget"}
+        ]
+      }
+    ]
+  }
+}

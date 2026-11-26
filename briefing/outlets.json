@@ -1,0 +1,1116 @@
+{
+  "_about": "Reliability and lean ratings for news outlets the briefing may cite. 'tier' drives how prominently the page labels a source: primary < high < mostly < mixed < low < unrated (more warning as you go right). Ratings summarize Media Bias/Fact Check (MBFC) and Ad Fontes Media. 'checked' is the date someone last confirmed the ratings against those sites; null means the entry comes from general knowledge and the nightly run should confirm it the next time the outlet is cited.",
+  "tiers": {
+    "primary": "Official government document or record",
+    "high": "Rated highly reliable",
+    "mostly": "Rated mostly reliable",
+    "mixed": "Rated mixed reliability",
+    "low": "Rated low reliability",
+    "unrated": "Not rated by major media raters"
+  },
+  "outlets": [
+    {
+      "id": "ap",
+      "name": "Associated Press",
+      "domains": [
+        "apnews.com"
+      ],
+      "lean": "Center",
+      "tier": "high",
+      "mbfc": "Least Biased / High factual",
+      "adfontes": "Middle / Reliable",
+      "checked": null
+    },
+    {
+      "id": "reuters",
+      "name": "Reuters",
+      "domains": [
+        "reuters.com"
+      ],
+      "lean": "Center",
+      "tier": "high",
+      "mbfc": "Least Biased / Very High factual",
+      "adfontes": "Middle / Reliable",
+      "checked": null
+    },
+    {
+      "id": "bloomberg",
+      "name": "Bloomberg",
+      "domains": [
+        "bloomberg.com"
+      ],
+      "lean": "Center-Left",
+      "tier": "high",
+      "mbfc": "Left-Center / High factual",
+      "adfontes": "Middle / Reliable",
+      "checked": null
+    },
+    {
+      "id": "bloomberglaw",
+      "name": "Bloomberg Law / Bloomberg Government",
+      "domains": [
+        "news.bloomberglaw.com",
+        "bloomberglaw.com",
+        "bgov.com",
+        "news.bgov.com",
+        "bloombergtax.com"
+      ],
+      "lean": "Center",
+      "tier": "high",
+      "mbfc": "Not separately rated (see Bloomberg)",
+      "adfontes": "Middle / Reliable",
+      "checked": null
+    },
+    {
+      "id": "npr",
+      "name": "NPR",
+      "domains": [
+        "npr.org"
+      ],
+      "lean": "Center-Left",
+      "tier": "high",
+      "mbfc": "Left-Center / High factual",
+      "adfontes": "Skews Left / Reliable",
+      "checked": null
+    },
+    {
+      "id": "pbs",
+      "name": "PBS News",
+      "domains": [
+        "pbs.org"
+      ],
+      "lean": "Center-Left",
+      "tier": "high",
+      "mbfc": "Left-Center / High factual",
+      "adfontes": "Middle / Reliable",
+      "checked": null
+    },
+    {
+      "id": "axios",
+      "name": "Axios",
+      "domains": [
+        "axios.com"
+      ],
+      "lean": "Center-Left",
+      "tier": "high",
+      "mbfc": "Left-Center / High factual",
+      "adfontes": "Middle / Reliable",
+      "checked": null
+    },
+    {
+      "id": "thehill",
+      "name": "The Hill",
+      "domains": [
+        "thehill.com"
+      ],
+      "lean": "Center",
+      "tier": "high",
+      "mbfc": "Least Biased / High factual",
+      "adfontes": "Middle / Reliable",
+      "checked": null
+    },
+    {
+      "id": "politico",
+      "name": "Politico",
+      "domains": [
+        "politico.com"
+      ],
+      "lean": "Center-Left",
+      "tier": "high",
+      "mbfc": "Left-Center / High factual",
+      "adfontes": "Skews Left / Reliable",
+      "checked": null
+    },
+    {
+      "id": "rollcall",
+      "name": "Roll Call",
+      "domains": [
+        "rollcall.com"
+      ],
+      "lean": "Center",
+      "tier": "high",
+      "mbfc": "Least Biased / High factual",
+      "adfontes": "Middle / Reliable",
+      "checked": null
+    },
+    {
+      "id": "nyt",
+      "name": "The New York Times",
+      "domains": [
+        "nytimes.com"
+      ],
+      "lean": "Center-Left",
+      "tier": "high",
+      "mbfc": "Left-Center / High factual",
+      "adfontes": "Skews Left / Reliable",
+      "checked": null
+    },
+    {
+      "id": "wapo",
+      "name": "The Washington Post",
+      "domains": [
+        "washingtonpost.com"
+      ],
+      "lean": "Center-Left",
+      "tier": "mostly",
+      "mbfc": "Left-Center / Mostly factual",
+      "adfontes": "Skews Left / Reliable",
+      "checked": null
+    },
+    {
+      "id": "wsj",
+      "name": "The Wall Street Journal",
+      "domains": [
+        "wsj.com"
+      ],
+      "lean": "Center-Right",
+      "tier": "mostly",
+      "mbfc": "Right-Center / Mostly factual",
+      "adfontes": "Middle (news) / Reliable",
+      "checked": null
+    },
+    {
+      "id": "cnn",
+      "name": "CNN",
+      "domains": [
+        "cnn.com"
+      ],
+      "lean": "Left",
+      "tier": "mostly",
+      "mbfc": "Left / Mostly factual",
+      "adfontes": "Skews Left / Generally reliable",
+      "checked": null
+    },
+    {
+      "id": "nbc",
+      "name": "NBC News",
+      "domains": [
+        "nbcnews.com"
+      ],
+      "lean": "Center-Left",
+      "tier": "high",
+      "mbfc": "Left-Center / High factual",
+      "adfontes": "Skews Left / Reliable",
+      "checked": null
+    },
+    {
+      "id": "cbs",
+      "name": "CBS News",
+      "domains": [
+        "cbsnews.com"
+      ],
+      "lean": "Center-Left",
+      "tier": "high",
+      "mbfc": "Left-Center / High factual",
+      "adfontes": "Middle / Reliable",
+      "checked": null
+    },
+    {
+      "id": "abc",
+      "name": "ABC News",
+      "domains": [
+        "abcnews.go.com",
+        "abcnews.com"
+      ],
+      "lean": "Center-Left",
+      "tier": "high",
+      "mbfc": "Left-Center / High factual",
+      "adfontes": "Middle / Reliable",
+      "checked": null
+    },
+    {
+      "id": "usatoday",
+      "name": "USA Today",
+      "domains": [
+        "usatoday.com"
+      ],
+      "lean": "Center-Left",
+      "tier": "high",
+      "mbfc": "Left-Center / High factual",
+      "adfontes": "Middle / Reliable",
+      "checked": null
+    },
+    {
+      "id": "guardian",
+      "name": "The Guardian",
+      "domains": [
+        "theguardian.com"
+      ],
+      "lean": "Left",
+      "tier": "mixed",
+      "mbfc": "Left-Center / Mixed factual",
+      "adfontes": "Skews Left / Generally reliable",
+      "checked": null
+    },
+    {
+      "id": "huffpost",
+      "name": "HuffPost",
+      "domains": [
+        "huffpost.com"
+      ],
+      "lean": "Left",
+      "tier": "mostly",
+      "mbfc": "Left / Mostly factual",
+      "adfontes": "Skews Left / Mixed reliability",
+      "checked": null
+    },
+    {
+      "id": "vox",
+      "name": "Vox",
+      "domains": [
+        "vox.com"
+      ],
+      "lean": "Left",
+      "tier": "mostly",
+      "mbfc": "Left / Mostly factual",
+      "adfontes": "Skews Left / Generally reliable",
+      "checked": null
+    },
+    {
+      "id": "msnow",
+      "name": "MS NOW (formerly MSNBC)",
+      "domains": [
+        "ms.now",
+        "msnbc.com"
+      ],
+      "lean": "Left",
+      "tier": "mixed",
+      "mbfc": "Left / Mixed factual",
+      "adfontes": "Strong Left (opinion-heavy) / Mixed reliability",
+      "checked": null
+    },
+    {
+      "id": "motherjones",
+      "name": "Mother Jones",
+      "domains": [
+        "motherjones.com"
+      ],
+      "lean": "Left",
+      "tier": "mostly",
+      "mbfc": "Left / High factual",
+      "adfontes": "Skews Left / Mixed reliability",
+      "checked": null
+    },
+    {
+      "id": "fox",
+      "name": "Fox News",
+      "domains": [
+        "foxnews.com",
+        "foxbusiness.com"
+      ],
+      "lean": "Right",
+      "tier": "mixed",
+      "mbfc": "Right / Mixed factual",
+      "adfontes": "Skews Right / Mixed reliability",
+      "checked": null
+    },
+    {
+      "id": "washex",
+      "name": "Washington Examiner",
+      "domains": [
+        "washingtonexaminer.com"
+      ],
+      "lean": "Right",
+      "tier": "mixed",
+      "mbfc": "Right / Mixed factual",
+      "adfontes": "Skews Right / Mixed reliability",
+      "checked": null
+    },
+    {
+      "id": "nationalreview",
+      "name": "National Review",
+      "domains": [
+        "nationalreview.com"
+      ],
+      "lean": "Right",
+      "tier": "mostly",
+      "mbfc": "Right / Mostly factual",
+      "adfontes": "Skews Right / Mixed reliability",
+      "checked": null
+    },
+    {
+      "id": "dispatch",
+      "name": "The Dispatch",
+      "domains": [
+        "thedispatch.com"
+      ],
+      "lean": "Center-Right",
+      "tier": "high",
+      "mbfc": "Right-Center / High factual",
+      "adfontes": "Skews Right / Reliable",
+      "checked": null
+    },
+    {
+      "id": "reason",
+      "name": "Reason",
+      "domains": [
+        "reason.com"
+      ],
+      "lean": "Center-Right (libertarian)",
+      "tier": "high",
+      "mbfc": "Right-Center / High factual",
+      "adfontes": "Skews Right / Generally reliable",
+      "checked": null
+    },
+    {
+      "id": "freebeacon",
+      "name": "Washington Free Beacon",
+      "domains": [
+        "freebeacon.com"
+      ],
+      "lean": "Right",
+      "tier": "mixed",
+      "mbfc": "Right / Mixed factual",
+      "adfontes": "Skews Right / Mixed reliability",
+      "checked": null
+    },
+    {
+      "id": "dailycaller",
+      "name": "The Daily Caller",
+      "domains": [
+        "dailycaller.com"
+      ],
+      "lean": "Right",
+      "tier": "mixed",
+      "mbfc": "Right / Mixed factual",
+      "adfontes": "Strong Right / Mixed reliability",
+      "checked": null
+    },
+    {
+      "id": "dailywire",
+      "name": "The Daily Wire",
+      "domains": [
+        "dailywire.com"
+      ],
+      "lean": "Right",
+      "tier": "mixed",
+      "mbfc": "Right / Mixed factual",
+      "adfontes": "Strong Right / Mixed reliability",
+      "checked": null
+    },
+    {
+      "id": "nypost",
+      "name": "New York Post",
+      "domains": [
+        "nypost.com"
+      ],
+      "lean": "Right",
+      "tier": "mixed",
+      "mbfc": "Right-Center / Mixed factual",
+      "adfontes": "Skews Right / Mixed reliability",
+      "checked": null
+    },
+    {
+      "id": "breitbart",
+      "name": "Breitbart",
+      "domains": [
+        "breitbart.com"
+      ],
+      "lean": "Far Right",
+      "tier": "low",
+      "mbfc": "Questionable (Extreme Right) / Low-Mixed factual",
+      "adfontes": "Strong Right / Unreliable",
+      "checked": null
+    },
+    {
+      "id": "newsmax",
+      "name": "Newsmax",
+      "domains": [
+        "newsmax.com"
+      ],
+      "lean": "Far Right",
+      "tier": "low",
+      "mbfc": "Questionable / Low-Mixed factual",
+      "adfontes": "Strong Right / Unreliable",
+      "checked": null
+    },
+    {
+      "id": "federalist",
+      "name": "The Federalist",
+      "domains": [
+        "thefederalist.com"
+      ],
+      "lean": "Far Right",
+      "tier": "low",
+      "mbfc": "Questionable / Low factual",
+      "adfontes": "Strong Right / Unreliable",
+      "checked": null
+    },
+    {
+      "id": "dailykos",
+      "name": "Daily Kos",
+      "domains": [
+        "dailykos.com"
+      ],
+      "lean": "Far Left",
+      "tier": "mixed",
+      "mbfc": "Left / Mixed factual",
+      "adfontes": "Strong Left / Unreliable",
+      "checked": null
+    },
+    {
+      "id": "kffhealthnews",
+      "name": "KFF Health News",
+      "domains": [
+        "kffhealthnews.org"
+      ],
+      "lean": "Center-Left",
+      "tier": "high",
+      "mbfc": "Left-Center / High factual",
+      "adfontes": "Middle / Reliable",
+      "checked": null
+    },
+    {
+      "id": "kff",
+      "name": "KFF (health policy research)",
+      "domains": [
+        "kff.org"
+      ],
+      "lean": "Center",
+      "tier": "high",
+      "mbfc": "Least Biased / High factual",
+      "adfontes": "Not rated (research organization)",
+      "checked": null
+    },
+    {
+      "id": "stat",
+      "name": "STAT",
+      "domains": [
+        "statnews.com"
+      ],
+      "lean": "Center",
+      "tier": "high",
+      "mbfc": "Least Biased / High factual",
+      "adfontes": "Middle / Reliable",
+      "checked": null
+    },
+    {
+      "id": "fiercehealth",
+      "name": "Fierce Healthcare",
+      "domains": [
+        "fiercehealthcare.com"
+      ],
+      "lean": "Center",
+      "tier": "high",
+      "mbfc": "Least Biased / High factual",
+      "adfontes": "Not rated",
+      "checked": null
+    },
+    {
+      "id": "modernhealthcare",
+      "name": "Modern Healthcare",
+      "domains": [
+        "modernhealthcare.com"
+      ],
+      "lean": "Center",
+      "tier": "high",
+      "mbfc": "Least Biased / High factual",
+      "adfontes": "Not rated",
+      "checked": null
+    },
+    {
+      "id": "edweek",
+      "name": "Education Week",
+      "domains": [
+        "edweek.org"
+      ],
+      "lean": "Center",
+      "tier": "high",
+      "mbfc": "Least Biased / High factual",
+      "adfontes": "Middle / Reliable",
+      "checked": null
+    },
+    {
+      "id": "chalkbeat",
+      "name": "Chalkbeat",
+      "domains": [
+        "chalkbeat.org"
+      ],
+      "lean": "Center-Left",
+      "tier": "high",
+      "mbfc": "Left-Center / High factual",
+      "adfontes": "Middle / Reliable",
+      "checked": null
+    },
+    {
+      "id": "the74",
+      "name": "The 74",
+      "domains": [
+        "the74million.org"
+      ],
+      "lean": "Center",
+      "tier": "high",
+      "mbfc": "Least Biased / High factual",
+      "adfontes": "Middle / Reliable",
+      "checked": null
+    },
+    {
+      "id": "k12dive",
+      "name": "K-12 Dive",
+      "domains": [
+        "k12dive.com"
+      ],
+      "lean": "Center",
+      "tier": "high",
+      "mbfc": "Least Biased / High factual",
+      "adfontes": "Not rated",
+      "checked": null
+    },
+    {
+      "id": "higheredive",
+      "name": "Higher Ed Dive",
+      "domains": [
+        "highereddive.com"
+      ],
+      "lean": "Center",
+      "tier": "high",
+      "mbfc": "Least Biased / High factual",
+      "adfontes": "Not rated",
+      "checked": null
+    },
+    {
+      "id": "insidehighered",
+      "name": "Inside Higher Ed",
+      "domains": [
+        "insidehighered.com"
+      ],
+      "lean": "Center-Left",
+      "tier": "high",
+      "mbfc": "Left-Center / High factual",
+      "adfontes": "Not rated",
+      "checked": null
+    },
+    {
+      "id": "hrdive",
+      "name": "HR Dive",
+      "domains": [
+        "hrdive.com"
+      ],
+      "lean": "Center",
+      "tier": "high",
+      "mbfc": "Least Biased / High factual",
+      "adfontes": "Not rated",
+      "checked": null
+    },
+    {
+      "id": "govexec",
+      "name": "Government Executive",
+      "domains": [
+        "govexec.com"
+      ],
+      "lean": "Center",
+      "tier": "high",
+      "mbfc": "Least Biased / High factual",
+      "adfontes": "Not rated",
+      "checked": null
+    },
+    {
+      "id": "fnn",
+      "name": "Federal News Network",
+      "domains": [
+        "federalnewsnetwork.com"
+      ],
+      "lean": "Center",
+      "tier": "high",
+      "mbfc": "Least Biased / High factual",
+      "adfontes": "Not rated",
+      "checked": null
+    },
+    {
+      "id": "stateline",
+      "name": "Stateline",
+      "domains": [
+        "stateline.org"
+      ],
+      "lean": "Center",
+      "tier": "high",
+      "mbfc": "Least Biased / High factual",
+      "adfontes": "Middle / Reliable",
+      "checked": null
+    },
+    {
+      "id": "scotusblog",
+      "name": "SCOTUSblog",
+      "domains": [
+        "scotusblog.com"
+      ],
+      "lean": "Center",
+      "tier": "high",
+      "mbfc": "Least Biased / Very High factual",
+      "adfontes": "Middle / Reliable",
+      "checked": null
+    },
+    {
+      "id": "laboronotes",
+      "name": "Labor Notes",
+      "domains": [
+        "labornotes.org"
+      ],
+      "lean": "Left (pro-labor advocacy)",
+      "tier": "mostly",
+      "mbfc": "Left / Mostly factual",
+      "adfontes": "Not rated",
+      "checked": null
+    },
+    {
+      "id": "bostonglobe",
+      "name": "The Boston Globe",
+      "domains": [
+        "bostonglobe.com"
+      ],
+      "lean": "Center-Left",
+      "tier": "high",
+      "mbfc": "Left-Center / High factual",
+      "adfontes": "Skews Left / Reliable",
+      "checked": null
+    },
+    {
+      "id": "bostonherald",
+      "name": "Boston Herald",
+      "domains": [
+        "bostonherald.com"
+      ],
+      "lean": "Center-Right",
+      "tier": "mostly",
+      "mbfc": "Right-Center / Mostly factual",
+      "adfontes": "Not rated",
+      "checked": null
+    },
+    {
+      "id": "wbur",
+      "name": "WBUR",
+      "domains": [
+        "wbur.org"
+      ],
+      "lean": "Center-Left",
+      "tier": "high",
+      "mbfc": "Left-Center / High factual",
+      "adfontes": "Not rated",
+      "checked": null
+    },
+    {
+      "id": "gbh",
+      "name": "GBH News",
+      "domains": [
+        "wgbh.org"
+      ],
+      "lean": "Center-Left",
+      "tier": "high",
+      "mbfc": "Left-Center / High factual",
+      "adfontes": "Not rated",
+      "checked": null
+    },
+    {
+      "id": "commonwealth",
+      "name": "CommonWealth Beacon",
+      "domains": [
+        "commonwealthbeacon.org",
+        "commonwealthmagazine.org"
+      ],
+      "lean": "Center",
+      "tier": "high",
+      "mbfc": "Least Biased / High factual",
+      "adfontes": "Not rated",
+      "checked": null
+    },
+    {
+      "id": "shns",
+      "name": "State House News Service",
+      "domains": [
+        "statehousenews.com"
+      ],
+      "lean": "Center",
+      "tier": "high",
+      "mbfc": "Least Biased / High factual",
+      "adfontes": "Not rated",
+      "checked": null
+    },
+    {
+      "id": "masslive",
+      "name": "MassLive",
+      "domains": [
+        "masslive.com"
+      ],
+      "lean": "Center-Left",
+      "tier": "mostly",
+      "mbfc": "Left-Center / Mostly factual",
+      "adfontes": "Not rated",
+      "checked": null
+    },
+    {
+      "id": "bostoncom",
+      "name": "Boston.com",
+      "domains": [
+        "boston.com"
+      ],
+      "lean": "Center-Left",
+      "tier": "mostly",
+      "mbfc": "Left-Center / Mostly factual",
+      "adfontes": "Not rated",
+      "checked": null
+    },
+    {
+      "id": "bbj",
+      "name": "Boston Business Journal",
+      "domains": [
+        "bizjournals.com"
+      ],
+      "lean": "Center",
+      "tier": "high",
+      "mbfc": "Least Biased / High factual",
+      "adfontes": "Not rated",
+      "checked": null
+    },
+    {
+      "id": "telegram",
+      "name": "Worcester Telegram & Gazette",
+      "domains": [
+        "telegram.com"
+      ],
+      "lean": "Center",
+      "tier": "mostly",
+      "mbfc": "Not rated",
+      "adfontes": "Not rated",
+      "checked": null
+    },
+    {
+      "id": "nbcboston",
+      "name": "NBC Boston",
+      "domains": [
+        "nbcboston.com"
+      ],
+      "lean": "Center",
+      "tier": "high",
+      "mbfc": "Not separately rated (see NBC News)",
+      "adfontes": "Not rated",
+      "checked": null
+    },
+    {
+      "id": "nhbulletin",
+      "name": "New Hampshire Bulletin",
+      "domains": [
+        "newhampshirebulletin.com"
+      ],
+      "lean": "Center-Left",
+      "tier": "high",
+      "mbfc": "Left-Center / High factual",
+      "adfontes": "Not rated",
+      "checked": null
+    },
+    {
+      "id": "nhpr",
+      "name": "NHPR (New Hampshire Public Radio)",
+      "domains": [
+        "nhpr.org"
+      ],
+      "lean": "Center-Left",
+      "tier": "high",
+      "mbfc": "Left-Center / High factual",
+      "adfontes": "Not rated",
+      "checked": null
+    },
+    {
+      "id": "unionleader",
+      "name": "New Hampshire Union Leader",
+      "domains": [
+        "unionleader.com"
+      ],
+      "lean": "Center-Right",
+      "tier": "mostly",
+      "mbfc": "Right-Center / Mostly factual",
+      "adfontes": "Not rated",
+      "checked": null
+    },
+    {
+      "id": "concordmonitor",
+      "name": "Concord Monitor",
+      "domains": [
+        "concordmonitor.com"
+      ],
+      "lean": "Center-Left",
+      "tier": "high",
+      "mbfc": "Left-Center / High factual",
+      "adfontes": "Not rated",
+      "checked": null
+    },
+    {
+      "id": "indepthnh",
+      "name": "InDepthNH.org",
+      "domains": [
+        "indepthnh.org"
+      ],
+      "lean": "Center",
+      "tier": "high",
+      "mbfc": "Least Biased / High factual",
+      "adfontes": "Not rated",
+      "checked": null
+    },
+    {
+      "id": "wmur",
+      "name": "WMUR",
+      "domains": [
+        "wmur.com"
+      ],
+      "lean": "Center",
+      "tier": "high",
+      "mbfc": "Least Biased / High factual",
+      "adfontes": "Not rated",
+      "checked": null
+    },
+    {
+      "id": "seacoast",
+      "name": "Seacoastonline (Portsmouth Herald)",
+      "domains": [
+        "seacoastonline.com"
+      ],
+      "lean": "Center",
+      "tier": "mostly",
+      "mbfc": "Not rated",
+      "adfontes": "Not rated",
+      "checked": null
+    },
+    {
+      "id": "nhjournal",
+      "name": "NH Journal",
+      "domains": [
+        "nhjournal.com"
+      ],
+      "lean": "Right",
+      "tier": "mixed",
+      "mbfc": "Right / Mixed factual",
+      "adfontes": "Not rated",
+      "checked": null
+    },
+    {
+      "id": "granitegrok",
+      "name": "Granite Grok",
+      "domains": [
+        "granitegrok.com"
+      ],
+      "lean": "Far Right",
+      "tier": "low",
+      "mbfc": "Questionable / Low factual",
+      "adfontes": "Not rated",
+      "checked": null
+    },
+    {
+      "id": "valleynews",
+      "name": "Valley News",
+      "domains": [
+        "vnews.com"
+      ],
+      "lean": "Center-Left",
+      "tier": "high",
+      "mbfc": "Left-Center / High factual",
+      "adfontes": "Not rated",
+      "checked": null
+    },
+    {
+      "id": "fedreg",
+      "name": "Federal Register",
+      "domains": [
+        "federalregister.gov"
+      ],
+      "lean": "n/a",
+      "tier": "primary",
+      "mbfc": "n/a (official record)",
+      "adfontes": "n/a",
+      "checked": null
+    },
+    {
+      "id": "congress",
+      "name": "Congress.gov",
+      "domains": [
+        "congress.gov"
+      ],
+      "lean": "n/a",
+      "tier": "primary",
+      "mbfc": "n/a (official record)",
+      "adfontes": "n/a",
+      "checked": null
+    },
+    {
+      "id": "cbo",
+      "name": "Congressional Budget Office",
+      "domains": [
+        "cbo.gov"
+      ],
+      "lean": "n/a (nonpartisan)",
+      "tier": "primary",
+      "mbfc": "n/a (official)",
+      "adfontes": "n/a",
+      "checked": null
+    },
+    {
+      "id": "supremecourt",
+      "name": "U.S. Supreme Court",
+      "domains": [
+        "supremecourt.gov"
+      ],
+      "lean": "n/a",
+      "tier": "primary",
+      "mbfc": "n/a (official record)",
+      "adfontes": "n/a",
+      "checked": null
+    },
+    {
+      "id": "whitehouse",
+      "name": "White House",
+      "domains": [
+        "whitehouse.gov"
+      ],
+      "lean": "n/a (administration's own statement)",
+      "tier": "primary",
+      "mbfc": "n/a",
+      "adfontes": "n/a",
+      "checked": null
+    },
+    {
+      "id": "usgov",
+      "name": "U.S. federal agency",
+      "domains": [
+        "dol.gov",
+        "hhs.gov",
+        "cms.gov",
+        "ed.gov",
+        "nlrb.gov",
+        "eeoc.gov",
+        "irs.gov",
+        "treasury.gov",
+        "justice.gov",
+        "usda.gov",
+        "ssa.gov",
+        "va.gov",
+        "epa.gov",
+        "osha.gov",
+        "bls.gov",
+        "census.gov",
+        "gao.gov",
+        "senate.gov",
+        "house.gov",
+        "uscourts.gov"
+      ],
+      "lean": "n/a (agency's own statement)",
+      "tier": "primary",
+      "mbfc": "n/a",
+      "adfontes": "n/a",
+      "checked": null
+    },
+    {
+      "id": "magov",
+      "name": "Commonwealth of Massachusetts",
+      "domains": [
+        "mass.gov",
+        "malegislature.gov"
+      ],
+      "lean": "n/a (state's own statement)",
+      "tier": "primary",
+      "mbfc": "n/a",
+      "adfontes": "n/a",
+      "checked": null
+    },
+    {
+      "id": "nhgov",
+      "name": "State of New Hampshire",
+      "domains": [
+        "nh.gov",
+        "gc.nh.gov",
+        "gencourt.state.nh.us",
+        "governor.nh.gov",
+        "education.nh.gov",
+        "dhhs.nh.gov"
+      ],
+      "lean": "n/a (state's own statement)",
+      "tier": "primary",
+      "mbfc": "n/a",
+      "adfontes": "n/a",
+      "checked": null
+    },
+    {
+      "id": "healthcaredive",
+      "name": "Healthcare Dive",
+      "domains": [
+        "healthcaredive.com"
+      ],
+      "lean": "Center",
+      "tier": "high",
+      "mbfc": "Least Biased / High factual",
+      "adfontes": "Not rated",
+      "checked": null
+    },
+    {
+      "id": "beckers",
+      "name": "Becker's Hospital Review",
+      "domains": [
+        "beckershospitalreview.com",
+        "beckerspayer.com"
+      ],
+      "lean": "Center",
+      "tier": "mostly",
+      "mbfc": "Not rated (trade publication)",
+      "adfontes": "Not rated",
+      "checked": null
+    },
+    {
+      "id": "epochtimes",
+      "name": "The Epoch Times",
+      "domains": [
+        "theepochtimes.com"
+      ],
+      "lean": "Right",
+      "tier": "low",
+      "mbfc": "Questionable (Right) / Mixed factual",
+      "adfontes": "Skews Right / Mixed reliability",
+      "checked": null
+    },
+    {
+      "id": "texastribune",
+      "name": "The Texas Tribune",
+      "domains": [
+        "texastribune.org"
+      ],
+      "lean": "Center-Left",
+      "tier": "high",
+      "mbfc": "Left-Center / High factual",
+      "adfontes": "Middle / Reliable",
+      "checked": null
+    },
+    {
+      "id": "kera",
+      "name": "KERA News (public radio, Dallas; often republishes The Texas Tribune)",
+      "domains": [
+        "kera.org",
+        "keranews.org"
+      ],
+      "lean": "Center-Left",
+      "tier": "high",
+      "mbfc": "Not separately rated (see Texas Tribune / NPR)",
+      "adfontes": "Not rated",
+      "checked": null
+    },
+    {
+      "id": "nhfpi",
+      "name": "New Hampshire Fiscal Policy Institute",
+      "domains": [
+        "nhfpi.org"
+      ],
+      "lean": "Center-Left (policy research nonprofit)",
+      "tier": "mostly",
+      "mbfc": "Not rated",
+      "adfontes": "Not rated",
+      "checked": null
+    },
+    {
+      "id": "wwlp",
+      "name": "WWLP 22News",
+      "domains": [
+        "wwlp.com"
+      ],
+      "lean": "Center",
+      "tier": "mostly",
+      "mbfc": "Not rated",
+      "adfontes": "Not rated",
+      "checked": null
+    }
+  ]
+}

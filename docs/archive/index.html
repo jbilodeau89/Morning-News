@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="robots" content="noindex">
+<meta name="color-scheme" content="light dark">
+<title>Past Briefings</title>
+<style>
+:root{--bg:#f7f5f0;--card:#fff;--ink:#1c1b19;--muted:#5f5b53;--line:#e4dfd4;--accent:#1f4e79;
+--labor:#8a4b0f;--labor-bg:#fbeedd;--health:#0d6b58;--health-bg:#dff3ec;--edu:#5a3d8a;--edu-bg:#ece5f7;
+--other:#4a4a4a;--other-bg:#ececec;--warn:#8a1c1c;--warn-bg:#fdecea;--caut:#7a5a00;--caut-bg:#fff6d9;
+--ok:#1d6b35;--ok-bg:#e2f3e7}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#151514;--card:#1f1f1d;--ink:#ecebe7;
+--muted:#a9a59c;--line:#34332f;--accent:#8fb8e3;--labor:#f0b070;--labor-bg:#3a2a18;--health:#6fd3b8;
+--health-bg:#17332b;--edu:#c3a9f0;--edu-bg:#2c2440;--other:#cfcfcf;--other-bg:#2e2e2e;--warn:#f2a3a3;
+--warn-bg:#3b1d1d;--caut:#f1d27a;--caut-bg:#3a3117;--ok:#8fdba5;--ok-bg:#1b3323}}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.55 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif}
+a{color:var(--accent)}
+.wrap{max-width:680px;margin:0 auto;padding:0 16px 48px}
+header.top{padding:28px 0 8px}
+.kicker{font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin:0}
+h1{font-size:28px;line-height:1.2;margin:4px 0 2px}
+.date{color:var(--muted);margin:0}
+.stale{display:none;background:var(--caut-bg);color:var(--caut);border-radius:10px;padding:10px 12px;margin:14px 0 0;font-size:15px}
+.note{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:12px 14px;margin:16px 0 0;font-size:16px}
+nav.jump{position:sticky;top:0;z-index:5;background:var(--bg);display:flex;gap:8px;padding:10px 0;margin-top:12px;border-bottom:1px solid var(--line);overflow-x:auto}
+nav.jump a{flex:0 0 auto;text-decoration:none;color:var(--ink);background:var(--card);border:1px solid var(--line);border-radius:999px;padding:6px 12px;font-size:14px;font-weight:600}
+nav.jump a span{color:var(--muted);font-weight:500;margin-left:4px}
+section.sec{scroll-margin-top:60px}
+h2{font-size:22px;margin:28px 0 10px;padding-bottom:6px;border-bottom:2px solid var(--ink)}
+.empty{color:var(--muted);font-style:italic}
+.story{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px;margin:0 0 14px}
+.tags{display:flex;flex-wrap:wrap;gap:6px;align-items:center}
+.topic{font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.05em;border-radius:6px;padding:2px 8px}
+.tp-labor{color:var(--labor);background:var(--labor-bg)}.tp-healthcare{color:var(--health);background:var(--health-bg)}
+.tp-education{color:var(--edu);background:var(--edu-bg)}.tp-other{color:var(--other);background:var(--other-bg)}
+.status{font-size:13px;color:var(--muted)}
+.story h3{font-size:19px;line-height:1.3;margin:8px 0 10px}
+dl{margin:0}.row{margin:0 0 10px}
+dt{font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.05em;color:var(--muted)}
+dd{margin:2px 0 0}
+.trust{border-radius:10px;padding:10px 12px;margin:0 0 12px;font-size:15px}
+.trust p{margin:0 0 4px}.trust ul{margin:4px 0 0;padding-left:18px}
+.trust-h{font-weight:700}
+.trust.warning{background:var(--warn-bg);color:var(--warn);border-left:4px solid var(--warn)}
+.trust.caution{background:var(--caut-bg);color:var(--caut);border-left:4px solid var(--caut)}
+.src-h{font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.05em;color:var(--muted);margin:12px 0 4px}
+.sources{list-style:none;margin:0;padding:0}
+.sources li{padding:8px 0;border-top:1px solid var(--line);font-size:15px;overflow-wrap:anywhere}
+.src-meta{display:flex;flex-wrap:wrap;gap:6px;align-items:center;margin-top:3px;font-size:13px;color:var(--muted)}
+.outlet{font-weight:600;color:var(--ink)}
+.chip{border-radius:6px;padding:1px 7px;font-weight:600}
+.t-primary,.t-high{color:var(--ok);background:var(--ok-bg)}
+.t-mostly{color:var(--other);background:var(--other-bg)}
+.t-mixed{color:var(--caut);background:var(--caut-bg)}
+.t-low,.t-unrated{color:var(--warn);background:var(--warn-bg)}
+.spectrum{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px 16px;margin:28px 0 0}
+.sp-h{margin:0 0 8px;font-weight:700;font-size:15px}
+.sp-row{display:grid;grid-template-columns:repeat(5,1fr);gap:6px;text-align:center}
+.sp-cell{background:var(--bg);border-radius:8px;padding:6px 2px}
+.sp-n{display:block;font-size:20px;font-weight:700}.sp-l{display:block;font-size:11px;color:var(--muted)}
+.sp-f{margin:8px 0 0;font-size:13px;color:var(--muted)}
+footer{margin-top:28px;font-size:14px;color:var(--muted)}
+footer p{margin:0 0 8px}
+.archive li{margin:0 0 8px}
+</style>
+
+</head>
+<body><div class="wrap"><header class="top"><p class="kicker">Morning Policy Briefing</p><h1>Past briefings</h1></header><ul class="archive"><li><a href="2026-11-26.html">Thursday, November 26, 2026</a></li></ul><footer><p><a href="../index.html">Latest briefing</a></p></footer></div></body>
+</html>
