@@ -90,6 +90,12 @@ arriving.
     gc.nh.gov, governor press releases, and court opinions.
 - **Read the article** (or the primary document) before summarizing it. Don't write from
   search snippets alone.
+- **If a site blocks automated reading** (a 403 or a "verify you are human" page), never try
+  to get around it. Read the same story somewhere that allows it instead: the official
+  document (bill text, press release, court opinion, Federal Register), another outlet's
+  coverage, or a republished copy (AP stories run on many local papers' sites, and States
+  Newsroom outlets like the NH Bulletin republish each other). Link to what you actually read.
+  If no readable source exists for a story, leave it out.
 - **Cover the spectrum deliberately.** Each briefing should cite outlets from the left, the
   center, and the right (see `briefing/outlets.json` for lean). For major federal stories,
   check how at least one right-leaning and one left-leaning outlet covered them, and cite
