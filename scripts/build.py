@@ -335,11 +335,13 @@ h1{font-size:28px;line-height:1.2;margin:4px 0 2px}
 .date{color:var(--muted);margin:0}
 .stale{display:none;background:var(--caut-bg);color:var(--caut);border-radius:10px;padding:10px 12px;margin:14px 0 0;font-size:15px}
 .note{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:12px 14px;margin:16px 0 0;font-size:16px}
-nav.jump{position:sticky;top:0;z-index:5;background:var(--bg);display:flex;flex-wrap:wrap;gap:5px;padding:8px 0;margin-top:12px;border-bottom:1px solid var(--line);overflow-x:auto}
+nav.jump{position:sticky;top:0;z-index:5;background:var(--bg);display:flex;flex-wrap:nowrap;gap:6px;padding:8px 0;scrollbar-width:none;margin-top:12px;border-bottom:1px solid var(--line);overflow-x:auto}
 nav.jump a{flex:0 0 auto;text-decoration:none;color:var(--ink);background:var(--card);border:1px solid var(--line);border-radius:999px;padding:4px 9px;font-size:13.5px;font-weight:600}
 nav.jump a span{color:var(--muted);font-weight:500;margin-left:3px}
-section.sec{scroll-margin-top:60px}
-h2{font-size:22px;margin:28px 0 10px;padding-bottom:6px;border-bottom:2px solid var(--ink)}
+section.sec{scroll-margin-top:60px;padding-top:28px}
+.sec-kicker{font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);margin:0 0 2px}
+nav.jump::-webkit-scrollbar{display:none}
+h2{font-size:22px;margin:0 0 10px;padding-bottom:6px;border-bottom:2px solid var(--ink)}
 .empty{color:var(--muted);font-style:italic}
 .block{--c:var(--accent);--cbg:var(--other-bg);background:var(--card);border:1px solid var(--line);border-top:5px solid var(--c);border-radius:14px;margin:0 0 18px;overflow:hidden;scroll-margin-top:60px}
 .bk-labor{--c:var(--labor);--cbg:var(--labor-bg)}.bk-healthcare{--c:var(--health);--cbg:var(--health-bg)}.bk-education{--c:var(--edu);--cbg:var(--edu-bg)}
@@ -399,16 +401,57 @@ def page(title: str, body: str, extra_head: str = "") -> str:
 """
 
 
+STATES = [("massachusetts", "Massachusetts"), ("new_hampshire", "New Hampshire")]
+
+
+def slug(s: str) -> str:
+    return re.sub(r"[^a-z0-9]+", "-", s.lower()).strip("-") or "topic"
+
+
+def display_sections(b: dict) -> list[dict]:
+    """Page order: Federal, World, then topic sections (state news grouped by topic, plus AI).
+
+    The data stays organized by government; Massachusetts and New Hampshire blocks are
+    regrouped here so each topic section holds one block per state.
+    """
+    out = [
+        {"id": "federal", "title": "Federal", "nav": "Federal", "blocks": b["sections"]["federal"],
+         "empty": "Nothing of real substance at the federal level today."},
+        {"id": "world", "title": "World", "nav": "World", "blocks": b["sections"]["world"],
+         "empty": "Nothing of real substance internationally today."},
+    ]
+    topics: dict[str, dict] = {}
+    for key, state in STATES:
+        for blk in b["sections"][key]:
+            title = blk.get("label") or TOPIC_LABELS.get(blk["topic"], "Policy")
+            tid = slug(title)
+            t = topics.setdefault(tid, {"id": tid, "title": title, "nav": title, "topic": blk["topic"],
+                                        "kicker": "Massachusetts & New Hampshire", "blocks": []})
+            t["blocks"].append({**blk, "label": state})
+    rank = {t: n for n, t in enumerate(PRIORITY_TOPICS)}
+    ordered = sorted(topics.values(), key=lambda t: rank.get(t["topic"], len(PRIORITY_TOPICS)))
+    priority = [t for t in ordered if t["topic"] in rank]
+    others = [t for t in ordered if t["topic"] not in rank]
+    ai = {"id": "ai", "title": "Artificial Intelligence", "nav": "AI", "blocks": b["sections"]["ai"],
+          "empty": "No major AI developments today."}
+    out += priority + [ai] + others
+    if not topics:
+        out.append({"id": "states", "title": "Massachusetts & New Hampshire", "nav": "MA & NH",
+                    "blocks": [], "empty": "No state policy news of real substance today."})
+    return out
+
+
 def render_briefing(b: dict, tiers_text: dict, archive_prefix: str) -> str:
     nav, secs = [], []
-    for key, title in SECTIONS:
-        blocks = b["sections"][key]
+    for sec in display_sections(b):
+        key, blocks = sec["id"], sec["blocks"]
         n = sum(len(blk["items"]) for blk in blocks)
-        nav.append(f'<a href="#{key}">{NAV_LABELS[key]}<span>{n}</span></a>')
+        nav.append(f'<a href="#{key}">{e(sec["nav"])}<span>{n}</span></a>')
         inner = "".join(render_block(blk, tiers_text, f"{key}-{i + 1}")
                         for i, blk in enumerate(blocks)) or \
-            '<p class="empty">Nothing of real substance in this section today.</p>'
-        secs.append(f'<section class="sec" id="{key}"><h2>{title}</h2>{inner}</section>')
+            f'<p class="empty">{e(sec.get("empty", "Nothing today."))}</p>'
+        kicker = f'<p class="sec-kicker">{e(sec["kicker"])}</p>' if sec.get("kicker") else ""
+        secs.append(f'<section class="sec" id="{key}">{kicker}<h2>{e(sec["title"])}</h2>{inner}</section>')
     note = f'<p class="note">{e(b["note"])}</p>' if b.get("note") else ""
     gen = ""
     if b.get("generated_at"):

@@ -26,11 +26,13 @@ h1{font-size:28px;line-height:1.2;margin:4px 0 2px}
 .date{color:var(--muted);margin:0}
 .stale{display:none;background:var(--caut-bg);color:var(--caut);border-radius:10px;padding:10px 12px;margin:14px 0 0;font-size:15px}
 .note{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:12px 14px;margin:16px 0 0;font-size:16px}
-nav.jump{position:sticky;top:0;z-index:5;background:var(--bg);display:flex;flex-wrap:wrap;gap:5px;padding:8px 0;margin-top:12px;border-bottom:1px solid var(--line);overflow-x:auto}
+nav.jump{position:sticky;top:0;z-index:5;background:var(--bg);display:flex;flex-wrap:nowrap;gap:6px;padding:8px 0;scrollbar-width:none;margin-top:12px;border-bottom:1px solid var(--line);overflow-x:auto}
 nav.jump a{flex:0 0 auto;text-decoration:none;color:var(--ink);background:var(--card);border:1px solid var(--line);border-radius:999px;padding:4px 9px;font-size:13.5px;font-weight:600}
 nav.jump a span{color:var(--muted);font-weight:500;margin-left:3px}
-section.sec{scroll-margin-top:60px}
-h2{font-size:22px;margin:28px 0 10px;padding-bottom:6px;border-bottom:2px solid var(--ink)}
+section.sec{scroll-margin-top:60px;padding-top:28px}
+.sec-kicker{font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);margin:0 0 2px}
+nav.jump::-webkit-scrollbar{display:none}
+h2{font-size:22px;margin:0 0 10px;padding-bottom:6px;border-bottom:2px solid var(--ink)}
 .empty{color:var(--muted);font-style:italic}
 .block{--c:var(--accent);--cbg:var(--other-bg);background:var(--card);border:1px solid var(--line);border-top:5px solid var(--c);border-radius:14px;margin:0 0 18px;overflow:hidden;scroll-margin-top:60px}
 .bk-labor{--c:var(--labor);--cbg:var(--labor-bg)}.bk-healthcare{--c:var(--health);--cbg:var(--health-bg)}.bk-education{--c:var(--edu);--cbg:var(--edu-bg)}

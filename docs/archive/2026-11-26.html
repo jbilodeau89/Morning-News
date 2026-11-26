@@ -26,11 +26,13 @@ h1{font-size:28px;line-height:1.2;margin:4px 0 2px}
 .date{color:var(--muted);margin:0}
 .stale{display:none;background:var(--caut-bg);color:var(--caut);border-radius:10px;padding:10px 12px;margin:14px 0 0;font-size:15px}
 .note{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:12px 14px;margin:16px 0 0;font-size:16px}
-nav.jump{position:sticky;top:0;z-index:5;background:var(--bg);display:flex;flex-wrap:wrap;gap:5px;padding:8px 0;margin-top:12px;border-bottom:1px solid var(--line);overflow-x:auto}
+nav.jump{position:sticky;top:0;z-index:5;background:var(--bg);display:flex;flex-wrap:nowrap;gap:6px;padding:8px 0;scrollbar-width:none;margin-top:12px;border-bottom:1px solid var(--line);overflow-x:auto}
 nav.jump a{flex:0 0 auto;text-decoration:none;color:var(--ink);background:var(--card);border:1px solid var(--line);border-radius:999px;padding:4px 9px;font-size:13.5px;font-weight:600}
 nav.jump a span{color:var(--muted);font-weight:500;margin-left:3px}
-section.sec{scroll-margin-top:60px}
-h2{font-size:22px;margin:28px 0 10px;padding-bottom:6px;border-bottom:2px solid var(--ink)}
+section.sec{scroll-margin-top:60px;padding-top:28px}
+.sec-kicker{font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);margin:0 0 2px}
+nav.jump::-webkit-scrollbar{display:none}
+h2{font-size:22px;margin:0 0 10px;padding-bottom:6px;border-bottom:2px solid var(--ink)}
 .empty{color:var(--muted);font-style:italic}
 .block{--c:var(--accent);--cbg:var(--other-bg);background:var(--card);border:1px solid var(--line);border-top:5px solid var(--c);border-radius:14px;margin:0 0 18px;overflow:hidden;scroll-margin-top:60px}
 .bk-labor{--c:var(--labor);--cbg:var(--labor-bg)}.bk-healthcare{--c:var(--health);--cbg:var(--health-bg)}.bk-education{--c:var(--edu);--cbg:var(--edu-bg)}
@@ -81,7 +83,7 @@ footer p{margin:0 0 8px}
   <p class="stale" id="stale"></p>
   <p class="note">Happy Thanksgiving. This is a second test edition, showing the new reading-block layout and the new AI and World sections. Congress and both state legislatures are on holiday recess, so it rounds up the past week rather than the past 24 hours. Regular editions start tomorrow morning.</p>
 </header>
-<nav class="jump" aria-label="Sections"><a href="#federal">Federal<span>6</span></a><a href="#massachusetts">Mass.<span>3</span></a><a href="#new_hampshire">N.H.<span>3</span></a><a href="#ai">AI<span>3</span></a><a href="#world">World<span>3</span></a></nav>
+<nav class="jump" aria-label="Sections"><a href="#federal">Federal<span>6</span></a><a href="#world">World<span>3</span></a><a href="#health-care">Health care<span>2</span></a><a href="#education">Education<span>2</span></a><a href="#ai">AI<span>3</span></a><a href="#housing">Housing<span>1</span></a><a href="#child-care">Child care<span>1</span></a></nav>
 <section class="sec" id="federal"><h2>Federal</h2>
 <article class="block bk-labor" id="federal-1">
   <header class="bk-head">
@@ -192,15 +194,78 @@ footer p{margin:0 0 8px}
     <p class="src-h">Sources</p>
     <ul class="sources"><li><a href="https://www.rollcall.com/2026/11/19/sweeping-permitting-overhaul-passes-senate-on-to-house" target="_blank" rel="noopener">Sweeping permitting overhaul passes Senate, on to House</a><span class="src-meta"><span class="outlet">Roll Call</span><span class="chip t-high" title="Roll Call — lean: Center. Media Bias/Fact Check: Least Biased / High factual. Ad Fontes Media: Middle / Reliable.">Rated highly reliable</span><span class="lean">Center</span></span></li><li><a href="https://axios.com/2026/11/25/house-energy-permitting-bill-vote-schedule" target="_blank" rel="noopener">Get ready for the House energy permitting bill vote</a><span class="src-meta"><span class="outlet">Axios</span><span class="chip t-high" title="Axios — lean: Center-Left. Media Bias/Fact Check: Left-Center / High factual. Ad Fontes Media: Middle / Reliable.">Rated highly reliable</span><span class="lean">Center-Left</span></span></li></ul>
   </section>
-</article></section><section class="sec" id="massachusetts"><h2>Massachusetts</h2>
-<article class="block bk-healthcare" id="massachusetts-1">
+</article></section><section class="sec" id="world"><h2>World</h2>
+<article class="block bk-other" id="world-1">
   <header class="bk-head">
-    <h3>Health care</h3><span class="bk-count">2 updates</span>
+    <h3>Middle East</h3><span class="bk-count">1 update</span>
+  </header>
+  <div class="overview"><p class="ov-h">The big picture</p><p>Shipping through the Strait of Hormuz, the route for about a fifth of the world&#x27;s oil, remains dangerous. Iran says several more tankers hit mines this week, and the United States responded with new sanctions.</p></div>
+  
+  
+  <section class="item" id="world-1-1">
+    <h4>Iran says tankers hit mines in the Strait of Hormuz despite U.S. naval escort</h4>
+    <p class="status">Unconfirmed Iranian claims; U.S. sanctions widened</p>
+    
+    <dl>
+      <div class="row"><dt>What changed</dt><dd>Iran&#x27;s Revolutionary Guard said three oil tankers hit naval mines and caught fire on Nov. 23–24 while under U.S. military escort, and that two more hit mines on Nov. 25 after using what it called an unauthorized route. The U.S. military had not confirmed the incidents. The Treasury Department widened sanctions the same week.</dd></div>
+      <div class="row"><dt>What it does</dt><dd>Iran is demanding that ships coordinate their passage with Tehran, using the threat of mines to enforce it, and it has been pressing that demand since the 2026 Hormuz crisis began. The U.S. escorts and sanctions aim to keep the strait open without accepting Iran&#x27;s control.</dd></div>
+      <div class="row"><dt>Who it affects</dt><dd>Ship crews and tanker operators, and anyone who pays for fuel: disruptions in the strait push up global oil and gasoline prices.</dd></div>
+      
+    </dl>
+    <p class="src-h">Sources</p>
+    <ul class="sources"><li><a href="https://www.cnbc.com/2026/11/24/iran-trump-hormuz-crude-.html" target="_blank" rel="noopener">Iran says three tankers hit mines in Hormuz despite U.S. escort, as Treasury widens sanctions</a><span class="src-meta"><span class="outlet">CNBC</span><span class="chip t-high" title="CNBC — lean: Center-Left. Media Bias/Fact Check: Left-Center / High factual. Ad Fontes Media: Middle / Reliable.">Rated highly reliable</span><span class="lean">Center-Left</span></span></li><li><a href="https://www.jpost.com/middle-east/iran-news/article-915899" target="_blank" rel="noopener">IRGC: Three tankers hit mines, exploded while transiting Hormuz with US support</a><span class="src-meta"><span class="outlet">The Jerusalem Post</span><span class="chip t-mostly" title="The Jerusalem Post — lean: Center-Right. Media Bias/Fact Check: Right-Center / Mostly factual. Ad Fontes Media: Skews Right / Generally reliable.">Rated mostly reliable</span><span class="lean">Center-Right</span></span></li></ul>
+  </section>
+</article>
+<article class="block bk-other" id="world-2">
+  <header class="bk-head">
+    <h3>Europe</h3><span class="bk-count">1 update</span>
+  </header>
+  <div class="overview"><p class="ov-h">The big picture</p><p>U.S.-brokered peace talks between Russia and Ukraine ended without a ceasefire. Territory remains the sticking point.</p></div>
+  
+  
+  <section class="item" id="world-2-1">
+    <h4>Russia–Ukraine talks in Abu Dhabi end without a ceasefire</h4>
+    <p class="status">Talks ended; no agreement</p>
+    
+    <dl>
+      <div class="row"><dt>What changed</dt><dd>The third round of U.S.-mediated talks among the United States, Ukraine, and Russia, held in Abu Dhabi beginning Nov. 10, ended without a ceasefire. Fighting continued during the talks.</dd></div>
+      <div class="row"><dt>What it does</dt><dd>No terms changed. Russia still demands that Ukraine withdraw from the parts of the Donbas region it still holds. Ukraine refuses to give up territory Russia doesn&#x27;t occupy. Both sides floated a prisoner exchange, the one area of possible agreement. The EU says it is assembling its own negotiating team.</dd></div>
+      <div class="row"><dt>Who it affects</dt><dd>Ukrainian and Russian civilians and soldiers, European security planning, and U.S. aid and diplomacy.</dd></div>
+      <div class="row"><dt>What's next</dt><dd>No date has been set for the next round.</dd></div>
+    </dl>
+    <p class="src-h">Sources</p>
+    <ul class="sources"><li><a href="https://www.semafor.com/article/11/11/2026/russia-ukraine-ceasefire-negotiations-stall" target="_blank" rel="noopener">Russia-Ukraine ceasefire negotiations stall</a><span class="src-meta"><span class="outlet">Semafor</span><span class="chip t-high" title="Semafor — lean: Center. Media Bias/Fact Check: Least Biased / High factual. Ad Fontes Media: Middle / Reliable.">Rated highly reliable</span><span class="lean">Center</span></span></li><li><a href="https://www.euronews.com/2026/11/11/ukraine-russia-peace-talks-enter-second-day-with-territory-and-security-guarantees-in-focu" target="_blank" rel="noopener">Ukraine-Russia peace talks enter second day with territory and security guarantees in focus</a><span class="src-meta"><span class="outlet">Euronews</span><span class="chip t-high" title="Euronews — lean: Center. Media Bias/Fact Check: Least Biased / High factual. Ad Fontes Media: Middle / Reliable.">Rated highly reliable</span><span class="lean">Center</span></span></li></ul>
+  </section>
+</article>
+<article class="block bk-other" id="world-3">
+  <header class="bk-head">
+    <h3>International law</h3><span class="bk-count">1 update</span>
+  </header>
+  <div class="overview"><p class="ov-h">The big picture</p><p>For the first time, the UN&#x27;s top court has found that a country committed genocide.</p></div>
+  
+  
+  <section class="item" id="world-3-1">
+    <h4>World Court rules Myanmar committed genocide against the Rohingya</h4>
+    <p class="status">International Court of Justice judgment, Nov. 19 (9–6)</p>
+    <aside class="trust warning" role="note"><p class="trust-h">Check the source</p><p>This story is not confirmed by a highly rated outlet or an official record. The information comes from:</p><ul><li><strong>Rated mixed reliability.</strong> Al Jazeera English — lean: Center-Left. Media Bias/Fact Check: Left-Center / Mixed factual. Ad Fontes Media: Skews Left / Generally reliable.</li></ul></aside>
+    <dl>
+      <div class="row"><dt>What changed</dt><dd>The International Court of Justice ruled 9–6 that Myanmar violated the Genocide Convention through its military&#x27;s campaign against the Rohingya, a Muslim minority, in Rakhine State. It is the first time the court has found a state responsible for genocide.</dd></div>
+      <div class="row"><dt>What it does</dt><dd>The court ordered Myanmar to support the safe and voluntary return of displaced Rohingya, reunite families, and restore property and rights. This is a ruling against the state, not a criminal case against individuals, and the court has no enforcement power of its own. Myanmar&#x27;s military-backed government called the ruling &quot;unfair.&quot;</dd></div>
+      <div class="row"><dt>Who it affects</dt><dd>Roughly a million Rohingya refugees, most living in camps in Bangladesh, plus countries deciding whether to send Rohingya back. The ruling may also shape future genocide cases.</dd></div>
+      
+    </dl>
+    <p class="src-h">Sources</p>
+    <ul class="sources"><li><a href="https://edition.cnn.com/2026/11/19/asia/icj-myanmar-genocide-rohingya-ruling-intl-hnk" target="_blank" rel="noopener">In historic first, UN top court rules a country committed genocide</a><span class="src-meta"><span class="outlet">CNN</span><span class="chip t-mostly" title="CNN — lean: Left. Media Bias/Fact Check: Left / Mostly factual. Ad Fontes Media: Skews Left / Generally reliable.">Rated mostly reliable</span><span class="lean">Left</span></span></li><li><a href="https://www.aljazeera.com/news/2026/11/19/what-the-icj-ruling-means-for-the-rohingya" target="_blank" rel="noopener">What the ICJ genocide ruling means for the Rohingya people</a><span class="src-meta"><span class="outlet">Al Jazeera English</span><span class="chip t-mixed" title="Al Jazeera English — lean: Center-Left. Media Bias/Fact Check: Left-Center / Mixed factual. Ad Fontes Media: Skews Left / Generally reliable.">Rated mixed reliability</span><span class="lean">Center-Left</span></span></li><li><a href="https://www.hrw.org/news/2026/11/19/world-court-finds-myanmar-committed-rohingya-genocide" target="_blank" rel="noopener">World Court Finds Myanmar Committed Rohingya Genocide</a><span class="src-meta"><span class="outlet">Human Rights Watch (advocacy group)</span><span class="chip t-mostly" title="Human Rights Watch (advocacy group) — lean: Center-Left (human rights advocacy). Media Bias/Fact Check: Left-Center / High factual. Ad Fontes Media: Not rated.">Rated mostly reliable</span><span class="lean">Center-Left (human rights advocacy)</span></span></li></ul>
+  </section>
+</article></section><section class="sec" id="health-care"><p class="sec-kicker">Massachusetts &amp; New Hampshire</p><h2>Health care</h2>
+<article class="block bk-healthcare" id="health-care-1">
+  <header class="bk-head">
+    <h3>Massachusetts</h3><span class="bk-count">2 updates</span>
   </header>
   <div class="overview"><p class="ov-h">The big picture</p><p>Two health bills are in House–Senate negotiations at the State House. One would push hospitals to spend more on primary care. The other is a $2+ billion spending bill, most of it for MassHealth. Both need a compromise before they can reach the governor.</p></div>
-  <ol class="toc"><li><a href="#massachusetts-1-1">House and Senate negotiators face a deadline on a bill to steer more health spending to primary care</a></li><li><a href="#massachusetts-1-2">House and Senate still need to agree on a $2+ billion budget bill, mostly for MassHealth</a></li></ol>
+  <ol class="toc"><li><a href="#health-care-1-1">House and Senate negotiators face a deadline on a bill to steer more health spending to primary care</a></li><li><a href="#health-care-1-2">House and Senate still need to agree on a $2+ billion budget bill, mostly for MassHealth</a></li></ol>
   
-  <section class="item" id="massachusetts-1-1">
+  <section class="item" id="health-care-1-1">
     <h4>House and Senate negotiators face a deadline on a bill to steer more health spending to primary care</h4>
     <p class="status">In House–Senate negotiations</p>
     
@@ -213,7 +278,7 @@ footer p{margin:0 0 8px}
     <p class="src-h">Sources</p>
     <ul class="sources"><li><a href="https://www.bostonglobe.com/2026/11/23/metro/massachusetts-legislature-bill-primary-care-crisis/" target="_blank" rel="noopener">Mass. lawmakers&#x27; talks over primary care bill face deadline</a><span class="src-meta"><span class="outlet">The Boston Globe</span><span class="chip t-high" title="The Boston Globe — lean: Center-Left. Media Bias/Fact Check: Left-Center / High factual. Ad Fontes Media: Skews Left / Reliable.">Rated highly reliable</span><span class="lean">Center-Left</span></span></li><li><a href="https://malegislature.gov/PressRoom/Detail?pressReleaseId=1406" target="_blank" rel="noopener">Senate Bill Takes Aim at Health Care Affordability, Primary Care Shortages and Long Wait Times</a><span class="src-meta"><span class="outlet">Commonwealth of Massachusetts</span><span class="chip t-primary" title="Commonwealth of Massachusetts — lean: n/a (state&amp;#x27;s own statement). Media Bias/Fact Check: n/a. Ad Fontes Media: n/a.">Official government document or record</span><span class="lean">n/a (state&#x27;s own statement)</span></span></li></ul>
   </section>
-  <section class="item" id="massachusetts-1-2">
+  <section class="item" id="health-care-1-2">
     <h4>House and Senate still need to agree on a $2+ billion budget bill, mostly for MassHealth</h4>
     <p class="status">House and Senate versions differ</p>
     
@@ -226,36 +291,15 @@ footer p{margin:0 0 8px}
     <p class="src-h">Sources</p>
     <ul class="sources"><li><a href="https://www.wbur.org/news/2026/10/30/senate-supplemental-spending-bill-house-healey" target="_blank" rel="noopener">Senate loads up supplemental spending bill with policy riders</a><span class="src-meta"><span class="outlet">WBUR</span><span class="chip t-high" title="WBUR — lean: Center-Left. Media Bias/Fact Check: Left-Center / High factual. Ad Fontes Media: Not rated.">Rated highly reliable</span><span class="lean">Center-Left</span></span></li><li><a href="https://www.wbur.org/news/2026/10/21/supplemental-budget-house-gas-tax-health-funding" target="_blank" rel="noopener">What did and didn&#x27;t make it into the Mass. House&#x27;s supplemental budget bill</a><span class="src-meta"><span class="outlet">WBUR</span><span class="chip t-high" title="WBUR — lean: Center-Left. Media Bias/Fact Check: Left-Center / High factual. Ad Fontes Media: Not rated.">Rated highly reliable</span><span class="lean">Center-Left</span></span></li></ul>
   </section>
-</article>
-<article class="block bk-other" id="massachusetts-2">
+</article></section><section class="sec" id="education"><p class="sec-kicker">Massachusetts &amp; New Hampshire</p><h2>Education</h2>
+<article class="block bk-education" id="education-1">
   <header class="bk-head">
-    <h3>Housing</h3><span class="bk-count">1 update</span>
-  </header>
-  <div class="overview"><p class="ov-h">The big picture</p><p>After voters narrowly rejected Question 7, the governor wants the Legislature to take up starter-home zoning itself.</p></div>
-  
-  
-  <section class="item" id="massachusetts-2-1">
-    <h4>After Question 7 failed, Healey asks the Legislature to pass a starter-home bill</h4>
-    <p class="status">Proposal; no bill passed</p>
-    <aside class="trust caution" role="note"><p class="trust-h">Source note</p><p>This story comes only from outlets rated mostly (not highly) reliable:</p><ul><li><strong>Rated mostly reliable.</strong> Boston.com — lean: Center-Left. Media Bias/Fact Check: Left-Center / Mostly factual. Ad Fontes Media: Not rated.</li></ul></aside>
-    <dl>
-      <div class="row"><dt>What changed</dt><dd>Gov. Healey said she wants lawmakers to pass a standalone bill allowing single-family &quot;starter homes&quot; on smaller lots, after voters narrowly rejected Question 7 on Nov. 3.</dd></div>
-      <div class="row"><dt>What it does</dt><dd>Question 7 would have allowed single-family homes on lots as small as 5,000 square feet statewide, overriding larger local minimum lot sizes. It did not set a limit on house size. A legislative version could change those details. Separately, a Senate-backed idea to allow duplexes by right on all residential lots is in private House–Senate talks.</dd></div>
-      <div class="row"><dt>Who it affects</dt><dd>First-time homebuyers, cities and towns that set their own zoning (the Massachusetts Municipal Association opposed Question 7), and builders.</dd></div>
-      <div class="row"><dt>What's next</dt><dd>The governor has signaled she wants action after the holidays.</dd></div>
-    </dl>
-    <p class="src-h">Sources</p>
-    <ul class="sources"><li><a href="https://www.boston.com/news/politics/2026/11/17/a-measure-pitched-as-promising-more-starter-homes-failed-at-the-ballot-maura-healey-wants-the-legislature-to-pass-it/" target="_blank" rel="noopener">A measure pitched as promising more starter homes failed at the ballot. Maura Healey wants the Legislature to pass it.</a><span class="src-meta"><span class="outlet">Boston.com</span><span class="chip t-mostly" title="Boston.com — lean: Center-Left. Media Bias/Fact Check: Left-Center / Mostly factual. Ad Fontes Media: Not rated.">Rated mostly reliable</span><span class="lean">Center-Left</span></span></li></ul>
-  </section>
-</article></section><section class="sec" id="new_hampshire"><h2>New Hampshire</h2>
-<article class="block bk-education" id="new_hampshire-1">
-  <header class="bk-head">
-    <h3>Education</h3><span class="bk-count">2 updates</span>
+    <h3>New Hampshire</h3><span class="bk-count">2 updates</span>
   </header>
   <div class="overview"><p class="ov-h">The big picture</p><p>School funding is the big New Hampshire education issue heading into the January session. Democrats&#x27; new majorities want to change how state aid is distributed, while 91 districts are adjusting to property-tax caps their voters just approved.</p></div>
-  <ol class="toc"><li><a href="#new_hampshire-1-1">Democrats with new legislative majorities plan changes to school funding</a></li><li><a href="#new_hampshire-1-2">91 school districts adopted property-tax caps; budgets must now fit them</a></li></ol>
+  <ol class="toc"><li><a href="#education-1-1">Democrats with new legislative majorities plan changes to school funding</a></li><li><a href="#education-1-2">91 school districts adopted property-tax caps; budgets must now fit them</a></li></ol>
   
-  <section class="item" id="new_hampshire-1-1">
+  <section class="item" id="education-1-1">
     <h4>Democrats with new legislative majorities plan changes to school funding</h4>
     <p class="status">Proposals for the 2027 session</p>
     
@@ -268,7 +312,7 @@ footer p{margin:0 0 8px}
     <p class="src-h">Sources</p>
     <ul class="sources"><li><a href="https://newhampshirebulletin.com/2026/11/16/with-their-new-legislative-majorities-nh-democrats-eye-education-changes/" target="_blank" rel="noopener">With their new legislative majorities, NH Democrats eye education changes</a><span class="src-meta"><span class="outlet">New Hampshire Bulletin</span><span class="chip t-high" title="New Hampshire Bulletin — lean: Center-Left. Media Bias/Fact Check: Left-Center / High factual. Ad Fontes Media: Not rated.">Rated highly reliable</span><span class="lean">Center-Left</span></span></li></ul>
   </section>
-  <section class="item" id="new_hampshire-1-2">
+  <section class="item" id="education-1-2">
     <h4>91 school districts adopted property-tax caps; budgets must now fit them</h4>
     <p class="status">Approved by local voters Nov. 3</p>
     
@@ -280,27 +324,6 @@ footer p{margin:0 0 8px}
     </dl>
     <p class="src-h">Sources</p>
     <ul class="sources"><li><a href="https://newhampshirebulletin.com/2026/11/10/dozens-of-nh-school-districts-adopted-tax-caps-now-a-balancing-act-begins/" target="_blank" rel="noopener">Dozens of NH school districts adopted tax caps. Now, a balancing act begins.</a><span class="src-meta"><span class="outlet">New Hampshire Bulletin</span><span class="chip t-high" title="New Hampshire Bulletin — lean: Center-Left. Media Bias/Fact Check: Left-Center / High factual. Ad Fontes Media: Not rated.">Rated highly reliable</span><span class="lean">Center-Left</span></span></li></ul>
-  </section>
-</article>
-<article class="block bk-other" id="new_hampshire-2">
-  <header class="bk-head">
-    <h3>Child care</h3><span class="bk-count">1 update</span>
-  </header>
-  <div class="overview"><p class="ov-h">The big picture</p><p>The state&#x27;s child care scholarship program spent about twice its budget this year, and the health department wants more money for it in the next budget.</p></div>
-  
-  
-  <section class="item" id="new_hampshire-2-1">
-    <h4>Health and Human Services asks for more child care money in the next two-year budget</h4>
-    <p class="status">Agency budget request</p>
-    
-    <dl>
-      <div class="row"><dt>What changed</dt><dd>The Department of Health and Human Services is asking for more state funding for its child care scholarship program in the next two-year budget.</dd></div>
-      <div class="row"><dt>What it does</dt><dd>The request responds to a funding gap: the department budgeted just over $25 million for the scholarship program in fiscal 2026, but spent more than $52 million.</dd></div>
-      <div class="row"><dt>Who it affects</dt><dd>Low- and moderate-income working families who rely on child care scholarships, and child care providers.</dd></div>
-      <div class="row"><dt>What's next</dt><dd>Agency requests feed into Gov. Ayotte&#x27;s budget proposal, due early next year, and then go to the Legislature.</dd></div>
-    </dl>
-    <p class="src-h">Sources</p>
-    <ul class="sources"><li><a href="https://newhampshirebulletin.com/2026/11/19/health-and-human-services-proposes-more-funding-for-childcare-in-next-two-year-budget/" target="_blank" rel="noopener">Health and Human Services proposes more funding for childcare in next two-year budget</a><span class="src-meta"><span class="outlet">New Hampshire Bulletin</span><span class="chip t-high" title="New Hampshire Bulletin — lean: Center-Left. Media Bias/Fact Check: Left-Center / High factual. Ad Fontes Media: Not rated.">Rated highly reliable</span><span class="lean">Center-Left</span></span></li></ul>
   </section>
 </article></section><section class="sec" id="ai"><h2>Artificial Intelligence</h2>
 <article class="block bk-education" id="ai-1">
@@ -365,68 +388,47 @@ footer p{margin:0 0 8px}
     <p class="src-h">Sources</p>
     <ul class="sources"><li><a href="https://www.cnbc.com/2026/11/18/anthropic-ipo-ai-offering-price.html" target="_blank" rel="noopener">Anthropic IPO raises over $81 billion in largest offering on record, topping SpaceX</a><span class="src-meta"><span class="outlet">CNBC</span><span class="chip t-high" title="CNBC — lean: Center-Left. Media Bias/Fact Check: Left-Center / High factual. Ad Fontes Media: Middle / Reliable.">Rated highly reliable</span><span class="lean">Center-Left</span></span></li><li><a href="https://www.foxbusiness.com/markets/anthropic-begins-trading-nasdaq-record-breaking-ipo" target="_blank" rel="noopener">Anthropic begins trading on Nasdaq, tops SpaceX for biggest IPO ever</a><span class="src-meta"><span class="outlet">Fox News</span><span class="chip t-mixed" title="Fox News — lean: Right. Media Bias/Fact Check: Right / Mixed factual. Ad Fontes Media: Skews Right / Mixed reliability.">Rated mixed reliability</span><span class="lean">Right</span></span></li></ul>
   </section>
-</article></section><section class="sec" id="world"><h2>World</h2>
-<article class="block bk-other" id="world-1">
+</article></section><section class="sec" id="housing"><p class="sec-kicker">Massachusetts &amp; New Hampshire</p><h2>Housing</h2>
+<article class="block bk-other" id="housing-1">
   <header class="bk-head">
-    <h3>Middle East</h3><span class="bk-count">1 update</span>
+    <h3>Massachusetts</h3><span class="bk-count">1 update</span>
   </header>
-  <div class="overview"><p class="ov-h">The big picture</p><p>Shipping through the Strait of Hormuz, the route for about a fifth of the world&#x27;s oil, remains dangerous. Iran says several more tankers hit mines this week, and the United States responded with new sanctions.</p></div>
+  <div class="overview"><p class="ov-h">The big picture</p><p>After voters narrowly rejected Question 7, the governor wants the Legislature to take up starter-home zoning itself.</p></div>
   
   
-  <section class="item" id="world-1-1">
-    <h4>Iran says tankers hit mines in the Strait of Hormuz despite U.S. naval escort</h4>
-    <p class="status">Unconfirmed Iranian claims; U.S. sanctions widened</p>
+  <section class="item" id="housing-1-1">
+    <h4>After Question 7 failed, Healey asks the Legislature to pass a starter-home bill</h4>
+    <p class="status">Proposal; no bill passed</p>
+    <aside class="trust caution" role="note"><p class="trust-h">Source note</p><p>This story comes only from outlets rated mostly (not highly) reliable:</p><ul><li><strong>Rated mostly reliable.</strong> Boston.com — lean: Center-Left. Media Bias/Fact Check: Left-Center / Mostly factual. Ad Fontes Media: Not rated.</li></ul></aside>
+    <dl>
+      <div class="row"><dt>What changed</dt><dd>Gov. Healey said she wants lawmakers to pass a standalone bill allowing single-family &quot;starter homes&quot; on smaller lots, after voters narrowly rejected Question 7 on Nov. 3.</dd></div>
+      <div class="row"><dt>What it does</dt><dd>Question 7 would have allowed single-family homes on lots as small as 5,000 square feet statewide, overriding larger local minimum lot sizes. It did not set a limit on house size. A legislative version could change those details. Separately, a Senate-backed idea to allow duplexes by right on all residential lots is in private House–Senate talks.</dd></div>
+      <div class="row"><dt>Who it affects</dt><dd>First-time homebuyers, cities and towns that set their own zoning (the Massachusetts Municipal Association opposed Question 7), and builders.</dd></div>
+      <div class="row"><dt>What's next</dt><dd>The governor has signaled she wants action after the holidays.</dd></div>
+    </dl>
+    <p class="src-h">Sources</p>
+    <ul class="sources"><li><a href="https://www.boston.com/news/politics/2026/11/17/a-measure-pitched-as-promising-more-starter-homes-failed-at-the-ballot-maura-healey-wants-the-legislature-to-pass-it/" target="_blank" rel="noopener">A measure pitched as promising more starter homes failed at the ballot. Maura Healey wants the Legislature to pass it.</a><span class="src-meta"><span class="outlet">Boston.com</span><span class="chip t-mostly" title="Boston.com — lean: Center-Left. Media Bias/Fact Check: Left-Center / Mostly factual. Ad Fontes Media: Not rated.">Rated mostly reliable</span><span class="lean">Center-Left</span></span></li></ul>
+  </section>
+</article></section><section class="sec" id="child-care"><p class="sec-kicker">Massachusetts &amp; New Hampshire</p><h2>Child care</h2>
+<article class="block bk-other" id="child-care-1">
+  <header class="bk-head">
+    <h3>New Hampshire</h3><span class="bk-count">1 update</span>
+  </header>
+  <div class="overview"><p class="ov-h">The big picture</p><p>The state&#x27;s child care scholarship program spent about twice its budget this year, and the health department wants more money for it in the next budget.</p></div>
+  
+  
+  <section class="item" id="child-care-1-1">
+    <h4>Health and Human Services asks for more child care money in the next two-year budget</h4>
+    <p class="status">Agency budget request</p>
     
     <dl>
-      <div class="row"><dt>What changed</dt><dd>Iran&#x27;s Revolutionary Guard said three oil tankers hit naval mines and caught fire on Nov. 23–24 while under U.S. military escort, and that two more hit mines on Nov. 25 after using what it called an unauthorized route. The U.S. military had not confirmed the incidents. The Treasury Department widened sanctions the same week.</dd></div>
-      <div class="row"><dt>What it does</dt><dd>Iran is demanding that ships coordinate their passage with Tehran, using the threat of mines to enforce it, and it has been pressing that demand since the 2026 Hormuz crisis began. The U.S. escorts and sanctions aim to keep the strait open without accepting Iran&#x27;s control.</dd></div>
-      <div class="row"><dt>Who it affects</dt><dd>Ship crews and tanker operators, and anyone who pays for fuel: disruptions in the strait push up global oil and gasoline prices.</dd></div>
-      
+      <div class="row"><dt>What changed</dt><dd>The Department of Health and Human Services is asking for more state funding for its child care scholarship program in the next two-year budget.</dd></div>
+      <div class="row"><dt>What it does</dt><dd>The request responds to a funding gap: the department budgeted just over $25 million for the scholarship program in fiscal 2026, but spent more than $52 million.</dd></div>
+      <div class="row"><dt>Who it affects</dt><dd>Low- and moderate-income working families who rely on child care scholarships, and child care providers.</dd></div>
+      <div class="row"><dt>What's next</dt><dd>Agency requests feed into Gov. Ayotte&#x27;s budget proposal, due early next year, and then go to the Legislature.</dd></div>
     </dl>
     <p class="src-h">Sources</p>
-    <ul class="sources"><li><a href="https://www.cnbc.com/2026/11/24/iran-trump-hormuz-crude-.html" target="_blank" rel="noopener">Iran says three tankers hit mines in Hormuz despite U.S. escort, as Treasury widens sanctions</a><span class="src-meta"><span class="outlet">CNBC</span><span class="chip t-high" title="CNBC — lean: Center-Left. Media Bias/Fact Check: Left-Center / High factual. Ad Fontes Media: Middle / Reliable.">Rated highly reliable</span><span class="lean">Center-Left</span></span></li><li><a href="https://www.jpost.com/middle-east/iran-news/article-915899" target="_blank" rel="noopener">IRGC: Three tankers hit mines, exploded while transiting Hormuz with US support</a><span class="src-meta"><span class="outlet">The Jerusalem Post</span><span class="chip t-mostly" title="The Jerusalem Post — lean: Center-Right. Media Bias/Fact Check: Right-Center / Mostly factual. Ad Fontes Media: Skews Right / Generally reliable.">Rated mostly reliable</span><span class="lean">Center-Right</span></span></li></ul>
-  </section>
-</article>
-<article class="block bk-other" id="world-2">
-  <header class="bk-head">
-    <h3>Europe</h3><span class="bk-count">1 update</span>
-  </header>
-  <div class="overview"><p class="ov-h">The big picture</p><p>U.S.-brokered peace talks between Russia and Ukraine ended without a ceasefire. Territory remains the sticking point.</p></div>
-  
-  
-  <section class="item" id="world-2-1">
-    <h4>Russia–Ukraine talks in Abu Dhabi end without a ceasefire</h4>
-    <p class="status">Talks ended; no agreement</p>
-    
-    <dl>
-      <div class="row"><dt>What changed</dt><dd>The third round of U.S.-mediated talks among the United States, Ukraine, and Russia, held in Abu Dhabi beginning Nov. 10, ended without a ceasefire. Fighting continued during the talks.</dd></div>
-      <div class="row"><dt>What it does</dt><dd>No terms changed. Russia still demands that Ukraine withdraw from the parts of the Donbas region it still holds. Ukraine refuses to give up territory Russia doesn&#x27;t occupy. Both sides floated a prisoner exchange, the one area of possible agreement. The EU says it is assembling its own negotiating team.</dd></div>
-      <div class="row"><dt>Who it affects</dt><dd>Ukrainian and Russian civilians and soldiers, European security planning, and U.S. aid and diplomacy.</dd></div>
-      <div class="row"><dt>What's next</dt><dd>No date has been set for the next round.</dd></div>
-    </dl>
-    <p class="src-h">Sources</p>
-    <ul class="sources"><li><a href="https://www.semafor.com/article/11/11/2026/russia-ukraine-ceasefire-negotiations-stall" target="_blank" rel="noopener">Russia-Ukraine ceasefire negotiations stall</a><span class="src-meta"><span class="outlet">Semafor</span><span class="chip t-high" title="Semafor — lean: Center. Media Bias/Fact Check: Least Biased / High factual. Ad Fontes Media: Middle / Reliable.">Rated highly reliable</span><span class="lean">Center</span></span></li><li><a href="https://www.euronews.com/2026/11/11/ukraine-russia-peace-talks-enter-second-day-with-territory-and-security-guarantees-in-focu" target="_blank" rel="noopener">Ukraine-Russia peace talks enter second day with territory and security guarantees in focus</a><span class="src-meta"><span class="outlet">Euronews</span><span class="chip t-high" title="Euronews — lean: Center. Media Bias/Fact Check: Least Biased / High factual. Ad Fontes Media: Middle / Reliable.">Rated highly reliable</span><span class="lean">Center</span></span></li></ul>
-  </section>
-</article>
-<article class="block bk-other" id="world-3">
-  <header class="bk-head">
-    <h3>International law</h3><span class="bk-count">1 update</span>
-  </header>
-  <div class="overview"><p class="ov-h">The big picture</p><p>For the first time, the UN&#x27;s top court has found that a country committed genocide.</p></div>
-  
-  
-  <section class="item" id="world-3-1">
-    <h4>World Court rules Myanmar committed genocide against the Rohingya</h4>
-    <p class="status">International Court of Justice judgment, Nov. 19 (9–6)</p>
-    <aside class="trust warning" role="note"><p class="trust-h">Check the source</p><p>This story is not confirmed by a highly rated outlet or an official record. The information comes from:</p><ul><li><strong>Rated mixed reliability.</strong> Al Jazeera English — lean: Center-Left. Media Bias/Fact Check: Left-Center / Mixed factual. Ad Fontes Media: Skews Left / Generally reliable.</li></ul></aside>
-    <dl>
-      <div class="row"><dt>What changed</dt><dd>The International Court of Justice ruled 9–6 that Myanmar violated the Genocide Convention through its military&#x27;s campaign against the Rohingya, a Muslim minority, in Rakhine State. It is the first time the court has found a state responsible for genocide.</dd></div>
-      <div class="row"><dt>What it does</dt><dd>The court ordered Myanmar to support the safe and voluntary return of displaced Rohingya, reunite families, and restore property and rights. This is a ruling against the state, not a criminal case against individuals, and the court has no enforcement power of its own. Myanmar&#x27;s military-backed government called the ruling &quot;unfair.&quot;</dd></div>
-      <div class="row"><dt>Who it affects</dt><dd>Roughly a million Rohingya refugees, most living in camps in Bangladesh, plus countries deciding whether to send Rohingya back. The ruling may also shape future genocide cases.</dd></div>
-      
-    </dl>
-    <p class="src-h">Sources</p>
-    <ul class="sources"><li><a href="https://edition.cnn.com/2026/11/19/asia/icj-myanmar-genocide-rohingya-ruling-intl-hnk" target="_blank" rel="noopener">In historic first, UN top court rules a country committed genocide</a><span class="src-meta"><span class="outlet">CNN</span><span class="chip t-mostly" title="CNN — lean: Left. Media Bias/Fact Check: Left / Mostly factual. Ad Fontes Media: Skews Left / Generally reliable.">Rated mostly reliable</span><span class="lean">Left</span></span></li><li><a href="https://www.aljazeera.com/news/2026/11/19/what-the-icj-ruling-means-for-the-rohingya" target="_blank" rel="noopener">What the ICJ genocide ruling means for the Rohingya people</a><span class="src-meta"><span class="outlet">Al Jazeera English</span><span class="chip t-mixed" title="Al Jazeera English — lean: Center-Left. Media Bias/Fact Check: Left-Center / Mixed factual. Ad Fontes Media: Skews Left / Generally reliable.">Rated mixed reliability</span><span class="lean">Center-Left</span></span></li><li><a href="https://www.hrw.org/news/2026/11/19/world-court-finds-myanmar-committed-rohingya-genocide" target="_blank" rel="noopener">World Court Finds Myanmar Committed Rohingya Genocide</a><span class="src-meta"><span class="outlet">Human Rights Watch (advocacy group)</span><span class="chip t-mostly" title="Human Rights Watch (advocacy group) — lean: Center-Left (human rights advocacy). Media Bias/Fact Check: Left-Center / High factual. Ad Fontes Media: Not rated.">Rated mostly reliable</span><span class="lean">Center-Left (human rights advocacy)</span></span></li></ul>
+    <ul class="sources"><li><a href="https://newhampshirebulletin.com/2026/11/19/health-and-human-services-proposes-more-funding-for-childcare-in-next-two-year-budget/" target="_blank" rel="noopener">Health and Human Services proposes more funding for childcare in next two-year budget</a><span class="src-meta"><span class="outlet">New Hampshire Bulletin</span><span class="chip t-high" title="New Hampshire Bulletin — lean: Center-Left. Media Bias/Fact Check: Left-Center / High factual. Ad Fontes Media: Not rated.">Rated highly reliable</span><span class="lean">Center-Left</span></span></li></ul>
   </section>
 </article></section>
 <section class="spectrum" aria-label="Political lean of outlets cited"><p class="sp-h">Outlets cited today, by lean</p><div class="sp-row"><div class="sp-cell"><span class="sp-n">1</span><span class="sp-l">Left</span></div><div class="sp-cell"><span class="sp-n">10</span><span class="sp-l">Center-Left</span></div><div class="sp-cell"><span class="sp-n">12</span><span class="sp-l">Center</span></div><div class="sp-cell"><span class="sp-n">1</span><span class="sp-l">Center-Right</span></div><div class="sp-cell"><span class="sp-n">3</span><span class="sp-l">Right</span></div></div><p class="sp-f">Official records and agency documents are not counted.</p></section>

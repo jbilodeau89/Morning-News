@@ -49,6 +49,15 @@ items and 4–8 World items. Federal will usually be the largest section. Aim fo
 quiet day (a weekend or holiday) it is fine to go shorter, and to say so in the `note`. A
 section may be empty if nothing substantive happened.
 
+### Page order (handled automatically)
+
+The page shows **Federal** first and **World** second, then sections by **topic**: Labor,
+Health care, and Education, then AI, then other topics such as Housing. Inside each topic,
+Massachusetts and New Hampshire each get their own block. You still write the data by
+government (see §5); the build script does the regrouping. That means each state block's
+overview should read well on its own under a topic heading, e.g. a Massachusetts block
+inside "Health care".
+
 ### Reading blocks
 
 Within each section, group items into **reading blocks**, one per topic. For example, all
