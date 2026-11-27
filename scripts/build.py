@@ -138,6 +138,11 @@ def validate(data: dict, by_domain: dict) -> dict:
     total = 0
     for key, _ in SECTIONS:
         blocks = sections.get(key, [])
+        if isinstance(blocks, dict):  # article format (current)
+            art = validate_article(blocks, key, by_domain)
+            out["sections"][key] = art
+            total += 1 if art else 0
+            continue
         resolved_blocks, seen = [], set()
         for bi, blk in enumerate(blocks):
             topic = blk.get("topic")
@@ -176,15 +181,67 @@ def validate(data: dict, by_domain: dict) -> dict:
         resolved_blocks.sort(key=lambda b: rank.get(b["topic"], len(PRIORITY_TOPICS)))
         out["sections"][key] = resolved_blocks
     if total == 0:
-        raise BriefingError("briefing has no stories")
+        raise BriefingError("briefing has no stories (every section is empty)")
     return out
 
 
+CITE_RE = re.compile(r"\[(\d+)\]")
+
+
+def validate_article(a: dict, key: str, by_domain: dict) -> dict | None:
+    """One section written as a single article. Empty object or no paragraphs = quiet day."""
+    paras = a.get("paragraphs") or []
+    where = f"{key} article"
+    if not paras:
+        return None
+    if not str(a.get("headline", "")).strip():
+        raise BriefingError(f"{where}: missing 'headline'")
+    srcs = a.get("sources") or []
+    if not srcs:
+        raise BriefingError(f"{where}: needs a 'sources' list")
+    resolved = [resolve_source(x, by_domain, f"{where} source {i + 1}") for i, x in enumerate(srcs)]
+    used = set()
+    clean = []
+    for i, p in enumerate(paras):
+        pw = f"{where} paragraph {i + 1}"
+        if isinstance(p, dict) and p.get("subhead"):
+            clean.append({"subhead": str(p["subhead"])})
+            continue
+        text = p if isinstance(p, str) else str(p.get("text", ""))
+        if not text.strip():
+            raise BriefingError(f"{pw}: empty paragraph")
+        nums = [int(n) for n in CITE_RE.findall(text)]
+        if not nums:
+            raise BriefingError(f"{pw}: every paragraph must cite a source like [1] "
+                                f"(numbers refer to the article's 'sources' list)")
+        for n in nums:
+            if not 1 <= n <= len(resolved):
+                raise BriefingError(f"{pw}: citation [{n}] but there are only {len(resolved)} sources")
+            used.add(n)
+        clean.append({"text": text})
+    unused = [i + 1 for i in range(len(resolved)) if i + 1 not in used]
+    if unused:
+        raise BriefingError(f"{where}: source(s) {unused} are listed but never cited in the text")
+    return {"headline": a["headline"], "dek": a.get("dek"), "paragraphs": clean,
+            "sources": resolved, "source_note": a.get("source_note"), "article": True}
+
+
+def is_article(sec) -> bool:
+    return isinstance(sec, dict) and sec.get("article")
+
+
 def all_items(b: dict, key: str | None = None):
+    """Yield story-like objects (each has 'sources') for counting and the lean spectrum."""
     for k, _ in SECTIONS:
         if key and k != key:
             continue
-        for blk in b["sections"][k]:
+        sec = b["sections"][k]
+        if sec is None:
+            continue
+        if is_article(sec):
+            yield sec
+            continue
+        for blk in sec:
             yield from blk["items"]
 
 
@@ -295,6 +352,70 @@ def render_block(blk: dict, tiers_text: dict, anchor: str) -> str:
 </article>"""
 
 
+def render_article(a: dict, tiers_text: dict, anchor: str) -> str:
+    weak = {i + 1 for i, src in enumerate(a["sources"])
+            if src["outlet"]["tier"] in ("mixed", "low", "unrated")}
+
+    def cite(m):
+        n = int(m.group(1))
+        cls = "cite weak" if n in weak else "cite"
+        tip = e(a["sources"][n - 1]["outlet"]["name"])
+        return f'<a class="{cls}" href="#{anchor}-s{n}" title="{tip}" aria-label="Source {n}">{n}</a>'
+
+    body = []
+    for p in a["paragraphs"]:
+        if "subhead" in p:
+            body.append(f'<h4 class="sub">{e(p["subhead"])}</h4>')
+        else:
+            body.append(f'<p>{CITE_RE.sub(cite, e(p["text"]))}</p>')
+    # source labels: the weaker the rating, the louder the note
+    strong = any(src["outlet"]["tier"] in ("primary", "high") for src in a["sources"])
+    groups: dict[str, dict] = {}
+    for i, src in enumerate(a["sources"]):
+        if src["outlet"]["tier"] in ("mixed", "low", "unrated") or not strong:
+            g = groups.setdefault(src["outlet"]["name"], {"o": src["outlet"], "n": []})
+            g["n"].append(str(i + 1))
+    trust_top = trust_bottom = ""
+    if groups or a.get("source_note"):
+        items = "".join(
+            f'<li><strong>Source{"s" if len(g["n"]) > 1 else ""} {", ".join(g["n"])}: '
+            f'{e(tiers_text.get(g["o"]["tier"], g["o"]["tier"]))}.</strong> {rating_sentence(g["o"])}</li>'
+            for g in groups.values())
+        extra = f'<p>{e(a["source_note"])}</p>' if a.get("source_note") else ""
+        if not strong:
+            box = ('<aside class="trust warning" role="note"><p class="trust-h">Check the sources</p>'
+                   '<p>Nothing in this section is confirmed by a highly rated outlet or an official record.</p>'
+                   f'<ul>{items}</ul>{extra}</aside>')
+            trust_top = box
+        else:
+            lead = ("Citations shown in yellow come from outlets with weaker reliability ratings; "
+                    "the text names the outlet wherever it relies on them." if groups else "")
+            box = (f'<aside class="trust caution" role="note"><p class="trust-h">Source note</p>'
+                   f'{f"<p>{lead}</p><ul>{items}</ul>" if groups else ""}{extra}</aside>')
+            trust_bottom = box
+    rows = []
+    for i, src in enumerate(a["sources"]):
+        o = src["outlet"]; tier = o["tier"]
+        rows.append(
+            f'<li id="{anchor}-s{i + 1}"><span class="sn">{i + 1}</span><div>'
+            f'<a href="{e(src["url"])}" target="_blank" rel="noopener">{e(src["title"])}</a>'
+            f'<span class="src-meta"><span class="outlet">{e(o["name"])}</span>'
+            f'<span class="chip t-{tier}" title="{e(rating_sentence(o))}">{e(tiers_text.get(tier, tier))}</span>'
+            f'<span class="lean">{e(o["lean"])}</span></span></div></li>')
+    dek = f'<p class="dek">{e(a["dek"])}</p>' if a.get("dek") else ""
+    return f"""
+<article class="block art" id="{anchor}">
+  <div class="art-body">
+    <h3>{e(a["headline"])}</h3>
+    {dek}
+    {trust_top}
+    {"".join(body)}
+    {trust_bottom}
+  </div>
+  <div class="art-src"><p class="src-h">Sources</p><ol class="sources num">{"".join(rows)}</ol></div>
+</article>"""
+
+
 def spectrum(b: dict) -> str:
     counts = Counter()
     seen = set()
@@ -381,6 +502,18 @@ dd{margin:2px 0 0}
 footer{margin-top:28px;font-size:14px;color:var(--muted)}
 footer p{margin:0 0 8px}
 .archive li{margin:0 0 8px}
+.art{border-top-color:var(--accent)}
+.art-body{padding:16px 16px 4px}
+.art-body h3{font-size:22px;line-height:1.25;margin:0 0 6px}
+.dek{color:var(--muted);font-size:16px;margin:0 0 12px}
+.art-body p{margin:0 0 14px}
+.art-body h4.sub{font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);margin:18px 0 6px}
+.cite{display:inline-block;min-width:1.5em;padding:0 4px;margin:0 1px;border-radius:6px;font-size:12px;line-height:1.5;font-weight:700;text-align:center;text-decoration:none;vertical-align:2px;background:var(--ok-bg);color:var(--ok);border:1px solid transparent}
+.cite.weak{background:var(--caut-bg);color:var(--caut);border-color:var(--caut)}
+.art-src{padding:0 16px 12px;border-top:1px solid var(--line)}
+.sources.num li{display:flex;gap:8px;scroll-margin-top:60px}
+.sources.num .sn{flex:0 0 auto;font-weight:700;color:var(--muted);min-width:1.4em}
+.sources.num li:target{background:var(--caut-bg)}
 """
 
 
@@ -441,15 +574,38 @@ def display_sections(b: dict) -> list[dict]:
     return out
 
 
+ARTICLE_ORDER = [
+    ("federal", "Federal", "Federal", "Nothing of real substance at the federal level today."),
+    ("world", "World", "World", "Nothing of real substance internationally today."),
+    ("massachusetts", "Massachusetts", "Mass.", "No Massachusetts policy news of real substance today."),
+    ("new_hampshire", "New Hampshire", "N.H.", "No New Hampshire policy news of real substance today."),
+    ("ai", "Artificial Intelligence", "AI", "No major AI developments today."),
+]
+
+
+def article_sections(b: dict) -> list[dict]:
+    """Page order for article-format briefings: Federal, World, Mass., N.H., AI."""
+    return [{"id": k, "title": t, "nav": n, "empty": emp, "article": b["sections"].get(k)}
+            for k, t, n, emp in ARTICLE_ORDER]
+
+
 def render_briefing(b: dict, tiers_text: dict, archive_prefix: str) -> str:
     nav, secs = [], []
-    for sec in display_sections(b):
-        key, blocks = sec["id"], sec["blocks"]
-        n = sum(len(blk["items"]) for blk in blocks)
-        nav.append(f'<a href="#{key}">{e(sec["nav"])}<span>{n}</span></a>')
-        inner = "".join(render_block(blk, tiers_text, f"{key}-{i + 1}")
-                        for i, blk in enumerate(blocks)) or \
-            f'<p class="empty">{e(sec.get("empty", "Nothing today."))}</p>'
+    articles = any(is_article(v) for v in b["sections"].values())
+    for sec in (article_sections(b) if articles else display_sections(b)):
+        key = sec["id"]
+        if articles:
+            a = sec["article"]
+            nav.append(f'<a href="#{key}">{e(sec["nav"])}</a>')
+            inner = render_article(a, tiers_text, key) if a else \
+                f'<p class="empty">{e(sec.get("empty", "Nothing today."))}</p>'
+        else:
+            blocks = sec["blocks"]
+            n = sum(len(blk["items"]) for blk in blocks)
+            nav.append(f'<a href="#{key}">{e(sec["nav"])}<span>{n}</span></a>')
+            inner = "".join(render_block(blk, tiers_text, f"{key}-{i + 1}")
+                            for i, blk in enumerate(blocks)) or \
+                f'<p class="empty">{e(sec.get("empty", "Nothing today."))}</p>'
         kicker = f'<p class="sec-kicker">{e(sec["kicker"])}</p>' if sec.get("kicker") else ""
         secs.append(f'<section class="sec" id="{key}">{kicker}<h2>{e(sec["title"])}</h2>{inner}</section>')
     note = f'<p class="note">{e(b["note"])}</p>' if b.get("note") else ""
@@ -515,9 +671,10 @@ def main(argv: list[str]) -> int:
         return 2
 
     counts = {k: sum(1 for _ in all_items(b, k)) for k, _ in SECTIONS}
+    unit = "articles" if any(is_article(v) for v in b["sections"].values()) else "stories"
     unrated = sorted({s["outlet"]["name"] for st in all_items(b)
                       for s in st["sources"] if s["outlet"]["tier"] == "unrated"})
-    print(f"OK: {path.name} — {sum(counts.values())} stories {counts}")
+    print(f"OK: {path.name} — {sum(counts.values())} {unit} {counts}")
     if unrated:
         print(f"NOTE: unrated outlets (flagged on the page): {', '.join(unrated)}")
     if check_only:

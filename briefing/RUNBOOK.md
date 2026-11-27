@@ -30,8 +30,8 @@ Five sections, in this order:
    schools, or health care; big industry moves; safety incidents; and court cases. Skip hype,
    benchmark bragging, and rumor. Prioritize AI in education, AI and jobs, and AI in health
    care. **Disclosure rule:** this briefing is written by Claude, made by Anthropic. Any AI
-   story about Anthropic (or one where Anthropic is a main party) must say so plainly in
-   that block's overview, and must be written with extra care for neutrality.
+   development about Anthropic (or one where Anthropic is a main party) must say so plainly in
+   the paragraph that covers it, and must be written with extra care for neutrality.
 5. **World**: substantive international news, including diplomacy, wars and ceasefires,
    international court rulings, trade and sanctions, elections *results* and the policies of
    new governments, humanitarian crises, and major policy changes abroad. The same "skip the
@@ -43,36 +43,38 @@ the Federal, Massachusetts, and New Hampshire sections. Also include any other s
 policy substance (housing, energy, taxes, immigration, criminal justice, environment,
 transportation, technology, and so on).
 
-**Target length:** 15–25 items across Federal, Massachusetts, and New Hampshire, plus 3–6 AI
-items and 4–8 World items. Federal will usually be the largest section. Aim for at least
-3–4 items each for Massachusetts and New Hampshire when the news supports it. Never pad: on a
+**Target coverage:** 15–25 developments across Federal, Massachusetts, and New Hampshire, plus
+3–6 AI developments and 4–8 World developments, each woven into its section's article.
+Federal will usually be the largest section. Aim for at least
+3–4 developments each for Massachusetts and New Hampshire when the news supports it. Never pad: on a
 quiet day (a weekend or holiday) it is fine to go shorter, and to say so in the `note`. A
 section may be empty if nothing substantive happened.
 
-### Page order (handled automatically)
+### One article per section
 
-The page shows **Federal** first and **World** second, then sections by **topic**: Labor,
-Health care, and Education, then AI, then other topics such as Housing. Inside each topic,
-Massachusetts and New Hampshire each get their own block. You still write the data by
-government (see §5); the build script does the regrouping. That means each state block's
-overview should read well on its own under a topic heading, e.g. a Massachusetts block
-inside "Health care".
+Each section is written as **one news article**, a flowing roundup that weaves the day's
+developments together, not a list of separate story cards. The page shows the sections in
+this order: **Federal, World, Massachusetts, New Hampshire, AI**.
 
-### Reading blocks
+How to build each article:
 
-Within each section, group items into **reading blocks**, one per topic. For example, all
-federal health care news goes in a single Health care block. Each block opens with a 2–4
-sentence **overview** ("The big picture") that ties its items together: the common thread,
-the most important development, and why it matters. Then come the individual items.
-
-- Federal / Massachusetts / New Hampshire blocks: one per topic (Labor, Health care,
-  Education, then other topics such as Housing, Energy, Taxes).
-- AI blocks: by theme, such as "Government & regulation", "AI in schools", "AI & work",
-  "AI in health care", "Industry", or "Safety".
-- World blocks: by region or theme, such as "Middle East", "Europe", "Asia", "Americas",
-  "Africa", "Trade & economy", or "International law".
-- Never make two blocks for the same topic in one section; merge them. A block may have a
-  single item.
+- **Headline:** neutral and specific, naming the main threads (e.g. "New tariff proposals,
+  Medicare drug prices, and court limits on presidential power").
+- **Dek (optional):** one sentence under the headline, such as "Plus …" for smaller items.
+- **Lead paragraph:** the big picture. What happened today in this area, which development
+  matters most, and the common thread if there is one.
+- **Body:** one or two paragraphs per development. For each, say what changed, what it does,
+  who it affects (with numbers), and what's next (vote, deadline, effective date). Fold in the
+  status ("proposed rule; comments due Jan. 26") as part of the sentence.
+- **Order:** in Federal, Massachusetts and New Hampshire, put labor, health care and education
+  first, then other topics by importance. In AI and World, order by importance.
+- **Subheads:** when an article covers more than one topic, add a short subhead before each
+  topic ("Health care", "Housing", "Middle East"). Never repeat a subhead in one article.
+- **Citations:** every paragraph cites its sources with bracketed numbers, like `[1]` or
+  `[2] [3]`, that point to the article's numbered source list. Every listed source must be
+  cited at least once.
+- **Length:** typically 4–12 paragraphs. A quiet section can be a single short paragraph, or
+  empty (`{}`) if nothing substantive happened.
 
 **Freshness:** focus on the last ~24 hours (on Mondays, the weekend too). An older story can
 come in only when something new happened today, such as a law taking effect or a deadline
@@ -139,10 +141,10 @@ factual or flagged Questionable; `unrated` = no ratings found.
   claim neutrally and attribute it.
 - **Neutral headlines:** factual, specific, and without loaded verbs ("slams", "guts",
   "rams through").
-- **Every story links to its source(s).** Use the article's own URL, not a homepage or search
+- **Every paragraph cites its source(s).** Use the article's own URL, not a homepage or search
   page. Check that each URL is the one you actually read.
-- Status line: a short phrase such as "Signed into law", "Passed House 220–211",
-  "Proposed rule; comments due Jan. 20", "Court ruling", or "Takes effect Jan. 1".
+- **Always state the status** in the sentence: "signed into law", "passed the House 220–211",
+  "proposed rule; comments due Jan. 20", "a court ruling", or "takes effect Jan. 1".
 
 ## 5. Write the data file
 
@@ -154,54 +156,47 @@ Save today's briefing as `data/YYYY-MM-DD.json` (today's Eastern date):
   "generated_at": "2026-11-27 3:41 a.m. ET",
   "note": "Optional one or two sentences, e.g. holiday slowdown. Omit if not needed.",
   "sections": {
-    "federal": [ BLOCK, ... ],
-    "massachusetts": [ BLOCK, ... ],
-    "new_hampshire": [ BLOCK, ... ],
-    "ai": [ BLOCK, ... ],
-    "world": [ BLOCK, ... ]
+    "federal": ARTICLE,
+    "world": ARTICLE,
+    "massachusetts": ARTICLE,
+    "new_hampshire": ARTICLE,
+    "ai": ARTICLE
   }
 }
 ```
 
-Each BLOCK:
+Each ARTICLE (use `{}` for a section with no news):
 
 ```json
 {
-  "topic": "healthcare",
-  "overview": "2–4 sentences: the big picture tying this block's items together.",
-  "items": [ STORY, ... ]
-}
-```
-
-- `topic` is one of `labor`, `healthcare`, `education`, or `other`. For `other`, add a
-  `"label"` (e.g. `"Housing"`, `"Middle East"`, `"Government & regulation"`). Any block may
-  also carry a `label` to override the default heading, e.g. an AI block with
-  `"topic": "education", "label": "AI in schools"`.
-
-Each STORY (one item inside a block):
-
-```json
-{
-  "headline": "Labor Department proposes new overtime threshold of $X",
-  "status": "Proposed rule; comments due Jan. 20",
-  "what_changed": "One to three sentences.",
-  "what_it_does": "One to four sentences on the mechanics.",
-  "who_it_affects": "One to three sentences, concrete groups and numbers.",
-  "whats_next": "Optional: next vote, effective date, deadline.",
+  "headline": "Neutral headline naming the main threads",
+  "dek": "Optional one-sentence subtitle.",
+  "paragraphs": [
+    "Lead paragraph: the big picture for this section today. [1] [3]",
+    {"subhead": "Health care"},
+    "What changed, what it does, who it affects, what's next. [1] [2]",
+    {"subhead": "Housing"},
+    "Next development, with attribution for weaker outlets: According to the Washington Examiner, ... [3]"
+  ],
   "sources": [
     {"url": "https://apnews.com/article/...", "title": "Article headline as published"},
-    {"url": "https://www.federalregister.gov/documents/...", "title": "Proposed rule text"}
+    {"url": "https://www.federalregister.gov/documents/...", "title": "Proposed rule text"},
+    {"url": "https://www.washingtonexaminer.com/...", "title": "Article headline as published"}
   ],
-  "source_note": "Optional: e.g. 'Only one outlet has reported this so far.'"
+  "source_note": "Optional: e.g. 'Only one outlet has reported the housing item so far.'"
 }
 ```
 
-- The build script puts labor, healthcare, and education blocks first in each section
-  automatically. Otherwise, order blocks and the items inside them by importance, most
-  consequential first.
+- Citation numbers are 1-based positions in that article's `sources` list. The build fails if
+  a paragraph has no citation, a number is out of range, or a listed source is never cited.
+- The page colors citations from mixed, low or unrated outlets yellow and adds a source note.
+  If a section relies only on such outlets, it shows a louder warning at the top. You still
+  attribute those claims in the text.
 - A source from an outlet not in `outlets.json` should get its own entry there (see §3).
   As a last resort, give the source `"outlet"` and a `"rating"` object
   (`lean`, `tier`, `mbfc`, `adfontes`).
+- Older data files that use the earlier block-and-item format still build, so the archive keeps
+  working. Write new days in the article format.
 
 ## 6. Build, check, publish
 
@@ -223,11 +218,11 @@ and push again. Never force-push.
 
 ## 7. Final self-check (before pushing)
 
-- [ ] Each story says what changed, what it does, and who it's affected, in plain words.
+- [ ] Each development says what changed, what it does, and who it affects, in plain words.
 - [ ] No horse-race language and no predictions about who wins politically.
-- [ ] Every story has at least one working link to the article you actually read.
+- [ ] Every paragraph cites at least one working link to the article you actually read.
 - [ ] Left, center, and right outlets all appear somewhere in the briefing.
-- [ ] Stories from mixed/low/unrated outlets attribute their claims in the text.
+- [ ] Claims from mixed/low/unrated outlets are attributed in the text ("According to …").
 - [ ] Federal, Massachusetts, New Hampshire, AI, and World are all covered (or noted as quiet).
-- [ ] Each block's overview ties its items together; no topic appears twice in a section.
-- [ ] Any AI story involving Anthropic carries the disclosure.
+- [ ] Each article opens with a big-picture lead; no subhead appears twice in an article.
+- [ ] Any AI development involving Anthropic carries the disclosure.
