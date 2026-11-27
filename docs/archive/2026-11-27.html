@@ -1,0 +1,323 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="robots" content="noindex">
+<meta name="color-scheme" content="light dark">
+<title>Policy Briefing — Friday, November 27, 2026</title>
+<style>
+:root{--bg:#f7f5f0;--card:#fff;--ink:#1c1b19;--muted:#5f5b53;--line:#e4dfd4;--accent:#1f4e79;
+--labor:#8a4b0f;--labor-bg:#fbeedd;--health:#0d6b58;--health-bg:#dff3ec;--edu:#5a3d8a;--edu-bg:#ece5f7;
+--other:#4a4a4a;--other-bg:#ececec;--warn:#8a1c1c;--warn-bg:#fdecea;--caut:#7a5a00;--caut-bg:#fff6d9;
+--ok:#1d6b35;--ok-bg:#e2f3e7}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#151514;--card:#1f1f1d;--ink:#ecebe7;
+--muted:#a9a59c;--line:#34332f;--accent:#8fb8e3;--labor:#f0b070;--labor-bg:#3a2a18;--health:#6fd3b8;
+--health-bg:#17332b;--edu:#c3a9f0;--edu-bg:#2c2440;--other:#cfcfcf;--other-bg:#2e2e2e;--warn:#f2a3a3;
+--warn-bg:#3b1d1d;--caut:#f1d27a;--caut-bg:#3a3117;--ok:#8fdba5;--ok-bg:#1b3323}}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.55 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif}
+a{color:var(--accent)}
+.wrap{max-width:680px;margin:0 auto;padding:0 16px 48px}
+header.top{padding:28px 0 8px}
+.kicker{font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin:0}
+h1{font-size:28px;line-height:1.2;margin:4px 0 2px}
+.date{color:var(--muted);margin:0}
+.stale{display:none;background:var(--caut-bg);color:var(--caut);border-radius:10px;padding:10px 12px;margin:14px 0 0;font-size:15px}
+.note{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:12px 14px;margin:16px 0 0;font-size:16px}
+nav.jump{position:sticky;top:0;z-index:5;background:var(--bg);display:flex;flex-wrap:nowrap;gap:6px;padding:8px 0;scrollbar-width:none;margin-top:12px;border-bottom:1px solid var(--line);overflow-x:auto}
+nav.jump a{flex:0 0 auto;text-decoration:none;color:var(--ink);background:var(--card);border:1px solid var(--line);border-radius:999px;padding:4px 9px;font-size:13.5px;font-weight:600}
+nav.jump a span{color:var(--muted);font-weight:500;margin-left:3px}
+section.sec{scroll-margin-top:60px;padding-top:28px}
+.sec-kicker{font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);margin:0 0 2px}
+nav.jump::-webkit-scrollbar{display:none}
+h2{font-size:22px;margin:0 0 10px;padding-bottom:6px;border-bottom:2px solid var(--ink)}
+.empty{color:var(--muted);font-style:italic}
+.block{--c:var(--accent);--cbg:var(--other-bg);background:var(--card);border:1px solid var(--line);border-top:5px solid var(--c);border-radius:14px;margin:0 0 18px;overflow:hidden;scroll-margin-top:60px}
+.bk-labor{--c:var(--labor);--cbg:var(--labor-bg)}.bk-healthcare{--c:var(--health);--cbg:var(--health-bg)}.bk-education{--c:var(--edu);--cbg:var(--edu-bg)}
+.bk-head{display:flex;align-items:baseline;justify-content:space-between;gap:10px;padding:14px 16px 0}
+.bk-head h3{font-size:21px;line-height:1.25;margin:0;color:var(--c)}
+.bk-count{font-size:13px;color:var(--muted);white-space:nowrap}
+.overview{background:var(--cbg);margin:12px 16px 0;border-radius:10px;padding:10px 12px}
+.overview p{margin:0}.ov-h{font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.05em;color:var(--c);margin-bottom:2px!important}
+.toc{margin:12px 16px 0;padding-left:22px;font-size:15px}.toc li{margin:0 0 4px}.toc a{color:var(--ink);text-decoration-color:var(--line)}
+.item{padding:16px;border-top:1px solid var(--line);margin-top:14px;scroll-margin-top:60px}
+.item h4{font-size:18px;line-height:1.3;margin:0 0 4px}
+.status{font-size:13px;color:var(--muted);margin:0 0 10px}
+dl{margin:0}.row{margin:0 0 10px}
+dt{font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.05em;color:var(--muted)}
+dd{margin:2px 0 0}
+.trust{border-radius:10px;padding:10px 12px;margin:0 0 12px;font-size:15px}
+.trust p{margin:0 0 4px}.trust ul{margin:4px 0 0;padding-left:18px}
+.trust-h{font-weight:700}
+.trust.warning{background:var(--warn-bg);color:var(--warn);border-left:4px solid var(--warn)}
+.trust.caution{background:var(--caut-bg);color:var(--caut);border-left:4px solid var(--caut)}
+.src-h{font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.05em;color:var(--muted);margin:12px 0 4px}
+.sources{list-style:none;margin:0;padding:0}
+.sources li{padding:8px 0;border-top:1px solid var(--line);font-size:15px;overflow-wrap:anywhere}
+.src-meta{display:flex;flex-wrap:wrap;gap:6px;align-items:center;margin-top:3px;font-size:13px;color:var(--muted)}
+.outlet{font-weight:600;color:var(--ink)}
+.chip{border-radius:6px;padding:1px 7px;font-weight:600}
+.t-primary,.t-high{color:var(--ok);background:var(--ok-bg)}
+.t-mostly{color:var(--other);background:var(--other-bg)}
+.t-mixed{color:var(--caut);background:var(--caut-bg)}
+.t-low,.t-unrated{color:var(--warn);background:var(--warn-bg)}
+.spectrum{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px 16px;margin:28px 0 0}
+.sp-h{margin:0 0 8px;font-weight:700;font-size:15px}
+.sp-row{display:grid;grid-template-columns:repeat(5,1fr);gap:6px;text-align:center}
+.sp-cell{background:var(--bg);border-radius:8px;padding:6px 2px}
+.sp-n{display:block;font-size:20px;font-weight:700}.sp-l{display:block;font-size:11px;color:var(--muted)}
+.sp-f{margin:8px 0 0;font-size:13px;color:var(--muted)}
+footer{margin-top:28px;font-size:14px;color:var(--muted)}
+footer p{margin:0 0 8px}
+.archive li{margin:0 0 8px}
+</style>
+
+</head>
+<body><div class="wrap">
+<header class="top">
+  <p class="kicker">Morning Policy Briefing</p>
+  <h1>What changed, and who it affects</h1>
+  <p class="date">Friday, November 27, 2026</p>
+  <p class="stale" id="stale"></p>
+  <p class="note">A short edition after Thanksgiving. Congress and both state legislatures are on recess, and Massachusetts had no new state policy news in the past day.</p>
+</header>
+<nav class="jump" aria-label="Sections"><a href="#federal">Federal<span>2</span></a><a href="#world">World<span>6</span></a><a href="#labor">Labor<span>1</span></a><a href="#education">Education<span>1</span></a><a href="#ai">AI<span>1</span></a></nav>
+<section class="sec" id="federal"><h2>Federal</h2>
+<article class="block bk-other" id="federal-1">
+  <header class="bk-head">
+    <h3>Transportation safety</h3><span class="bk-count">1 update</span>
+  </header>
+  <div class="overview"><p class="ov-h">The big picture</p><p>The federal auto-safety agency wants to give carmakers two more years to meet a 2024 rule requiring automatic emergency braking on new cars and light trucks. When the rule was written, the agency estimated it would prevent hundreds of deaths a year. The agency now says the 2029 deadline may be impracticable.</p></div>
+  
+  
+  <section class="item" id="federal-1-1">
+    <h4>NHTSA proposes two-year delay of automatic emergency braking requirement for new cars</h4>
+    <p class="status">Proposed rule; comments due Jan. 26, 2027</p>
+    
+    <dl>
+      <div class="row"><dt>What changed</dt><dd>The National Highway Traffic Safety Administration (NHTSA) proposed moving the compliance date for its automatic emergency braking (AEB) standard from Sept. 1, 2029, to Sept. 1, 2031. Small-volume manufacturers would get until Sept. 1, 2032.</dd></div>
+      <div class="row"><dt>What it does</dt><dd>The 2024 standard requires nearly all new passenger vehicles under 10,000 pounds to warn drivers of a likely crash and brake automatically to avoid hitting a vehicle ahead or a pedestrian, including at night and at higher speeds than many current systems handle. NHTSA says its own testing and meetings with industry, some of whose members challenged the rule in court, created &#x27;uncertainty in whether the fleet can comply&#x27; on time. It worries vehicles that cannot be certified would be barred from sale. The proposal also adds test procedures for the system&#x27;s malfunction warning light and clarifies test-speed tolerances, and the agency asks for comment on other possible changes.</dd></div>
+      <div class="row"><dt>Who it affects</dt><dd>Car buyers, automakers, and pedestrians. In 2024 NHTSA estimated the rule would prevent 362 deaths and 24,321 injuries a year once in effect, at an industry cost of about $354 million a year, mostly for software. A delay would push those benefits back by two years.</dd></div>
+      <div class="row"><dt>What's next</dt><dd>Public comments are due Jan. 26, 2027; NHTSA would then issue a final rule.</dd></div>
+    </dl>
+    <p class="src-h">Sources</p>
+    <ul class="sources"><li><a href="https://www.govinfo.gov/content/pkg/FR-2026-11-27/html/2026-24140.htm" target="_blank" rel="noopener">Federal Motor Vehicle Safety Standards: Automatic Emergency Braking Systems for Light Vehicles (proposed rule, full text)</a><span class="src-meta"><span class="outlet">Federal Register</span><span class="chip t-primary" title="Federal Register — lean: n/a. Media Bias/Fact Check: n/a (official record). Ad Fontes Media: n/a.">Official government document or record</span><span class="lean">n/a</span></span></li><li><a href="https://www.federalregister.gov/documents/2026/11/27/2026-24140/federal-motor-vehicle-safety-standards-automatic-emergency-braking-systems-for-light-vehicles" target="_blank" rel="noopener">Federal Register listing</a><span class="src-meta"><span class="outlet">Federal Register</span><span class="chip t-primary" title="Federal Register — lean: n/a. Media Bias/Fact Check: n/a (official record). Ad Fontes Media: n/a.">Official government document or record</span><span class="lean">n/a</span></span></li></ul>
+  </section>
+</article>
+<article class="block bk-other" id="federal-2">
+  <header class="bk-head">
+    <h3>Immigration &amp; courts</h3><span class="bk-count">1 update</span>
+  </header>
+  <div class="overview"><p class="ov-h">The big picture</p><p>A second federal judge has blocked President Trump&#x27;s August executive order narrowing who gets citizenship at birth. The order came after the Supreme Court struck down his first order in June.</p></div>
+  
+  
+  <section class="item" id="federal-2-1">
+    <h4>Second judge blocks Trump&#x27;s narrower birthright-citizenship order</h4>
+    <p class="status">Preliminary injunction (Nov. 25); class certified</p>
+    <aside class="trust caution" role="note"><p class="trust-h">Source note</p><p>Some details here come from an outlet with a weaker reliability rating; the core facts are backed by a highly rated source.</p><ul><li><strong>Rated mixed reliability.</strong> Washington Examiner — lean: Right. Media Bias/Fact Check: Right / Mixed factual. Ad Fontes Media: Skews Right / Generally Reliable, Analysis or Other Issues.</li></ul></aside>
+    <dl>
+      <div class="row"><dt>What changed</dt><dd>U.S. District Judge Christopher Cooper in Washington granted a preliminary injunction and class-action status blocking the August executive order that sought to deny automatic citizenship to some children born in the U.S.</dd></div>
+      <div class="row"><dt>What it does</dt><dd>The order directed agencies not to recognize citizenship for children whose parents work for foreign governments or international organizations without diplomatic immunity, children born through commercial surrogacy, and children with a parent suspected of gang membership or terrorism. Cooper wrote that the president &#x27;cannot carve out new exceptions to birthright citizenship&#x27; and that the Citizenship Clause &#x27;promises citizenship to practically all children born in the United States.&#x27; The White House called Cooper, an Obama appointee, an &#x27;activist judge,&#x27; ABC News reported.</dd></div>
+      <div class="row"><dt>Who it affects</dt><dd>Families in the categories the order targeted, including children of employees of foreign governments and international organizations, and families using surrogacy. The injunction covers the certified class while the case continues.</dd></div>
+      <div class="row"><dt>What's next</dt><dd>The administration can appeal to the D.C. Circuit.</dd></div>
+    </dl>
+    <p class="src-h">Sources</p>
+    <ul class="sources"><li><a href="https://abcnews.com/Politics/judge-blocks-latest-trump-effort-restrict-birthright-citizenship/story?id=138451919" target="_blank" rel="noopener">Judge blocks latest Trump effort to restrict birthright citizenship</a><span class="src-meta"><span class="outlet">ABC News</span><span class="chip t-high" title="ABC News — lean: Center-Left. Media Bias/Fact Check: Left-Center / High factual. Ad Fontes Media: Middle / Reliable.">Rated highly reliable</span><span class="lean">Center-Left</span></span></li><li><a href="https://www.washingtonexaminer.com/news/justice/4815735/judge-blocks-trump-second-attempt-birthright-citizenship/" target="_blank" rel="noopener">Judge blocks Trump&#x27;s second attempt at limiting birthright citizenship</a><span class="src-meta"><span class="outlet">Washington Examiner</span><span class="chip t-mixed" title="Washington Examiner — lean: Right. Media Bias/Fact Check: Right / Mixed factual. Ad Fontes Media: Skews Right / Generally Reliable, Analysis or Other Issues.">Rated mixed reliability</span><span class="lean">Right</span></span></li></ul>
+  </section>
+</article></section><section class="sec" id="world"><h2>World</h2>
+<article class="block bk-other" id="world-1">
+  <header class="bk-head">
+    <h3>Middle East</h3><span class="bk-count">2 updates</span>
+  </header>
+  <div class="overview"><p class="ov-h">The big picture</p><p>Two developments in the Iran war&#x27;s wider region: Yemen&#x27;s Houthis struck another Saudi refinery, and Iraq&#x27;s central government moved to take over oil and border operations from the Kurdish regional government, setting off mass protests in Irbil.</p></div>
+  <ol class="toc"><li><a href="#world-1-1">Houthi strike on Saudi Jazan refinery kills a worker and halts some operations</a></li><li><a href="#world-1-2">Iraq moves to take over Kurdish region&#x27;s oil exports and border crossings</a></li></ol>
+  
+  <section class="item" id="world-1-1">
+    <h4>Houthi strike on Saudi Jazan refinery kills a worker and halts some operations</h4>
+    <p class="status">Attack Nov. 26</p>
+    <aside class="trust warning" role="note"><p class="trust-h">Check the source</p><p>This story is not confirmed by a highly rated outlet or an official record. The information comes from:</p><ul><li><strong>Rated mixed reliability.</strong> Al Jazeera English — lean: Center-Left. Media Bias/Fact Check: Left-Center / Mixed factual. Ad Fontes Media: Skews Left / Reliable, Analysis/Fact Reporting.</li></ul></aside>
+    <dl>
+      <div class="row"><dt>What changed</dt><dd>An aerial projectile hit the Jazan oil refinery on Saudi Arabia&#x27;s Red Sea coast, killing a Nepali worker, injuring several people, and starting a fire that temporarily stopped some operations, Saudi Arabia&#x27;s Energy Ministry said. The Saudi-led coalition said the Iranian-backed Houthis carried out the attack.</dd></div>
+      <div class="row"><dt>What it does</dt><dd>The refinery can process up to 400,000 barrels of crude a day. It came a day after the Houthis claimed attacks on Ras Tanura, the kingdom&#x27;s largest refinery and a major export hub, and the ports of Jeddah and Jazan. The coalition said it later destroyed the missile launcher used, in Yemen&#x27;s Hodeidah province.</dd></div>
+      <div class="row"><dt>Who it affects</dt><dd>Workers at Gulf energy sites and global oil markets, which have been rising on Gulf attacks.</dd></div>
+      
+    </dl>
+    <p class="src-h">Sources</p>
+    <ul class="sources"><li><a href="https://www.aljazeera.com/news/2026/11/26/attack-on-saudi-aramcos-jazan-refinery-kills-worker-disrupts-operations" target="_blank" rel="noopener">Attack on Saudi&#x27;s Jazan refinery kills one person, disrupts operations</a><span class="src-meta"><span class="outlet">Al Jazeera English</span><span class="chip t-mixed" title="Al Jazeera English — lean: Center-Left. Media Bias/Fact Check: Left-Center / Mixed factual. Ad Fontes Media: Skews Left / Reliable, Analysis/Fact Reporting.">Rated mixed reliability</span><span class="lean">Center-Left</span></span></li></ul>
+  </section>
+  <section class="item" id="world-1-2">
+    <h4>Iraq moves to take over Kurdish region&#x27;s oil exports and border crossings</h4>
+    <p class="status">Federal government decision upheld by Iraq&#x27;s top court</p>
+    
+    <dl>
+      <div class="row"><dt>What changed</dt><dd>Iraq&#x27;s government said federal authorities will manage border crossings in the semi-autonomous Kurdish region, approve its oil exports through the federal oil ministry, and take over oil fields in four contested provinces: Kirkuk, Diyala, Salahuddin, and Nineveh. Iraq&#x27;s Federal Supreme Court backed the decision the next day, and federal forces closed two crossings, one with Syria and one with Iran, DW reported.</dd></div>
+      <div class="row"><dt>What it does</dt><dd>Prime Minister Ali al-Zaidi said the move targets oil smuggling. The Kurdish regional cabinet called it a violation of the constitution and &#x27;an attempt to return Iraq to a centralized regime.&#x27; Rival Kurdish parties held joint mass protests in Irbil and other cities.</dd></div>
+      <div class="row"><dt>Who it affects</dt><dd>Residents of Iraqi Kurdistan, whose government has largely run itself since 1991 and depends on oil revenue, and buyers of Kurdish oil.</dd></div>
+      
+    </dl>
+    <p class="src-h">Sources</p>
+    <ul class="sources"><li><a href="https://www.dw.com/en/protests-in-iraqi-kurdistan-at-plans-for-government-in-baghdad-to-take-over-oil-border-crossings/a-80065994" target="_blank" rel="noopener">Mass protests in Kurdish Irbil against Iraqi government reform plans</a><span class="src-meta"><span class="outlet">DW (Deutsche Welle)</span><span class="chip t-high" title="DW (Deutsche Welle) — lean: Center-Left. Media Bias/Fact Check: Left-Center / High factual. Ad Fontes Media: Skews Left (per Ground News summary; score not confirmed).">Rated highly reliable</span><span class="lean">Center-Left</span></span></li></ul>
+  </section>
+</article>
+<article class="block bk-other" id="world-2">
+  <header class="bk-head">
+    <h3>Europe</h3><span class="bk-count">1 update</span>
+  </header>
+  <div class="overview"><p class="ov-h">The big picture</p><p>EU leaders broke off talks on the bloc&#x27;s 2028–2034 budget without a deal. The main disputes are overall spending and a proposed new loan to Ukraine that three members oppose.</p></div>
+  
+  
+  <section class="item" id="world-2-1">
+    <h4>EU leaders fail to agree on long-term budget and Ukraine loan; talks resume in December</h4>
+    <p class="status">Summit ended without agreement (Nov. 26)</p>
+    <aside class="trust caution" role="note"><p class="trust-h">Source note</p><p>This story comes only from outlets rated mostly (not highly) reliable:</p><ul><li><strong>Rated mostly reliable.</strong> BBC News — lean: Center. Media Bias/Fact Check: Least Biased / Mostly Factual. Ad Fontes Media: Middle / Reliable, Analysis/Fact Reporting.</li></ul></aside>
+    <dl>
+      <div class="row"><dt>What changed</dt><dd>After 12 hours of talks in Brussels, EU leaders put off a decision on the 2028–2034 budget; some walked out, and negotiations resume in December.</dd></div>
+      <div class="row"><dt>What it does</dt><dd>France and Italy back a higher-spending proposal, while Germany leads those urging restraint. A proposed €45 billion loan to Ukraine, split between military and non-military aid, is opposed by Slovakia, the Czech Republic, and Hungary. German Chancellor Friedrich Merz said unanimous support for Ukraine aid is a condition for approving the wider budget. Many members want the budget settled before major 2027 elections, including in France.</dd></div>
+      <div class="row"><dt>Who it affects</dt><dd>Ukraine, which depends on EU financing, and EU farmers, regions, and programs funded by the bloc&#x27;s seven-year budget.</dd></div>
+      
+    </dl>
+    <p class="src-h">Sources</p>
+    <ul class="sources"><li><a href="https://www.bbc.com/news/articles/cw4gnm3m9deno" target="_blank" rel="noopener">EU leaders fail to bridge budget splits as talks stall</a><span class="src-meta"><span class="outlet">BBC News</span><span class="chip t-mostly" title="BBC News — lean: Center. Media Bias/Fact Check: Least Biased / Mostly Factual. Ad Fontes Media: Middle / Reliable, Analysis/Fact Reporting.">Rated mostly reliable</span><span class="lean">Center</span></span></li></ul>
+  </section>
+</article>
+<article class="block bk-other" id="world-3">
+  <header class="bk-head">
+    <h3>Americas</h3><span class="bk-count">1 update</span>
+  </header>
+  <div class="overview"><p class="ov-h">The big picture</p><p>Argentina&#x27;s Congress has written into law a ban on the central bank printing money to cover government spending. Past money-printing helped drive inflation above 200% in 2023.</p></div>
+  
+  
+  <section class="item" id="world-3-1">
+    <h4>Argentina bars its central bank from printing money to fund the government</h4>
+    <p class="status">Final passage, Chamber of Deputies 141–0 (99 abstentions)</p>
+    <aside class="trust warning" role="note"><p class="trust-h">Check the source</p><p>This story is not confirmed by a highly rated outlet or an official record. The information comes from:</p><ul><li><strong>Rated mixed reliability.</strong> Al Jazeera English — lean: Center-Left. Media Bias/Fact Check: Left-Center / Mixed factual. Ad Fontes Media: Skews Left / Reliable, Analysis/Fact Reporting.</li></ul></aside>
+    <dl>
+      <div class="row"><dt>What changed</dt><dd>Argentina&#x27;s Chamber of Deputies gave final approval to a law that defines the central bank&#x27;s &#x27;primary and fundamental mission&#x27; as protecting the value of the peso and bars it from issuing money to finance government spending, Al Jazeera reported, citing Reuters and AP.</dd></div>
+      <div class="row"><dt>What it does</dt><dd>The Senate passed the bill earlier but removed President Javier Milei&#x27;s proposal to require a two-thirds vote of Congress to remove central bank governors. The same day, the Senate advanced a separate bill to suspend primary elections before the October 2027 presidential vote; it still needs the lower house.</dd></div>
+      <div class="row"><dt>Who it affects</dt><dd>Argentines, whose inflation has fallen under Milei while poverty has risen, and investors watching the peso.</dd></div>
+      
+    </dl>
+    <p class="src-h">Sources</p>
+    <ul class="sources"><li><a href="https://www.aljazeera.com/news/2026/11/27/argentina-bars-central-bank-from-printing-money-to-fund-government-spending" target="_blank" rel="noopener">Argentina bars Central Bank from printing money to fund government spending</a><span class="src-meta"><span class="outlet">Al Jazeera English</span><span class="chip t-mixed" title="Al Jazeera English — lean: Center-Left. Media Bias/Fact Check: Left-Center / Mixed factual. Ad Fontes Media: Skews Left / Reliable, Analysis/Fact Reporting.">Rated mixed reliability</span><span class="lean">Center-Left</span></span></li></ul>
+  </section>
+</article>
+<article class="block bk-other" id="world-4">
+  <header class="bk-head">
+    <h3>Africa</h3><span class="bk-count">1 update</span>
+  </header>
+  <div class="overview"><p class="ov-h">The big picture</p><p>Guinea-Bissau&#x27;s military government has pushed back the elections that were supposed to return the country to civilian rule. It cites a lack of money and equipment.</p></div>
+  
+  
+  <section class="item" id="world-4-1">
+    <h4>Guinea-Bissau&#x27;s military rulers delay elections by two years, to November 2028</h4>
+    <p class="status">Decree issued Nov. 26</p>
+    <aside class="trust caution" role="note"><p class="trust-h">Source note</p><p>Some details here come from an outlet with a weaker reliability rating; the core facts are backed by a highly rated source.</p><ul><li><strong>Rated mixed reliability.</strong> Al Jazeera English — lean: Center-Left. Media Bias/Fact Check: Left-Center / Mixed factual. Ad Fontes Media: Skews Left / Reliable, Analysis/Fact Reporting.</li></ul></aside>
+    <dl>
+      <div class="row"><dt>What changed</dt><dd>A decree from transitional president Maj. Gen. Horta Inta-a moved presidential and legislative elections set for Dec. 6 to November 2028, citing &#x27;an insufficiency of the technical, material and financial conditions,&#x27; Al Jazeera reported, citing AFP and Reuters.</dd></div>
+      <div class="row"><dt>What it does</dt><dd>The army seized power a year ago, interrupting a presidential vote and ousting President Umaro Sissoco Embaló. The transition was meant to last one year. The regional bloc ECOWAS had called for a short, transparent transition back to civilian rule. Voters approved a constitutional change in August giving the presidency more power.</dd></div>
+      <div class="row"><dt>Who it affects</dt><dd>Guinea-Bissau&#x27;s 2.2 million people, one of the world&#x27;s poorest populations, who will stay under military rule two more years.</dd></div>
+      
+    </dl>
+    <p class="src-h">Sources</p>
+    <ul class="sources"><li><a href="https://www.aljazeera.com/news/2026/11/26/guinea-bissau-presidential-election-delayed-by-two-years" target="_blank" rel="noopener">Guinea-Bissau military leaders delay presidential election until 2028</a><span class="src-meta"><span class="outlet">Al Jazeera English</span><span class="chip t-mixed" title="Al Jazeera English — lean: Center-Left. Media Bias/Fact Check: Left-Center / Mixed factual. Ad Fontes Media: Skews Left / Reliable, Analysis/Fact Reporting.">Rated mixed reliability</span><span class="lean">Center-Left</span></span></li><li><a href="https://www.dw.com/en/guinea-bissau-junta-delays-presidential-vote-for-2-years/a-80068910" target="_blank" rel="noopener">Guinea-Bissau junta delays presidential vote for 2 years</a><span class="src-meta"><span class="outlet">DW (Deutsche Welle)</span><span class="chip t-high" title="DW (Deutsche Welle) — lean: Center-Left. Media Bias/Fact Check: Left-Center / High factual. Ad Fontes Media: Skews Left (per Ground News summary; score not confirmed).">Rated highly reliable</span><span class="lean">Center-Left</span></span></li></ul>
+  </section>
+</article>
+<article class="block bk-other" id="world-5">
+  <header class="bk-head">
+    <h3>Asia-Pacific</h3><span class="bk-count">1 update</span>
+  </header>
+  <div class="overview"><p class="ov-h">The big picture</p><p>Final results in New Zealand leave the governing coalition one seat short of a majority. It now needs a deal with a small centrist party or the country may vote again.</p></div>
+  
+  
+  <section class="item" id="world-5-1">
+    <h4>New Zealand&#x27;s governing coalition falls one seat short of a majority</h4>
+    <p class="status">Official election results (Nov. 27)</p>
+    <aside class="trust caution" role="note"><p class="trust-h">Source note</p><p>This story comes only from outlets rated mostly (not highly) reliable:</p><ul><li><strong>Rated mostly reliable.</strong> BBC News — lean: Center. Media Bias/Fact Check: Least Biased / Mostly Factual. Ad Fontes Media: Middle / Reliable, Analysis/Fact Reporting.</li></ul></aside>
+    <dl>
+      <div class="row"><dt>What changed</dt><dd>Official results give Prime Minister Christopher Luxon&#x27;s National Party 40 of 130 seats and its partners ACT and New Zealand First 13 and 12, one short of a majority. A Labour-led government is not possible even with the centrist Opportunity Party&#x27;s support.</dd></div>
+      <div class="row"><dt>What it does</dt><dd>The coalition needs the Opportunity Party&#x27;s backing to govern; if no deal is reached, New Zealand may hold another election. Luxon said talks &#x27;may be challenging.&#x27; Labour won the most votes but lacks a path to a majority under New Zealand&#x27;s mixed-member proportional system.</dd></div>
+      <div class="row"><dt>Who it affects</dt><dd>New Zealanders, whose next government&#x27;s economic policies depend on the coalition talks.</dd></div>
+      
+    </dl>
+    <p class="src-h">Sources</p>
+    <ul class="sources"><li><a href="https://www.bbc.com/news/articles/c670278qk879o" target="_blank" rel="noopener">New Zealand&#x27;s ruling coalition falls short of parliamentary majority by one seat</a><span class="src-meta"><span class="outlet">BBC News</span><span class="chip t-mostly" title="BBC News — lean: Center. Media Bias/Fact Check: Least Biased / Mostly Factual. Ad Fontes Media: Middle / Reliable, Analysis/Fact Reporting.">Rated mostly reliable</span><span class="lean">Center</span></span></li></ul>
+  </section>
+</article></section><section class="sec" id="labor"><p class="sec-kicker">Massachusetts &amp; New Hampshire</p><h2>Labor</h2>
+<article class="block bk-labor" id="labor-1">
+  <header class="bk-head">
+    <h3>New Hampshire</h3><span class="bk-count">1 update</span>
+  </header>
+  <div class="overview"><p class="ov-h">The big picture</p><p>A strike at one of New England&#x27;s largest grocery wholesalers is in its fourth week with no talks scheduled until mid-December. The dispute is over the company&#x27;s plan to replace workers&#x27; pensions with a 401(k).</p></div>
+  
+  
+  <section class="item" id="labor-1-1">
+    <h4>Associated Grocers strike enters fourth week; next talks set for Dec. 17</h4>
+    <p class="status">Strike ongoing since Nov. 2</p>
+    
+    <dl>
+      <div class="row"><dt>What changed</dt><dd>About 255 Teamsters Local 633 members at Associated Grocers of New England&#x27;s Pembroke headquarters and warehouse remain on strike, and the company has not agreed to bargain before Dec. 17, the union said.</dd></div>
+      <div class="row"><dt>What it does</dt><dd>The main dispute is the company&#x27;s demand to replace the workers&#x27; pension, which pays a set monthly benefit in retirement, with a 401(k) account, whose value depends on contributions and investment returns. The company has kept some shipments moving with non-union staff and has called the union&#x27;s messaging a &#x27;misrepresentation of facts.&#x27;</dd></div>
+      <div class="row"><dt>Who it affects</dt><dd>Drivers, warehouse, and maintenance workers in Pembroke, and the roughly 1,000 independent grocery stores in New England and New York that the cooperative supplies.</dd></div>
+      
+    </dl>
+    <p class="src-h">Sources</p>
+    <ul class="sources"><li><a href="https://www.nhpr.org/nh-news/2026-11-26/associated-grocers-strike-continues-pembroke-nh-newhampshire" target="_blank" rel="noopener">Associated Grocers strike continues at Pembroke facility; no talks for next three weeks</a><span class="src-meta"><span class="outlet">NHPR (New Hampshire Public Radio)</span><span class="chip t-high" title="NHPR (New Hampshire Public Radio) — lean: Center-Left. Media Bias/Fact Check: Left-Center / High factual. Ad Fontes Media: Not rated.">Rated highly reliable</span><span class="lean">Center-Left</span></span></li></ul>
+  </section>
+</article></section><section class="sec" id="education"><p class="sec-kicker">Massachusetts &amp; New Hampshire</p><h2>Education</h2>
+<article class="block bk-education" id="education-1">
+  <header class="bk-head">
+    <h3>New Hampshire</h3><span class="bk-count">1 update</span>
+  </header>
+  <div class="overview"><p class="ov-h">The big picture</p><p>New research on school cellphone bans bears on how New Hampshire districts enforce the state&#x27;s &#x27;bell to bell&#x27; law. Schools that lock phones in pouches saw test-score gains; the state law does not require pouches.</p></div>
+  
+  
+  <section class="item" id="education-1-1">
+    <h4>Study: locking students&#x27; phones in pouches raises math and reading scores</h4>
+    <p class="status">New research (working paper); relevant to NH&#x27;s school cellphone law</p>
+    
+    <dl>
+      <div class="row"><dt>What changed</dt><dd>A working paper by researchers at Dartmouth College, Harvard&#x27;s Center for Education Policy Research, and the testing nonprofit NWEA found that schools requiring students to store phones in lockable pouches saw gains in math and reading scores.</dd></div>
+      <div class="row"><dt>What it does</dt><dd>The researchers analyzed data from 3.3 million students in 4,600 schools from 2021 to 2026. Gains began in the first year and continued for three more, and they were similar across elementary, middle, and high schools and across students&#x27; race, gender, and prior achievement. New Hampshire&#x27;s law bans student phone use during class, between classes, and at lunch, but leaves enforcement to districts; some, including Lebanon, use an &#x27;off-and-away&#x27; rule instead of pouches.</dd></div>
+      <div class="row"><dt>Who it affects</dt><dd>New Hampshire students and the school boards deciding how to enforce the state ban. Pouches cost money, which may matter for district budgets.</dd></div>
+      
+    </dl>
+    <p class="src-h">Sources</p>
+    <ul class="sources"><li><a href="https://www.nhpr.org/education/2026-11-26/cellphone-bans-improve-improve-highschool-student-learning-dartmouth-harvard-study" target="_blank" rel="noopener">New study finds locked cellphone pouches can unlock student achievement</a><span class="src-meta"><span class="outlet">NHPR (New Hampshire Public Radio)</span><span class="chip t-high" title="NHPR (New Hampshire Public Radio) — lean: Center-Left. Media Bias/Fact Check: Left-Center / High factual. Ad Fontes Media: Not rated.">Rated highly reliable</span><span class="lean">Center-Left</span></span></li></ul>
+  </section>
+</article></section><section class="sec" id="ai"><h2>Artificial Intelligence</h2>
+<article class="block bk-other" id="ai-1">
+  <header class="bk-head">
+    <h3>Government &amp; regulation</h3><span class="bk-count">1 update</span>
+  </header>
+  <div class="overview"><p class="ov-h">The big picture</p><p>State attorneys general from both parties are trying to stop a bankrupt chatbot company from selling millions of users&#x27; private conversations, including those of minors, without privacy protections.</p></div>
+  
+  
+  <section class="item" id="ai-1-1">
+    <h4>42 state attorneys general move to block sale of Character.AI users&#x27; chat histories</h4>
+    <p class="status">Objection in federal bankruptcy case</p>
+    
+    <dl>
+      <div class="row"><dt>What changed</dt><dd>A bipartisan coalition of 42 state attorneys general is opposing Character.AI&#x27;s plan, made during its Chapter 11 bankruptcy, to sell the chat histories of more than 21 million U.S. accounts, including more than 2.1 million registered to minors, The Verge reported.</dd></div>
+      <div class="row"><dt>What it does</dt><dd>Chapter 11 lets a company reorganize or sell assets under court supervision. The attorneys general say the proposed sale has no requirement that the buyer honor existing privacy policies, no way for users to delete their data, and no limits on what the buyer could do with it, including reselling it. The first bidder was formed on Nov. 13, 2026, and lists no parent company or investors. Disney bought some of Character.AI&#x27;s assets and hired its CEO earlier.</dd></div>
+      <div class="row"><dt>Who it affects</dt><dd>Character.AI users, especially minors and their parents, whose private conversations with chatbots could be sold. New chatbot laws in New York, Connecticut, California, and Colorado take effect Jan. 1, 2027.</dd></div>
+      <div class="row"><dt>What's next</dt><dd>The bankruptcy court will decide whether to approve the sale.</dd></div>
+    </dl>
+    <p class="src-h">Sources</p>
+    <ul class="sources"><li><a href="https://www.theverge.com/policy/1042620/character-ai-sale-state-ags-block-selling-users-chats" target="_blank" rel="noopener">42 state AGs are trying to stop Character.AI from selling users&#x27; chats</a><span class="src-meta"><span class="outlet">The Verge</span><span class="chip t-high" title="The Verge — lean: Center-Left. Media Bias/Fact Check: Left-Center / High factual. Ad Fontes Media: Skews Left / Reliable.">Rated highly reliable</span><span class="lean">Center-Left</span></span></li></ul>
+  </section>
+</article></section>
+<section class="spectrum" aria-label="Political lean of outlets cited"><p class="sp-h">Outlets cited today, by lean</p><div class="sp-row"><div class="sp-cell"><span class="sp-n">0</span><span class="sp-l">Left</span></div><div class="sp-cell"><span class="sp-n">5</span><span class="sp-l">Center-Left</span></div><div class="sp-cell"><span class="sp-n">1</span><span class="sp-l">Center</span></div><div class="sp-cell"><span class="sp-n">0</span><span class="sp-l">Center-Right</span></div><div class="sp-cell"><span class="sp-n">1</span><span class="sp-l">Right</span></div></div><p class="sp-f">Official records and agency documents are not counted.</p></section>
+<footer>
+  <p>Reliability and lean labels summarize ratings from Media Bias/Fact Check and Ad Fontes Media.
+  The weaker a source's rating, the more prominently this page flags it.</p>
+  <p>Compiled 2026-11-27 3:50 a.m. ET.</p>
+  <p><a href="../archive/index.html">Past briefings</a></p>
+</footer>
+<script>
+(function(){try{var d="2026-11-27";var now=new Date();
+var et=new Intl.DateTimeFormat('en-CA',{timeZone:'America/New_York',year:'numeric',month:'2-digit',day:'2-digit'}).format(now);
+if(et>d){var el=document.getElementById('stale');el.textContent="Heads up: this is the "+d+" briefing. Today's hasn't been published yet.";el.style.display='block';}}catch(e){}})();
+</script></div></body>
+</html>

@@ -1,0 +1,243 @@
+{
+  "date": "2026-11-27",
+  "generated_at": "2026-11-27 3:50 a.m. ET",
+  "note": "A short edition after Thanksgiving. Congress and both state legislatures are on recess, and Massachusetts had no new state policy news in the past day.",
+  "sections": {
+    "federal": [
+      {
+        "topic": "other",
+        "label": "Transportation safety",
+        "overview": "The federal auto-safety agency wants to give carmakers two more years to meet a 2024 rule requiring automatic emergency braking on new cars and light trucks. When the rule was written, the agency estimated it would prevent hundreds of deaths a year. The agency now says the 2029 deadline may be impracticable.",
+        "items": [
+          {
+            "headline": "NHTSA proposes two-year delay of automatic emergency braking requirement for new cars",
+            "status": "Proposed rule; comments due Jan. 26, 2027",
+            "what_changed": "The National Highway Traffic Safety Administration (NHTSA) proposed moving the compliance date for its automatic emergency braking (AEB) standard from Sept. 1, 2029, to Sept. 1, 2031. Small-volume manufacturers would get until Sept. 1, 2032.",
+            "what_it_does": "The 2024 standard requires nearly all new passenger vehicles under 10,000 pounds to warn drivers of a likely crash and brake automatically to avoid hitting a vehicle ahead or a pedestrian, including at night and at higher speeds than many current systems handle. NHTSA says its own testing and meetings with industry, some of whose members challenged the rule in court, created 'uncertainty in whether the fleet can comply' on time. It worries vehicles that cannot be certified would be barred from sale. The proposal also adds test procedures for the system's malfunction warning light and clarifies test-speed tolerances, and the agency asks for comment on other possible changes.",
+            "who_it_affects": "Car buyers, automakers, and pedestrians. In 2024 NHTSA estimated the rule would prevent 362 deaths and 24,321 injuries a year once in effect, at an industry cost of about $354 million a year, mostly for software. A delay would push those benefits back by two years.",
+            "whats_next": "Public comments are due Jan. 26, 2027; NHTSA would then issue a final rule.",
+            "sources": [
+              {
+                "url": "https://www.govinfo.gov/content/pkg/FR-2026-11-27/html/2026-24140.htm",
+                "title": "Federal Motor Vehicle Safety Standards: Automatic Emergency Braking Systems for Light Vehicles (proposed rule, full text)"
+              },
+              {
+                "url": "https://www.federalregister.gov/documents/2026/11/27/2026-24140/federal-motor-vehicle-safety-standards-automatic-emergency-braking-systems-for-light-vehicles",
+                "title": "Federal Register listing"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "topic": "other",
+        "label": "Immigration & courts",
+        "overview": "A second federal judge has blocked President Trump's August executive order narrowing who gets citizenship at birth. The order came after the Supreme Court struck down his first order in June.",
+        "items": [
+          {
+            "headline": "Second judge blocks Trump's narrower birthright-citizenship order",
+            "status": "Preliminary injunction (Nov. 25); class certified",
+            "what_changed": "U.S. District Judge Christopher Cooper in Washington granted a preliminary injunction and class-action status blocking the August executive order that sought to deny automatic citizenship to some children born in the U.S.",
+            "what_it_does": "The order directed agencies not to recognize citizenship for children whose parents work for foreign governments or international organizations without diplomatic immunity, children born through commercial surrogacy, and children with a parent suspected of gang membership or terrorism. Cooper wrote that the president 'cannot carve out new exceptions to birthright citizenship' and that the Citizenship Clause 'promises citizenship to practically all children born in the United States.' The White House called Cooper, an Obama appointee, an 'activist judge,' ABC News reported.",
+            "who_it_affects": "Families in the categories the order targeted, including children of employees of foreign governments and international organizations, and families using surrogacy. The injunction covers the certified class while the case continues.",
+            "whats_next": "The administration can appeal to the D.C. Circuit.",
+            "sources": [
+              {
+                "url": "https://abcnews.com/Politics/judge-blocks-latest-trump-effort-restrict-birthright-citizenship/story?id=138451919",
+                "title": "Judge blocks latest Trump effort to restrict birthright citizenship"
+              },
+              {
+                "url": "https://www.washingtonexaminer.com/news/justice/4815735/judge-blocks-trump-second-attempt-birthright-citizenship/",
+                "title": "Judge blocks Trump's second attempt at limiting birthright citizenship"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "massachusetts": [],
+    "new_hampshire": [
+      {
+        "topic": "labor",
+        "overview": "A strike at one of New England's largest grocery wholesalers is in its fourth week with no talks scheduled until mid-December. The dispute is over the company's plan to replace workers' pensions with a 401(k).",
+        "items": [
+          {
+            "headline": "Associated Grocers strike enters fourth week; next talks set for Dec. 17",
+            "status": "Strike ongoing since Nov. 2",
+            "what_changed": "About 255 Teamsters Local 633 members at Associated Grocers of New England's Pembroke headquarters and warehouse remain on strike, and the company has not agreed to bargain before Dec. 17, the union said.",
+            "what_it_does": "The main dispute is the company's demand to replace the workers' pension, which pays a set monthly benefit in retirement, with a 401(k) account, whose value depends on contributions and investment returns. The company has kept some shipments moving with non-union staff and has called the union's messaging a 'misrepresentation of facts.'",
+            "who_it_affects": "Drivers, warehouse, and maintenance workers in Pembroke, and the roughly 1,000 independent grocery stores in New England and New York that the cooperative supplies.",
+            "sources": [
+              {
+                "url": "https://www.nhpr.org/nh-news/2026-11-26/associated-grocers-strike-continues-pembroke-nh-newhampshire",
+                "title": "Associated Grocers strike continues at Pembroke facility; no talks for next three weeks"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "topic": "education",
+        "overview": "New research on school cellphone bans bears on how New Hampshire districts enforce the state's 'bell to bell' law. Schools that lock phones in pouches saw test-score gains; the state law does not require pouches.",
+        "items": [
+          {
+            "headline": "Study: locking students' phones in pouches raises math and reading scores",
+            "status": "New research (working paper); relevant to NH's school cellphone law",
+            "what_changed": "A working paper by researchers at Dartmouth College, Harvard's Center for Education Policy Research, and the testing nonprofit NWEA found that schools requiring students to store phones in lockable pouches saw gains in math and reading scores.",
+            "what_it_does": "The researchers analyzed data from 3.3 million students in 4,600 schools from 2021 to 2026. Gains began in the first year and continued for three more, and they were similar across elementary, middle, and high schools and across students' race, gender, and prior achievement. New Hampshire's law bans student phone use during class, between classes, and at lunch, but leaves enforcement to districts; some, including Lebanon, use an 'off-and-away' rule instead of pouches.",
+            "who_it_affects": "New Hampshire students and the school boards deciding how to enforce the state ban. Pouches cost money, which may matter for district budgets.",
+            "sources": [
+              {
+                "url": "https://www.nhpr.org/education/2026-11-26/cellphone-bans-improve-improve-highschool-student-learning-dartmouth-harvard-study",
+                "title": "New study finds locked cellphone pouches can unlock student achievement"
+              }
+            ],
+            "source_note": "Originally reported by the Valley News and republished by NHPR. The study is a working paper and has not yet been peer-reviewed."
+          }
+        ]
+      }
+    ],
+    "ai": [
+      {
+        "topic": "other",
+        "label": "Government & regulation",
+        "overview": "State attorneys general from both parties are trying to stop a bankrupt chatbot company from selling millions of users' private conversations, including those of minors, without privacy protections.",
+        "items": [
+          {
+            "headline": "42 state attorneys general move to block sale of Character.AI users' chat histories",
+            "status": "Objection in federal bankruptcy case",
+            "what_changed": "A bipartisan coalition of 42 state attorneys general is opposing Character.AI's plan, made during its Chapter 11 bankruptcy, to sell the chat histories of more than 21 million U.S. accounts, including more than 2.1 million registered to minors, The Verge reported.",
+            "what_it_does": "Chapter 11 lets a company reorganize or sell assets under court supervision. The attorneys general say the proposed sale has no requirement that the buyer honor existing privacy policies, no way for users to delete their data, and no limits on what the buyer could do with it, including reselling it. The first bidder was formed on Nov. 13, 2026, and lists no parent company or investors. Disney bought some of Character.AI's assets and hired its CEO earlier.",
+            "who_it_affects": "Character.AI users, especially minors and their parents, whose private conversations with chatbots could be sold. New chatbot laws in New York, Connecticut, California, and Colorado take effect Jan. 1, 2027.",
+            "whats_next": "The bankruptcy court will decide whether to approve the sale.",
+            "sources": [
+              {
+                "url": "https://www.theverge.com/policy/1042620/character-ai-sale-state-ags-block-selling-users-chats",
+                "title": "42 state AGs are trying to stop Character.AI from selling users' chats"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "world": [
+      {
+        "topic": "other",
+        "label": "Middle East",
+        "overview": "Two developments in the Iran war's wider region: Yemen's Houthis struck another Saudi refinery, and Iraq's central government moved to take over oil and border operations from the Kurdish regional government, setting off mass protests in Irbil.",
+        "items": [
+          {
+            "headline": "Houthi strike on Saudi Jazan refinery kills a worker and halts some operations",
+            "status": "Attack Nov. 26",
+            "what_changed": "An aerial projectile hit the Jazan oil refinery on Saudi Arabia's Red Sea coast, killing a Nepali worker, injuring several people, and starting a fire that temporarily stopped some operations, Saudi Arabia's Energy Ministry said. The Saudi-led coalition said the Iranian-backed Houthis carried out the attack.",
+            "what_it_does": "The refinery can process up to 400,000 barrels of crude a day. It came a day after the Houthis claimed attacks on Ras Tanura, the kingdom's largest refinery and a major export hub, and the ports of Jeddah and Jazan. The coalition said it later destroyed the missile launcher used, in Yemen's Hodeidah province.",
+            "who_it_affects": "Workers at Gulf energy sites and global oil markets, which have been rising on Gulf attacks.",
+            "sources": [
+              {
+                "url": "https://www.aljazeera.com/news/2026/11/26/attack-on-saudi-aramcos-jazan-refinery-kills-worker-disrupts-operations",
+                "title": "Attack on Saudi's Jazan refinery kills one person, disrupts operations"
+              }
+            ]
+          },
+          {
+            "headline": "Iraq moves to take over Kurdish region's oil exports and border crossings",
+            "status": "Federal government decision upheld by Iraq's top court",
+            "what_changed": "Iraq's government said federal authorities will manage border crossings in the semi-autonomous Kurdish region, approve its oil exports through the federal oil ministry, and take over oil fields in four contested provinces: Kirkuk, Diyala, Salahuddin, and Nineveh. Iraq's Federal Supreme Court backed the decision the next day, and federal forces closed two crossings, one with Syria and one with Iran, DW reported.",
+            "what_it_does": "Prime Minister Ali al-Zaidi said the move targets oil smuggling. The Kurdish regional cabinet called it a violation of the constitution and 'an attempt to return Iraq to a centralized regime.' Rival Kurdish parties held joint mass protests in Irbil and other cities.",
+            "who_it_affects": "Residents of Iraqi Kurdistan, whose government has largely run itself since 1991 and depends on oil revenue, and buyers of Kurdish oil.",
+            "sources": [
+              {
+                "url": "https://www.dw.com/en/protests-in-iraqi-kurdistan-at-plans-for-government-in-baghdad-to-take-over-oil-border-crossings/a-80065994",
+                "title": "Mass protests in Kurdish Irbil against Iraqi government reform plans"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "topic": "other",
+        "label": "Europe",
+        "overview": "EU leaders broke off talks on the bloc's 2028–2034 budget without a deal. The main disputes are overall spending and a proposed new loan to Ukraine that three members oppose.",
+        "items": [
+          {
+            "headline": "EU leaders fail to agree on long-term budget and Ukraine loan; talks resume in December",
+            "status": "Summit ended without agreement (Nov. 26)",
+            "what_changed": "After 12 hours of talks in Brussels, EU leaders put off a decision on the 2028–2034 budget; some walked out, and negotiations resume in December.",
+            "what_it_does": "France and Italy back a higher-spending proposal, while Germany leads those urging restraint. A proposed €45 billion loan to Ukraine, split between military and non-military aid, is opposed by Slovakia, the Czech Republic, and Hungary. German Chancellor Friedrich Merz said unanimous support for Ukraine aid is a condition for approving the wider budget. Many members want the budget settled before major 2027 elections, including in France.",
+            "who_it_affects": "Ukraine, which depends on EU financing, and EU farmers, regions, and programs funded by the bloc's seven-year budget.",
+            "sources": [
+              {
+                "url": "https://www.bbc.com/news/articles/cw4gnm3m9deno",
+                "title": "EU leaders fail to bridge budget splits as talks stall"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "topic": "other",
+        "label": "Americas",
+        "overview": "Argentina's Congress has written into law a ban on the central bank printing money to cover government spending. Past money-printing helped drive inflation above 200% in 2023.",
+        "items": [
+          {
+            "headline": "Argentina bars its central bank from printing money to fund the government",
+            "status": "Final passage, Chamber of Deputies 141–0 (99 abstentions)",
+            "what_changed": "Argentina's Chamber of Deputies gave final approval to a law that defines the central bank's 'primary and fundamental mission' as protecting the value of the peso and bars it from issuing money to finance government spending, Al Jazeera reported, citing Reuters and AP.",
+            "what_it_does": "The Senate passed the bill earlier but removed President Javier Milei's proposal to require a two-thirds vote of Congress to remove central bank governors. The same day, the Senate advanced a separate bill to suspend primary elections before the October 2027 presidential vote; it still needs the lower house.",
+            "who_it_affects": "Argentines, whose inflation has fallen under Milei while poverty has risen, and investors watching the peso.",
+            "sources": [
+              {
+                "url": "https://www.aljazeera.com/news/2026/11/27/argentina-bars-central-bank-from-printing-money-to-fund-government-spending",
+                "title": "Argentina bars Central Bank from printing money to fund government spending"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "topic": "other",
+        "label": "Africa",
+        "overview": "Guinea-Bissau's military government has pushed back the elections that were supposed to return the country to civilian rule. It cites a lack of money and equipment.",
+        "items": [
+          {
+            "headline": "Guinea-Bissau's military rulers delay elections by two years, to November 2028",
+            "status": "Decree issued Nov. 26",
+            "what_changed": "A decree from transitional president Maj. Gen. Horta Inta-a moved presidential and legislative elections set for Dec. 6 to November 2028, citing 'an insufficiency of the technical, material and financial conditions,' Al Jazeera reported, citing AFP and Reuters.",
+            "what_it_does": "The army seized power a year ago, interrupting a presidential vote and ousting President Umaro Sissoco Embaló. The transition was meant to last one year. The regional bloc ECOWAS had called for a short, transparent transition back to civilian rule. Voters approved a constitutional change in August giving the presidency more power.",
+            "who_it_affects": "Guinea-Bissau's 2.2 million people, one of the world's poorest populations, who will stay under military rule two more years.",
+            "sources": [
+              {
+                "url": "https://www.aljazeera.com/news/2026/11/26/guinea-bissau-presidential-election-delayed-by-two-years",
+                "title": "Guinea-Bissau military leaders delay presidential election until 2028"
+              },
+              {
+                "url": "https://www.dw.com/en/guinea-bissau-junta-delays-presidential-vote-for-2-years/a-80068910",
+                "title": "Guinea-Bissau junta delays presidential vote for 2 years"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "topic": "other",
+        "label": "Asia-Pacific",
+        "overview": "Final results in New Zealand leave the governing coalition one seat short of a majority. It now needs a deal with a small centrist party or the country may vote again.",
+        "items": [
+          {
+            "headline": "New Zealand's governing coalition falls one seat short of a majority",
+            "status": "Official election results (Nov. 27)",
+            "what_changed": "Official results give Prime Minister Christopher Luxon's National Party 40 of 130 seats and its partners ACT and New Zealand First 13 and 12, one short of a majority. A Labour-led government is not possible even with the centrist Opportunity Party's support.",
+            "what_it_does": "The coalition needs the Opportunity Party's backing to govern; if no deal is reached, New Zealand may hold another election. Luxon said talks 'may be challenging.' Labour won the most votes but lacks a path to a majority under New Zealand's mixed-member proportional system.",
+            "who_it_affects": "New Zealanders, whose next government's economic policies depend on the coalition talks.",
+            "sources": [
+              {
+                "url": "https://www.bbc.com/news/articles/c670278qk879o",
+                "title": "New Zealand's ruling coalition falls short of parliamentary majority by one seat"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

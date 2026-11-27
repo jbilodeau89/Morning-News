@@ -909,7 +909,8 @@
       "id": "fedreg",
       "name": "Federal Register",
       "domains": [
-        "federalregister.gov"
+        "federalregister.gov",
+        "govinfo.gov"
       ],
       "lean": "n/a",
       "tier": "primary",
@@ -1208,11 +1209,11 @@
       "domains": [
         "dw.com"
       ],
-      "lean": "Center",
+      "lean": "Center-Left",
       "tier": "high",
-      "mbfc": "Least Biased / High factual",
-      "adfontes": "Middle / Reliable",
-      "checked": null
+      "mbfc": "Left-Center / High factual",
+      "adfontes": "Skews Left (per Ground News summary; score not confirmed)",
+      "checked": "2026-11-27"
     },
     {
       "id": "france24",
